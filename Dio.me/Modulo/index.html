@@ -7,6 +7,38 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script type="module" src="main.mjs"></script> 
+    <!--Para vincular o arquivo no HTML, tem que usar o atributo type="module" com o valor 'module' 
+    para o html e o browser entender que estara usando modulo-->
 </body>
 </html>
+
+<!--
+    Curiosidades:
+
+Module Cheatsheet
+
+export                              import
+name
+export const name = 'value'         import const name = 'value'         
+
+default                             default import
+export default 'value'              import anyName 'value' from './caminho'
+
+rename
+export { name as newName }          import {newName} from './caminho'
+
+list
+export List + Rename                
+export {                            
+    name1,
+    name2 as newName2
+}
+import List + Rename
+import {
+    name1 as newName
+    name2
+} from './caminho'
+
+pesquisar strict mode
+-->
