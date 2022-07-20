@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Site!!!</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        h1 {
+            color: red;
+        }
+        h2 {
+            color: orange;
+        }
+        p {
+            font-size: 30px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando os meus conhecimentos!!!</h1>
+
+    <script>
+        nome = prompt('Qual o seu nome? ')
+        /* Usando o metodo 
+        document.write: Exibe o dado na pagina
+        document.writeln: Exibe o dado na pagina quebrando a linha
+        */
+        document.write(`<h2>Olà ${nome}. Seu nome tem ${nome.length} letras!</h2>`) //podemos usar as tags HTML tambem.
+        document.write(`<p><br>Seu nome em maiuscula fica ${nome.toUpperCase()}</p>`) // tag <br> para quebrar a linha
+        document.writeln(`<p>Seu nome em minuscula <strong>${nome.toLowerCase()}</strong></p>`) // <strong> para deixar negrito
+        /* Number Flutuante
+        variavel.toFixer(quantidade de casa decimais)
+        convertendo numero em moeda de acordo com a localização.
+        variavel.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+         */
+        
+    </script>
+</body>
+</html>
