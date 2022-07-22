@@ -113,4 +113,93 @@ const resultSub = calc(sub, 1, 2)
 console.log(resultSoma) // 3
 console.log(resultSub) // -1
 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Parametros:
+Valores Padrão:
+Objetivo:
+1 - Ensinar como manipular parametros de uma função
+2 - Tecnica para lidar com numeros indefinidos de parametros
+
+arguments: É um array com todos os parametro passado quando a função foi invocada.
+Ex:
+function findMax (aqui não é passado nenhum parametro e sao indefinidos) {
+    let max = -Infinity
+
+    for (let i = 0; arguments.length; i++) {
+        if (arguments[i] > max)
+            max = arguments[i]
+    }
+return max
+}
+findMax(1, 2, 3, 6, 90, 1)  // os parametros sao passados ao chamar a função
+resultado 90
+
+Ex 2:
+function showArgs () {
+    return arguments
+}
+showArgs(1, 2, [2, 3, 4], "string")
+Resultado // 
+0: 1
+1: 2
+2: [2, 3, 4]
+3: "string"
+podendo ser iterado como um array
+callee: f showArgs
+length: 4
+Symbol(Symbol.iterator): f values()
+__photo__: Object
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Array e Obejetos
+
+O que era parte de um array se torna um elemento independente.
+-=-=-=-=-=-=-=
+Spread: É uma forma de lidar separadamente com elementos.
+
+Ex: 
+function sum (x, y, z) { / 03 parametros
+    return x + y + z
+}
+const numbers = [1, 2, 3]  // um array com 03 indices
+
+console.log(sum(...numbers))  // Tecnica spread: usa ...reticencias antes da variavel
+                                 para associar cada indice do array com ada parametro.
+-=-=-=-=-=-=-=-=-=-=
+Rest: Combina os argumentos de um array, tornando o que era um elemento independente, 
+se torna parte de um array
+Ex:
+function confereTamanho (...args) {
+    console.log(args.length)
+}
+confereTamanho()  // 0
+confereTamanho(1, 2) // 2
+confereTamanho(3, 4, 5)  // 3
+Rest: usa quando está declarando a função
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+Objetos
+Object Destructuring: Entre chaves{} podemos filtrar apenas os dados que nos interessam 
+em um objeto.
+
+Ex: 
+const user = {
+    id: 42,
+    displayName: 'jdoe',
+    fullName: {
+        firstName: 'John',
+        lastName: 'Doe'
+    }
+}
+function userId (id) {
+    return id
+}
+
+function getFullName({fullName: {firstName: first, laastName: last}}) {
+    return `${first} ${last}`
+}
+
+userId(user)  // 42
+getFullName(user) // John Doe
+
 */
