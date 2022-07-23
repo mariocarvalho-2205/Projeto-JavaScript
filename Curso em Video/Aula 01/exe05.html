@@ -8,23 +8,49 @@
     <style>
         body {
             background-color: black;
-            color: aqua;
+            color: rgb(207, 112, 112);
+            font: normal 12pt arial; 
         }
 
     </style>
 </head>
 <body>
-    <h1>Iniciando Estudos DOM - Document Object Model</h1>
-    <h2>Aqui vai o resultado</h2>
-    <p>métodos 
-        getElementByTagName,<br> 
-        getElementById,<br>
-        getElementByName,<br>
-        getElementByClassName,<br> 
-        querySelector de acesso ao <strong>DOM no JavaScript?</strong></p>
-    <div>Cliqeu em mim!!</div>
-    <script>
+    <h1>Iniciando Estudos com DOM<br>Document Object Model</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM </strong>em JavaScript</p>
+    <!--<p>Métodos para acessar a arvore HTML por:
+        document.getElementByTagName,<br> // Acessa por nome da tag
+        document.getElementById,<br>// Acessa por id
+        document.getElementByName,<br>// Acessa por nome do elemento
+        document.getElementByClassName,<br> // Acessa pelo nome da class do elemento
+        // Selector é o mais recente, porem so os navegadores mais
+        recentes vão reconhecer esse metodo
+        recomendado a ser usado.
+
+        var d = document.querySelector('div#msg') 
+        // Usando sintaxe css ( (#) acessa a div (.)acessa o id)
         
+        document.querySectorAll  //  
+        de acesso ao <strong>DOM no JavaScript?</strong></p> -->
+    <div id="msg">Clique em mim!!</div>
+    <script>
+        var corpo = document.body  // variavel criada usando document.body para acessar o body do HTML
+        var p1 = window.document.getElementsByTagName(`p`)[1] // para acessar tag pelo nome(`tag`)[indice sendo que 0 é a primeira tag OBS: segue a mesma logica usada em array]
+        p1.style.color = 'blue' // Aqui vai mudar a cor da tag original
+        // p1.style.backgroundColor = 'white' // mudando o backgroundColor
+        // document.write('Podemos concatenar usando o sinal de + ' + p1.innerText)  
+        // document.write(escreve na tela o que esta dentro)
+        // document.write(p1.innerText)  // innerText - Pega o texto sem as tags filhas, sem a formatação do HTML
+        // document.write(p1.innerHTML)  // innerHTML - Escreve na formatação do HTML, com as tags filhas
+        // corpo.style.backgroundColor = 'yellow' // Mudando a cor do body associado na variavel.
+        document.write(p1.innerHTML)
+        // Para usar com o alert, tem que usar o innerText, senão pega as tags filha
+        // alert(p1.innerText) //Não pega as tags
+        // alert(p1.innerHTML) //Pega as tags
+        var d = document.getElementById('msg')
+        d.style.backgroundColor = 'green'
+        // d.innerText = 'Estou aguardando... '  // podemos modificar por Js usando o DOM
+
     </script>
 </body>
 </html>
