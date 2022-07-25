@@ -51,7 +51,7 @@ function nome(parametros) {
     // instruções
     return // valor de retorno 'a função retorna o que estiver aqui'
 }
-
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 Função anonima:
 São funções que representam expressões - uma variavel pode armazenar uma função.
 Ex:
@@ -60,7 +60,7 @@ const soma = function (a, b) {
 }
 soma(1, 2) // 3
 soma(5, 4) // 9
-
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 Função autoinvocavél:
 IIFE (Immediately Invoked Function Experssion)
 
@@ -83,7 +83,7 @@ Com parametros:
     }
 )(1, 2)
 // 3
-
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 Armazenando função em variavel
 
 const soma3 = (
@@ -93,7 +93,7 @@ const soma3 = (
 )(1, 2)
 console.log(soma3) // 3
 
-
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 Callbacks
 É uma função passada com argumento para outra.
 Utilizando callbacks, você tem maior controle da ordem de chamadas
@@ -202,4 +202,19 @@ function getFullName({fullName: {firstName: first, laastName: last}}) {
 userId(user)  // 42
 getFullName(user) // John Doe
 
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+if, else if, switch
+
+function numeroPositivo (num) {
+    let resultado
+
+    if (num < 0) {
+        resultado = false
+    } else if {
+        resultado = true
+    }
+    return resultado
+}
+numeroPositivo(2)
+numeroPositivo(-2)
 */
