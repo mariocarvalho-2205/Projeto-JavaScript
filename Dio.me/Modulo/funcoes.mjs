@@ -205,6 +205,8 @@ getFullName(user) // John Doe
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=
 if, else if, switch
 
+If escrito sem abreviação:
+
 function numeroPositivo (num) {
     let resultado
 
@@ -217,4 +219,74 @@ function numeroPositivo (num) {
 }
 numeroPositivo(2)
 numeroPositivo(-2)
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+if com abreviação
+function numeroPositivo (num) {
+    let resultado
+    const ehNegativo = num < 0
+
+    if ( ehNegativo ) {
+        resultado = false
+    } else {
+        resultado = true
+    }
+    return resultado
+}
+console.log(2)
+console.log(-2)
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+if com abreviação 2:
+
+function numeroPositivo ( num ) {
+    const ehNegativo = num < 0
+
+    if ( enNegativo ) {
+        return false
+    }
+    return true
+}
+console.log(2)
+console.log(-2)
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+if aninhado:
+
+function numeroPositivo ( num ) {
+    const ehNegativo = num < 0
+    const maiorQueDez = num > 10
+
+    if (ehNegativo) {
+        return 'esse numero é negativo!'
+    } else if (!ehNegativo && maiorQueDez ) {
+        return 'Esse numero é maior que 10!'
+    }
+    return 'Esse numero é positivo'
+}
+console.log(2)
+console.log(11)
+console.log(-3)
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+switch case:
+faz verificação de tipo e valor
+equivalente a uma comparação ( === )
+Sempre precisa de um default no final da verificação
+ideal para quando se precisa comparar muitos valores
+
+function getAnimal (id) {
+    switch ( id ) {
+        case 1
+        return 'cão'
+        case 2
+        return 'gato'
+        case 3
+        return 'passaro'
+        default
+        return 'peixe
+    }
+}
+console.log( 1 )  // cão
+console.log( 4 )  // peixe
+console.log( '1' )  // peixe
 */
