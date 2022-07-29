@@ -71,8 +71,7 @@ console.log(umaString.replace(/r/g, '&'))  // usando expressao /letra/g, substit
 console.log(umaString.length)  // mostra a quantidade
 console.log(umaString.slice(2, 6))  // retorna o trecho do inicio ate uma posição a menos do incide solicitado
 console.log(umaString.slice(-5, -1))  // começa fatiando do final da string
-console.log(umaString.substring(umaString.length - 5, umaString.length - 1))  // mesma coisa que slice
+/*console.log(umaString.substring(umaString.length - 5, umaString.length - 1))  // mesma coisa que slice
 console.log(umaString.split(" ", 4))  // divide a strinte com caractere colocado
 console.log(umaString.toUpperCase())
-console.log(umaString.toLowerCase())
-console.log(umaString.to)
+console.log(umaString.toLowerCase())*/
