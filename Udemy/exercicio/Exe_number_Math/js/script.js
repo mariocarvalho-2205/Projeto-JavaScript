@@ -12,4 +12,3 @@ texto1.innerHTML += `<p>O numero ${numero} arrendodado para cima é: <strong>${M
 texto1.innerHTML += `<p>O numero ${numero} arredondado para baixo é: <strong>${Math.floor(numero)}</strong></p>`
 texto1.innerHTML += `<p>Seu numero é NaN <strong>${Number.isNaN(numero)}</strong></p>`
 texto1.innerHTML += `<p>Com duas casas decimais ${numero.toFixed(2)}</p>`
-
