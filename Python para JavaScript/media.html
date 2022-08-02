@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media V2</title>
+    <style>
+        body {
+            font: 16pt normal 'Arial';
+            background-color: gray;
+            display: block;
+            width: 250px;
+        }
+        p {
+            font-size: 14pt;
+            width: 250px;
+        }
+        input {
+            width: 250px;
+        }
+        div#media{
+            width: 250px;
+            display: block;
+            margin-top: 10px;
+          
+        }
+    </style>
+</head>
+<body>
+    <h1>Media de Alunos</h1>
+    <p><strong>Digite a 1 nota: </strong><br /><input type="number" name="nota1" id="nota1"></p>
+    <p><strong>Digite a 2 nota: </strong><br /><input type="number" name="nota2" id="nota2"></p>    
+    <input type="button" value="Media" onclick="media()">
+    <div id="media"></div>
+    <p id="resultado"></p>
+    <script src="media.js"></script>
+</body>
+</html>
