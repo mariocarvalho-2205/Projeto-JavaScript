@@ -26,6 +26,6 @@ function meuEscopo () {
         console.log(pessoas)
         resultado.innerHTML += `<p>${nome.value} ${sobrenome.value} ${idade.value} ${altura.value}</p>`
     }   
-    form.addEventListener('submit', recebeEventoForm)
+    form.addEventListener('submit', recebeEventoForm) 
 }
 meuEscopo()
