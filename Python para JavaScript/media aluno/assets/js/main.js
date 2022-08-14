@@ -1,4 +1,32 @@
-const form = document.querySelector('#formulario')
+function escopo () {
+    let form = document.querySelector('#formulario')
+    let resul = document.querySelector('#result')
+
+    form.addEventListener('submit', function (event) {
+        
+        event.preventDefault()
+        let nota1 = event.target.querySelector('#nota-1')
+        let nota2 = event.target.querySelector('#nota-2')
+
+        let n1 = Number(nota1.value)
+        let n2 = Number(nota2.value)
+        let media = (n1 + n2) / 2
+        //console.log(media)
+        
+
+        form.addEventListener('submit', event)
+        resul.innerHTML += `A media das notas ${n1} e ${n2} e igual a ${media}`
+    })
+}
+escopo()    
+    
+
+
+
+
+
+
+/*const form = document.querySelector('#formulario')
 
 form.addEventListener('submit', function (e) {
     e.preventDefault()
@@ -30,4 +58,4 @@ function getMedia(n1, n2) {
 function setResult (msg) {
     const result = document.querySelector('#result')
     result.innerHTML = msg
-}
+}*/
