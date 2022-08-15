@@ -50,6 +50,7 @@ form button {
     font-weight: 700px;
     height: 50px;
     margin-top: 30px;
+    border-radius: 5px;
 }
 
 form button:hover {
@@ -58,6 +59,7 @@ form button:hover {
 
 form button:active {
     background-color: bisque;
+    
 }
 
 footer {

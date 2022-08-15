@@ -15,7 +15,14 @@ function escopo () {
         
 
         form.addEventListener('submit', event)
-        resul.innerHTML += `A media das notas ${n1} e ${n2} e igual a ${media}`
+        if (media > 6) {
+            resul.style.backgroundColor = 'green'
+            resul.style.borderRadius = '5px'    
+        } else {
+            resul.style.backgroundColor = 'red'
+            resul.style.borderRadius = '5px'
+        }
+        resul.innerHTML = `A media das notas ${n1} e ${n2} e igual a ${media}`
     })
 }
 escopo()    
