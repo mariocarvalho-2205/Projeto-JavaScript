@@ -24,7 +24,7 @@ body {
     margin: 50px auto;
     background-color: antiquewhite;
     padding: 20px;
-
+    border-radius: 10px;
 }
 
 form input, form label, form button {
@@ -62,15 +62,12 @@ form button:active {
 }
 
 footer {
-    max-width: 300px;
+    max-width: 250px;
     margin: 10px auto;
     text-align: center;
-    padding: 4px;
+    padding: 0;
     background-color: antiquewhite;
     border-radius: 5px 5px;
-}
-#resultado {
-    text-align: center;
 }
 
 
