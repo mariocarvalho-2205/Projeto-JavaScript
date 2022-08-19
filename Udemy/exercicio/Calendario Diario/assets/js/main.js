@@ -1,45 +1,47 @@
-const p = document.querySelector('p')
-let data = new Date()
-let d = data.getDate()
-let diaSemana = data.getDay()
-let mes = data.getMonth()
-let ano = data.getFullYear()
-let hora = data.getHours()
-let min = data.getMinutes()
-let h1 = document.querySelector('h1')
+const p = document.querySelector('#data')
+const h1 = document.querySelector('.container')
+const data = new Date()
 
-function day (diaSemana) {
-    let diaTexto
+function getDiaSemanaTexto (diaSemana) {
+    const dias = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', ' sexta', 'sabado']
+    
+    return dias[diaSemana]
+    
+    
+    /*let diaSemanaTexto
     switch (diaSemana) {
         case 0: 
-        diaTexto = 'Domingo'
-        return diaTexto
+        diaSemanaTexto = 'Domingo'
+        return diaSemanaTexto
         case 1:
-        diaTexto = 'Segunda'
-        return diaTexto
+        diaSemanaTexto = 'Segunda'
+        return diaSemanaTexto
         case 2: 
-        diaTexto = 'Terça'
-        return diaTexto
+        diaSemanaTexto = 'Terça'
+        return diaSemanaTexto
         case 3:
-        diaTexto = 'Quarta'
-        return diaTexto
+        diaSemanaTexto = 'Quarta'
+        return diaSemanaTexto
         case 4: 
-        diaTexto = 'Quinta'
-        return diaTexto
+        diaSemanaTexto = 'Quinta'
+        return diaSemanaTexto
         case 5:
-        diaTexto = 'Sexta'
-        return diaTexto
+        diaSemanaTexto = 'Sexta'
+        return diaSemanaTexto
         case 6: 
-        diaTexto = 'Sabado'
-        return diaTexto
+        diaSemanaTexto = 'Sabado'
+        return diaSemanaTexto
         default:
-        diaTexto = ''
-        return diaTexto
-    }
+        diaSemanaTexto = ''
+        return diaSemanaTexto
+    }*/
 }
-function mesTex (mes) {
-    let mesTexto
-    switch (mes) {
+function getNomeMes (numeroMes) {
+    const meses = ['janeiro', 'fevereiro', 'março', 'abriu', 'maio', 'junho', 'julho', 
+    'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
+    return meses[numeroMes]
+    /*let mesTexto
+    switch (numeroMes) {
         case 0:
         mesTexto = 'Janeiro'
         return mesTexto
@@ -78,12 +80,48 @@ function mesTex (mes) {
         return mesTexto
         default:
         mesTexto = ''
-        return mesTexto
-        
-    }
+        return mesTexto 
+    }*/
 }
-const dia = day(diaSemana)
-const m = mesTex(mes)
-p.innerHTML = `<p>${dia}-feira,  ${d} de ${m} de ${ano} as ${hora}:${min}</p>`
+
+function zeroAEsquerda (num) {
+    return num >= 10 ? num : `0${num}`
+}
+
+function createDate(date) {
+    const diaSemana = data.getDay()
+    const numeroMes = data.getMonth()
+    const nomeDia = getDiaSemanaTexto(diaSemana)
+    const mesTexto = getNomeMes(numeroMes)
+    const ano = data.getFullYear()
+    const hora = zeroAEsquerda(data.getHours())
+    const min = zeroAEsquerda(data.getMinutes())
+
+    return (
+        `${nomeDia}-feira, ${data.getDate()} de ${mesTexto} de ${ano} as ${hora}:${min}`
+    )    
+} 
+p.innerHTML = createDate(data)
 p.style.textAlign = 'center'
 h1.style.textAlign = 'center'
+
+/*
+// metodo abreviado
+const h2 = document.querySelector('.container2')
+const data2 = new Date()
+const opcoes = new Intl.DateTimeFormat("pt-BR", {
+    dateStyle: "full",
+    timeStyle: "short"
+  });
+
+const horaOpcao2 =  new Intl.DateTimeFormat('pt-BR', { dateStyle: 'full', timeStyle: 'full'}) 
+//console.log(opcoes.format(Date.now()))
+console.log(horaOpcao2.format(Date.now()))
+h2.innerHTML = opcoes.format(Date.now())
+
+// metodo para pegar a hora
+/*const shortTime = new Intl.DateTimeFormat("pt-BR" , {
+    dateStyle: 'full',
+    timeStyle: "short"
+  });
+  console.log(shortTime.format(Date.now())); // "13:31 AM"*/
