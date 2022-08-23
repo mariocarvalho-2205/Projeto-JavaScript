@@ -24,11 +24,11 @@ function criaElementos () {
         let body = document.querySelector(".container");
         let novo = document.createElement(elementos[i].tag); 
         let texto = document.createTextNode(elementos[i].texto);       
-        body.appendChild(novo, novo.appendChild(texto));
-        //novo.appendChild(texto);
-        //console.log(novo);
+        body.appendChild(novo/*, novo.appendChild(texto)*/);
+        novo.appendChild(texto);
+        console.log(novo);
     }
-    container.appendChild(tagCriada)
+    //body.appendChild(tagCriada)
 }
 criaElementos();
 

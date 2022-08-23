@@ -29,7 +29,67 @@ for (let i = 100; i >= 10; i -= 10) {
     
 }*/
 
-for (let i = 0; i <= 10; i++) {
+/*for (let i = 0; i <= 10; i++) {
     const par = i % 2 === 0 ? 'par' : 'impar'
     console.log(`${i} é ${par}`)
+}*/
+
+//-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+/* 
+For in --> le os indices ou chaves de um array ou obj:
+simplificado usando variavel
+
+conts frutas = ['pera', 'maça', 'uva', 'laranja']
+
+for (index in frutas) {
+    console.log(furtas[index])
+}
+*/
+
+/*const frutas = ['pera', 'maça', 'uva', 'laranja']
+
+for (index in frutas) {
+    console.log(frutas[index])
+}*/
+//=-=-=-=-=-=-=-
+const pessoas = {
+    nome: 'mario',
+    sobrenome: 'carvalho',
+    idade: 48,
+}
+
+//console.log(pessoas.nome)
+//console.log(pessoas['nome'])
+const chave = 'sobrenome'
+//console.log(pessoas[chave])
+
+for (let chave in pessoas) {
+    console.log(chave, pessoas[chave])
+}
+//=-=-=-=-=-=-=-=-=-=-=-
+
+/*
+
+exemplos:
+
+const nome = 'mario carvalho'
+
+for classico:
+for (let i = 0; i < nome.length; i++) {
+    console.log(nome[i])
+}
+
+for in:
+for (let indice in nome) {
+    console.log(nome[i])
+}
+
+for of
+
+*/
+
+const nome = 'mario carvalho'
+
+for (let valor of nomes) {
+    console.log(valor)
 }
