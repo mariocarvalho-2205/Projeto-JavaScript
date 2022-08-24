@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lojas Super</title>
+    <script>
+        function cadastra () {
+            let nome_cliente = document.getElementById("nome").value;
+            let endereco_cliente = document.getElementById('endereco').value;
+            let idade_cliente = document.getElementById('idade').value;
+            if (document.getElementById('masculino').value) {
+                var sexo = 'M'
+            } else {
+                var sexo = 'F'
+            }
+            var dadosajax  = {
+                nome_cliente: nome_cliente,
+                endereco_cliente: endereco_cliente,
+                idade_cliente: idade_cliente,
+                sexo: sexo         
+            }
+            
+            var pageurl = grava_cliente.php
+
+         $.ajax({
+
+            url: pageurl,
+
+            data: dadosajax,
+
+            type: 'POST',
+
+            cache: false,
+
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+
+               
+
+                  alert('Erro Gravação Cliente!!');
+
+               },
+
+            success: function(result) {
+
+                
+
+                   alert("Gravação Cliente efetuada com sucesso");
+
+                   return;
+
+                }
+         
+        })
+        }
+  
+    </script>
+    <?php  
+
+    $host = "servidor_banco_de_dados.com.br";
+    
+    $user = "usuario_banco_de_dados";
+    
+    $pass = "senha_banco_de_dados";
+    
+    $db   = "banco_de_dados";
+    
+    
+    $conecta = mysql_connect($host, $user, $pass) or print (
+    
+    mysql_select_db($db, $conecta);
+    
+    
+    $nome_cliente  = $_REQUEST['nome_cliente'];
+    
+    $endereco_cliente = $_REQUEST['endereco_cliente'];
+    
+    $idade_cliente = $_REQUEST['idade_cliente'];
+    
+    $sexo_cliente = $_REQUEST['sexo_cliente'];
+    
+    
+    $sql = "INSERT INTO Cliente 
+    
+    (NomeCliente, 
+    
+    EnderecoCliente,
+    
+    IdadeCliente,
+    
+    SexoCliente,
+    
+    EnderecoCliente,) 
+    
+                VALUES 
+    
+    ('$nome_cliente', 
+    
+    '$endereco_cliente',
+    
+    '$idade_cliente',
+    
+    '$sexo_cliente');
+    
+    
+    $query = mysql_query($sql);
+    
+    ?>
+</head>
+<body>
+    <h1>Cadastro de Clientes</h1>
+    <p>Inclua as Informações do Cliente Abaixo</p>
+    <font id="nome">Nome do Cliente:</font>
+    <input type="text" id="nome"></input>
+
+    <font id="endereco">Endereço do Cliente:</font>
+    <input type="text" id="endereco"></input>
+
+    <font id="idade">Idade do Cliente:</font>
+    <input type="text" id="idade"></input>
+
+    <font>Sexo do Cliente:</font>
+    <input type="radio" name="sexo" id="masculino" checked="checked">
+    <input type="radio" name="sexo" id="feminino">
+
+    <input type="button" name="botao-ok" value="Cadastrar" id="botao_cadastra" onclick="cadastra()">
+
+</body>
+</html>
