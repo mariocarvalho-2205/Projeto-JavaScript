@@ -20,7 +20,7 @@
         </header>
         <form action="" id="todo-form">
             <p>Adicione sua Tarefa</p>
-            <div id="form-control">
+            <div class="form-control">
                 <input type="text" id="todo-input" placeholder="O que você vai fazer?">
                 <button type="submit">
                     <!--importação icone fomt-awesome-->
@@ -28,10 +28,10 @@
                 </button>
             </div>
         </form>
-        <form id="edit-form">
+        <form id="edit-form" class="hide">
             <p>Edite a sua tarefa:</p>
-            <div id="form-control">
-                <input type="text" id="edit-input">
+            <div class="form-control">
+                <input type="text" id="edit-input" placeholder="Qual a sua tarefa?">
                 <button type="submit">
                     <i class="fa-solid fa-check-double"></i>
                 </button>
@@ -58,7 +58,7 @@
             </div>
         </div>
         <div id="todo-list">
-            <div id="todo">
+            <div class="todo done">
                 <h3>Estou fazendo alguma coisa...</h3>
                 <button class="finish-todo">
                     <i class="fa-solid fa-check"></i>
@@ -68,7 +68,7 @@
                     <i class="fa-solid fa-xmark"></i> 
                 </button>
             </div>
-            <div id="todo">
+            <div class="todo ">
                 <h3>Estudar JavaScript</h3>
                 <button class="finish-todo">
                     <i class="fa-solid fa-check"></i>
