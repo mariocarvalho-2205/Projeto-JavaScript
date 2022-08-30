@@ -1,0 +1,95 @@
+/* Para zerar os parametros da pagina */
+* {
+    margin: 0;  /* Dessa forma o tamanho maximo da pargin e do padding ficam reais sem somarem aos outros atributos tipo margin, padding, border e tamanho */
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #3db36b;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 3px solid #0f642f;
+}
+
+/* Grid de Produtos */
+.container {
+    background-color: #eee;
+    min-height: 60vh; /* min-height: 60vh; -> determina uma largura minima de 60% da tela*/
+    padding: 50px;
+}
+.products-container {
+    max-width: 1200px; /* largura maxima dentro da pagina */
+    margin: 0 auto;  /* centralza os itens na pagina margin: cima/baixo e laterais automaticas*/
+}
+.card {
+    width: 31%;
+    display: inline-block;
+    margin: 1% 1%;
+    padding: 15px;
+}
+.product-image {
+    height: 300px;
+    width: 100%;
+    background-position: center; /* alinha a imagem ao centro, porem visualiza do centro para fora*/
+    background-size: cover;  /* visualiza toda a area da imagem centralizada */
+}
+#img-1 {
+    background-image: url(../img/tenis1.jpg);
+}
+#img-2 {
+    background-image: url(../img/tenis2.jpg);
+}
+#img-3 {
+    background-image: url(../img/tenis3.jpg);
+}
+#img-4 {
+    background-image: url(../img/tenis4.jpg);
+}
+#img-5 {
+    background-image: url(../img/tenis5.jpg);
+}
+#img-6 {
+    background-image: url(../img/tenis6.jpg);
+}
+h3 {
+    margin-bottom: 10px;
+    color: #3db36b;
+    font-size: 24px;
+    border-left: 7px solid #0f642f;
+    padding-left: 7px;
+}
+.card p {
+    margin-bottom: 10px;
+}
+.bold {
+    font-weight: bold;
+}
+.btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #3db36b;
+    padding: 15px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.5s; /* coloca um tempo de transição entre o buttom e o hover */
+}
+.btn:hover {
+    background-color: #0f642f;
+}
+/* Rodapé */
+footer {
+    background-color: #3db36b;
+    color: #fff;
+    text-align: center;
+    padding: 80px;
+    border-top: 3px solid #0f642f; 
+    
+}

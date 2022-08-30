@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de CSS</title>
+    <!--Utilizando o modo External-->
+    <link rel="stylesheet" href="./css/Aula de html_css.css">
+
+    <!--Utilizando o modo Internal-->
+    <style>
+        p {
+            color: blue;
+        }
+    </style>
+<!--é uma linguagem de estilização
+para estilizar elementos precisamos seguir alguns passos
+1-> escolher a tag a ser trabalhada
+2-> abrir e fechar as chaves, delimitando o expaço dos estilos do elemento
+3-> Escrever as regras de estilização
+4-> Todas as regras devem terminar com um ponto e virgula
+Ex:
+div {
+    background-color: red;
+}
+elemento_selecionado {
+    regra: parametro;
+}
+Formas de adicionar CSS
+
+1-> Inline: onde o css fica na tag;
+é utilizado um atributo na tag a ser estilizada, onde será colocada as regras na propria regra.
+não é muito utilizada, pois se tiver muitas regras fica ruim para dar manutenção e o escopo fica muito restrito.
+
+Ex:<h1 style="background-color: red"></h1>
+
+2-> Internal CSS: onde o CSS fica no head da pagina;
+é utilizada uma tag chamada style na parte head do html.
+é uma opção melhor do que a inline. porem, não é muito utilizada, pois para dar manutenção se torna muito trabalhoso, e fere um dos principios basicos da programação que é separação de responsabilidade, onde cada coisa deve ficar no seu lugar.
+
+3-> External CSS: onde o CSS fica em um arquivo externo.
+Essa é a forma mais indicada, e devemos sempre tentar utilizar-la.
+esse arquivo e chamado atraves da tag link colocada a area do head do html
+Ex:
+<link rel="stylesheet" href="endereço e nome do arquivo css.css">
+
+-->
+</head>
+<body>
+    <h1 id="titulo-principal">Aula de CSS com id</h1>
+    <!--Utilizando o modelo Inline-->
+    <h2 style="color: red">Modo Inline</h2>
+
+    <p>Modo Internal</p>
+
+    <h1 class="segundo-titulo-principal">segundo titulo principal</h1>
+    <p class="meu-paragrafo">Conteudo do site Utilizando classe</p>
+    <p class="meu-paragrafo">Conteudo do site Utilizando classe 3</p>
+    <p class="meu-paragrafo">Conteudo do site Utilizando classe 2</p>
+    <p class="meu-paragrafo">Conteudo do site Utilizando classe 4</p>
+
+    <!-- Temos 3 tipos de forma de adicionar cores aos elementos -->
+
+
+    <p class="nome-da-cor">Rosa - utilizando o nome da cor em ingles</p>
+    <p class="hexa">Hexadecimal - utilizando o codigo utilizando um # na frente</p>
+    <p class="rgb">RGB - Utilizandoo codigo RGB das cores rgb(000, 000, 000) com os valores entre 0 e 255<br /> (red, verde, azul, transparencia) e ainda tem um 4 parametro que e a transparencia.</p>
+
+    <!-- Fontes -->
+    <p class="serifada">Fonte serifada</p>
+    <p class="sem-serifa">Fonte sem-serifa</p>
+    <p class="mono-espacada">Fonte mono-espaçada</p>
+    <!-- Size e Weight -->
+    <p class="tamanho-fonte-pequeno">Está fonte esta pequena</p>
+    <p class="tamanho-fonte-grande">Está fonte esta grande</p>
+    <p class="peso-fonte">Esta fonte em negrito</p>
+    <p class="font-italico">Esta em italico</p>
+
+    <!-- Box Model -->
+    <div class="box-model">
+        <p>Este é o box-model</p>
+    </div>
+    <!-- Propriedades de Texto -->
+    <p class="alinhamento">alinhado ao centro</p>
+    <p class="texto-maiusculo">texto todo em maisuculo</p>
+    <p class="texto-minusculo">TEXTO TODO EM MINUSCULO</p>
+
+    <!-- Espaçamento de linhas e letras -->
+    <p class="espacamento-texto">Texto com espaço entre linhas e letras</p>
+    <p class="espacamento-texto">Texto com espaço entre linhas e letras</p>
+    
+    <!-- Links -->
+    <div>
+        <a href="#" class="decoration">Meu link 1</a>
+    </div>
+    <div>
+        <a href="https://www.google.com" class="visitado" target="_blank">Meu link 2</a>
+    </div>
+    <div>
+        <a href="#" class="hover">Meu link 3</a>
+    </div>
+    <!-- Link em Button -->
+    <div>
+        <a href="#" class="btn">clique em mim</a>
+    </div>
+
+    <!-- listas -->
+    <ul>
+        <li>Lista </li>
+        <li>com</li>
+        <li>bullets</li>
+    </ul>
+    <ul class="sem-estilo">
+        <li>Lista </li>
+        <li>sem</li>
+        <li>bullets</li>
+    </ul>
+
+    <!-- Display -->
+    <div class="inline">1</div>
+    <div class="inline">2</div>
+    <span class="bloco">teste </span>
+    <span class="bloco">teste 2</span>
+    <div class="inline hidden">2</div>
+    <!-- Posições Fixed -->
+    <div class="elemento-fixo">Elemento fixo vai ficar fixo na tela</div>
+
+    <!-- Fisth Child / Primeiro Filho -->
+    <div class="primeiro-elemento">
+        <p>Este tera stilo</p>
+        <p>Este não tera stilo</p>
+        <p>Este não tera stilo</p>
+        <p>Este não tera stilo</p>
+    </div>
+
+    <!-- Pseudo Elemento -->
+    <p class="primeira-letra">Esta frase começa com letra diferente: </p>
+
+    <!-- Especifidade -->
+    <h3>Meu Titulo</h3>
+    <h3 class="titulo">Meu Titulo class</h3>
+    <h3 class="titulo" id="meu-titulo-preferido">Meu Titulo Class e ID</h3>
+</body>
+</html>

@@ -1,0 +1,235 @@
+/*
+Seletores de CSS
+Alem das tags, podemos selecionar os elementos através das
+1-> classes: quando queremos afetar mais de um elemento com uma regra utilizando 
+.nome_da_classe
+2-> id: quando queremos afetar um unico elemento utilizando #nome_do_id
+obs: A uma convenção que não nos permiti utilizar mais de um elemento com o mesmo id em uma pagina
+
+Regra hierarquica de prioridade sobre os estilos
+
+prioridade:
+id: sobrepoe o estilo aplicado a classe e a tag
+classe: sobrepoe o estilo aplicado a tag
+tag: Só terá funcionalidade se a tag não estiver com estilo aplicado a classe ou id.
+
+
+*/
+body {
+    padding: 20px;
+    padding-bottom: 500px;
+}
+p {
+    font-size: 25px;
+}
+
+/* Classes e Ids */
+
+/* Selecinando Id utilizando .nome-do-id */
+.meu-paragrafo {
+    color: red;
+    background-color: black;
+}
+
+#titulo-principal {
+    color: yellow;
+    background-color: black;
+    padding: 10px;
+    font-family: Helvetica;
+}
+/* Elementos da pagina, listas */
+/* para selecionar todos os elementos da pagina utilizamos o * {} 
+lembrando que os elementos não podem estar com tag, classes ou ids */
+* {
+    font-family: Arial;
+}
+
+/* Selecionando mais de um elemento com o mesmo seletor utilizamos a virgula */
+
+p, h1, h2 {
+    border-bottom: 1px solid royalblue;
+}
+/* Adicionando cores */
+/*
+Temos 3 formas de adicionar cores aos elementos
+
+*/
+/* nome da cor */
+.nome-da-cor {
+    color: pink;
+}
+.hexa {
+    color: #08f17d;
+    background-color: #003a18;
+}
+.rgb {
+    color: rgb(18, 189, 32);
+}
+
+/* Fontes */
+/* obs: Quando se tem espaço entre os nomes das fontes, utiliza aspa*/
+.serifada {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.sem-serifa {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.mono-espacada {
+    font-family: 'Courier New', Courier, monospace;
+} /* todas as fontes tem a mesma espessura */
+
+/* Size e Weght */
+.tamanho-fonte-pequena {
+    font-size: 10px;
+}
+.tamanho-fonte-grande {
+    font-size: 50px;
+}
+.peso-fonte {
+    font-weight: 800;
+}
+.font-italico {
+    font-style: italic;
+}
+
+/* Box Model */
+.box-model {
+    width: 200px;  /* determina a largura do elemento*/
+    height: 100px; /* determina a altura do elemento*/
+    /* border: espessura tipo cor*/
+    border: 1px solid blue;
+    /*  padding e margin 4 parametros 
+            padding: top right bottom left ;
+        padding e margin 2 parametros 
+            padding: top bottom;
+        padding e margin 1 parametro
+            padding: 10px;
+    */ 
+    padding: 10px;
+    /* margin: auto; centraliza o elemento na tela */
+    margin: auto;
+}
+
+/* Propriedades de texto */
+.alinhamento {
+    text-align: center;
+}
+
+.texto-maiusculo {
+    text-transform: uppercase;
+}
+.texto-minusculo {
+    text-transform: lowercase;
+}
+/* Espaçamento de linhas e texto */
+.espacamento-texto {
+    width: 150px;
+    line-height: 40px;  /* line-height - aumenta a altura da linha*/
+    letter-spacing: 8px; /* letter-spacing - aumenta o espaçamento entre as letras */
+}
+
+/* Links */
+.decoration {
+    text-decoration: none; /* text-decoration: none; remove o underline do link*/
+}
+.visitado:visited { /* .visitado:visited - muda o aspecto do link quando for visitado */
+    color: orange;
+}
+.hover:hover { /* .hover:hover - muda o estilo do link quando passa o mouse por cima do link */
+    background-color: aqua;
+}
+/* Link em Button */
+.btn {
+    background-color: #08f17d;
+    border: 3px solid gray;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 120px;
+    padding: 12px 7px;
+    text-align: center;
+}
+.btn:hover {
+    background-color: #003a18;
+}
+/* listas */
+.sem-estilo {
+    list-style: none; /* list-style: none; - remove os bullets das listas */
+}
+
+/* display */
+.inline {
+    width: 50px;
+    height: 50px;
+    background-color: #003a18;
+    margin: 10px;
+    text-align: center;
+    display: inline-block; /* display: inline-block: - coloca os elemtos block em linha*/
+    
+}
+.bloco {
+    display: block; /* display: block; coloca os elemtos inline em bloco */
+}
+/* Esconder elementos na tela */
+.hidden { /* .hidden { display: none; } - E utilizado para esconder elementos na tela */
+    display: none;
+}
+/* Position Fixed */
+/* Fixar elemento na tela utilizado para barra de navegação */
+.elemento-fixo { 
+    position: fixed;
+    /* alinhando o elemento no topo da pagina */
+    left: 0;
+    top: 0;
+    width: 100%; /* limitando ao maximo da pagina */
+    padding: 15px; /* espaçamento do texto dos cantos da pagina */
+    text-align: center; /* alinha o texto ao centro */
+    background-color: #1292ae; 
+    border-bottom: 1px solid #342299;
+    color: bisque;
+}
+/* Fisth Child - Pseudo Seletor */
+.primeiro-elemento p:first-child {  /* Irá selecionar apenas o primeiro elemento */
+    color: purple;
+    font-weight: bold;  /* deixa em negrito */
+}
+
+/* Peseudo Elemento */
+
+.primeira-letra::first-letter {
+    font-size: 40px;
+    color: red;
+    padding: 3px;
+    background-color: black;
+    border-radius: 4px;
+}
+/* Especifidade / ordem de prioridade */
+/* 
+1 - id
+2 - class 
+3 - tag
+*/
+
+h3 {
+    color: orange;
+} 
+
+.titulo {
+    color: yellowgreen;
+}
+#meu-titulo-preferido {
+    color: #1292ae;
+}
+
+/* IMPORTANT! // A utilização dessa sintaxe, sobrepoe todas a especifidade, ficando acima
+ dos ids, class e tag 
+ Evitar ao maximo utilizar esse recurso
+ Ex:
+ */
+/*h3 {
+color: black !important;
+} */   
+
+
