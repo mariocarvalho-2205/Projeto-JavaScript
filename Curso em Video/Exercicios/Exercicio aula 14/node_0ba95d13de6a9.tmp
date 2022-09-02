@@ -1,0 +1,20 @@
+/* Ecercicio for */
+
+function contar () {
+    const start = 1//document.querySelector('#start')
+    const end = 10//document.querySelector('#end')
+    const step = 1//document.querySelector('#step')    
+    //const res = //document.querySelector('div#res')
+
+    
+    for (let c = start; c < end; c + step) {
+        //res.innerHTML += `${start[c]}`
+        console.log(start[c])
+    }
+
+
+    
+
+
+}
+contar()
