@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <style>
+        #event {
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            margin: 20px;
+        }
+        button {
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="event" onmouseover="mudaCor(this, '#f00')" onmouseout="mudaCor(this, '#fff')">
+        
+    </div>
+    <button onclick="hora()" ">clique em mim</button>
+    <script src="Eventos.js"></script>
+</body>
+</html>

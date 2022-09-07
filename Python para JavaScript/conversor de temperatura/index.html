@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exe 14 - Conversor de Temperatura</title>
+    <script src="./assets/js/main.js" defer></script>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -13,22 +14,26 @@
     <section class="container">
         <h1>Exe 014 - Conversor de Temperatura</h1>
         <p>Nesse programa, você irá escolher qual temperatura quer converter</p>
-        <form action="">
+        <form name="temp" action="" method="get">
             <label for="temp">Escola para qual temperatura quer converter</label>
-            <select name="escolha-temp" id="temp" onchange="convertTemp()">
-                <option value="celsius" selected>Celsius</option>
-                <option value="fahrenheit">Fahrenheit</option>
+            <select name="escolha-temp" id="escolha-temp" ">  
+                <!--
+                    <select name="escolha-temp" multiple id="temp" onchange="convertTemp()">
+                    multiple - permite selecionar mais de um elemento
+                    size="quantidade" - indica quantos elementos serão visiveis no seletor-->
+                <option value="C" selected>Celsius</option>
+                <option value="F">Fahrenheit</option>
             </select> 
 
             <label for="temp">Digite a temperatura</label>
             <input type="text" id="temp" placeholder="Celsius ou Fahrenheit">
 
             
-            <button id="res" onclick="convertTemp()">Converter</button>
+            <button type="button" value="converTemp" id="res" onclick="convertTemp()">Converter</button>
         </form>
     </section>
     <footer>&copy; Mario Carvalho Developer</footer>
-    <script src="./assets/js/main.js"></script>
+    
 </body>
 
 </html>
