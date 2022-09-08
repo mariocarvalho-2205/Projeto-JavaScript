@@ -20,6 +20,7 @@ body {
 }
 
 .container {
+    border-radius: 10px;
     max-width: 640px;
     margin: 50px auto;
     background-color: antiquewhite;
@@ -29,11 +30,13 @@ body {
 
 form input, form label, form button {
     display: block;
+    border-radius: 10px;
     width: 100%;
     margin-bottom: 10px;
 }
 
 form input {
+    border: 0.5px solid;
     font-size: 24px;
     height: 50px;
     padding: 0 20px;
@@ -43,10 +46,18 @@ form input:focus {
     outline: 1px solid var(--primary-color);
     padding: 0 50px;
 }
+#escolha-temp {
+    width: 150px;
+    height: 35px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15pt;
+}
 
 form button {
     border: none;
     background-color: var(--primary-color);
+    color: bisque;
     font-size: 18px;
     font-weight: 700px;
     height: 50px;
@@ -58,7 +69,11 @@ form button:hover {
 }
 
 form button:active {
-    background-color: beige;
+    background-color: brown;
+}
+#res {
+    text-align: center;
+    padding-top: 10px;
 }
 
 footer {

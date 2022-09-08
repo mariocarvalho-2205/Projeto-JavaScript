@@ -11,18 +11,21 @@ function convertTemp () {
     
     const select = document.getElementById('escolha-temp')
     const temp = document.getElementById('temp')
-
+    const res = document.getElementById('res')
 
     const indice = select.selectedIndex
     const value = select.value
     const text = select.options[indice].text
-    const tempValue = temp.value
-    /*if (value === 'C') {
-        console.log('ccc' + tempValue)
-    } else {
-        console.log('fff' + tempValue)
-    }*/
-    console.log(select, indice, value, text, tempValue)
+    const tempValue = Number(temp.value)
+    if (value === 'C') {
+        var f = 9 * tempValue / 5 + 32
+        res.innerHTML = `A temperatura de ${tempValue}ºC corresponde a ${f.toFixed(1)}ºF`
+    } else if (value === 'F') {
+        var c = 5 / 9 * (tempValue - 32)
+        res.innerHTML = `A temperatura em ${tempValue}ºF, corresponde a ${c.toFixed(1)}ºC`
+    }
+    
+    //console.log(select, indice, value, text, tempValue)
     
     
     /*let select = document.getElementById('escolha-temp')
