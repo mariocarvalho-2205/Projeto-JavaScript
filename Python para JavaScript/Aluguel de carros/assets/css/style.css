@@ -20,6 +20,7 @@ body {
 }
 
 .container {
+    border-radius: 10px;
     max-width: 640px;
     margin: 50px auto;
     background-color: antiquewhite;
@@ -28,12 +29,15 @@ body {
 }
 
 form input, form label, form button {
+    
+    border-radius: 10px;
     display: block;
     width: 100%;
     margin-bottom: 10px;
 }
 
 form input {
+    border: 0.5px solid;
     font-size: 24px;
     height: 50px;
     padding: 0 20px;
@@ -60,7 +64,13 @@ form button:hover {
 form button:active {
     background-color: beige;
 }
-
+#res {
+    border-radius: 10px;
+    margin-top: 30px;
+    background-color: brown;
+    color: bisque;
+    text-align: center;
+}
 footer {
     max-width: 250px;
     margin: 10px auto;

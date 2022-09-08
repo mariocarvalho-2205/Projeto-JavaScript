@@ -7,6 +7,6 @@ function calc () {
     let dia = d * 60
     let km = k * 0.15
     let total = dia + km
-    resultado.innerHTML = `O valor a ser pago por ${d} dias, e ${k} km rodados é R$ ${total.toFixed(2)}`
+    resultado.innerHTML = `O valor a ser pago por ${d} dias, e ${k} km rodados é <br />R$ ${total.toFixed(2)}`
 }
 
