@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe 019 - Escolha do Aluno</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <section class="container">
+        <h1>Exe 019 - Escolha do Aluno</h1>
+        <p>Vamos digitar nome para sortear:</p>
+        <form action="">
+            <label for="name-array">Digite o nome para ser sorteado:</label>
+            <input type="text" id="name-array">
+
+            <label for="btn-array"></label>
+            <button onclick="salvarArray()" type="button" id="btn-array">Salvar</button>
+
+            <label for="btn-sorted"></label>
+            <button onclick="sorteio()" type="button" id="btn-sorted">Sortear</button>
+        </form>
+        <div id="res">
+            <p>O resultado vem aqui!</p>
+        </div>
+    </section>
+    <footer>&copy; Mario Carvalho Developer</footer>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
