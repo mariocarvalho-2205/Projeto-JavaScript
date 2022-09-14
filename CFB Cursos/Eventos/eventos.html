@@ -12,9 +12,18 @@
             border: 1px solid;
             margin: 20px;
         }
+        #event2{
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            margin: 20px;
+        }
         button {
             margin: 20px;
             padding: 20px;
+        }
+        .test {
+            background-color: aqua;
         }
     </style>
 </head>
@@ -22,7 +31,20 @@
     <div id="event" onmouseover="mudaCor(this, '#f00')" onmouseout="mudaCor(this, '#fff')">
         
     </div>
-    <button onclick="hora()" ">clique em mim</button>
+
+    <div id="event2" onclick="mudaCor2(document.getElementById('event2'), 'orange')" onmouseout="mudaCor2(document.getElementById('event2'), 'white')">
+
+    </div>
+    <ul class="test">
+        <li >teste</li>
+        <li >teste</li>
+        <li >teste</li>
+    </ul>
+
+    <button onclick="cor(this, 'blue')" onmouseenter="mudaCor2(document.getElementById('event', 'event2',), 'pink')" onmouseout="cor(this, 'black')" >clique</button>
+    <button onclick="hora()" >clique em mim</button>
+
+    <button id="btn" onclick="mudou()" onmouseout="mudou2()">3 botao</button>
     <script src="Eventos.js"></script>
 </body>
 </html>
