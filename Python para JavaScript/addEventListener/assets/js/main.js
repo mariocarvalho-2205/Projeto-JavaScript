@@ -10,10 +10,16 @@ function ocultarEvento () {
     return novoEvento
 }*/
 
-let btnEnviar = document.getElementById('btn-enviar')
+//let btnEnviar = document.getElementById('btn-enviar')
 let btnCancel = document.getElementById('btn-cancel')
 
-var formNovoEvento = document.getElementById("form-novo-evento")
+var formNovoEvento = document.forms.namedItem("form-novo-evento")
+
+/*btnEnviar.addEventListener('click', (e) => {
+    //console.log(e)
+    e.target.parentElement.innerText = 'texto btn'
+    //e.target.previousElementSibling.innerText = 'troquei'   
+})*/
 
 function salvar (event) {
     let novoEvento = document.getElementById("input-teste-1").value
@@ -21,6 +27,10 @@ function salvar (event) {
     console.log(novoEvento)
 }
 
-formNovoEvento.addEventListener('submit', salvar)
+formNovoEvento.addEventListener('submit', event => {
+    event.preventDefault()
+    formNovoEvento.
+    console.log(event.target.cancel.name)
+})
 
 
