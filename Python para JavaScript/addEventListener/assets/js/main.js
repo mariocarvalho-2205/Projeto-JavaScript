@@ -24,13 +24,13 @@ var formNovoEvento = document.forms.namedItem("form-novo-evento")
 function salvar (event) {
     let novoEvento = document.getElementById("input-teste-1").value
     event.preventDefault()
-    console.log(novoEvento)
+    console.log(event.target)
 }
 
 formNovoEvento.addEventListener('submit', event => {
     event.preventDefault()
-    formNovoEvento.
-    console.log(event.target.cancel.name)
+   
+    console.log(event.target)
 })
 
 
