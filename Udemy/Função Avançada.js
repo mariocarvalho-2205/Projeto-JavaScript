@@ -99,3 +99,70 @@ const obj2 = {
     }
 }
 obj2.falei()
+
+/* Parametros : 
+function nome_funcao (parametro) {
+    logica 
+    console.log(argumento)
+}
+nome_function(argumento)
+*/
+
+// se quantidade de argumentos forem divergirem da quantidade de parametros, será retornado undefined
+function funcao (a, b, c, d, f) {
+    let tot = 0;
+    console.log(arguments[5])
+    for (let arg of arguments) {
+        tot += arg
+    }
+    console.log(tot, a, b, c, d, f)
+}
+funcao( 1, 2, 3)  // se quantidade de argumentos forem divergirem da quantidade de parametros, será retornado undefined
+// Caso o numero de parametros seja maior que o numero de argumentos, 
+// poderemos associar valores aos parametros caso o numero de argumentos tenha divergencia
+/*
+function parameter (a, b, c = 2, d = 5) { // dessa forma, caso nao tenha argumeto a função retornara o valor passado na criação
+
+}
+*/
+function param(a, b, c = 3, d = 5) {
+    console.log(a + b + c + d)
+}
+param(1, '', 2) // retorna 125
+param(1, 3, 2)  // retorna 11
+param(1, null, 10)
+
+// função com desestruturação de parametros como objeto
+function paramm ({nome, sobrenome, idade}) { // desestruturação de parametros como objeto
+    console.log(nome, sobrenome, idade)
+}
+paramm({nome: 'Mario', sobrenome: 'Carvalho', idade: 47})  // recebe objeto como parametro
+
+// função com desestruturação de parametros como array
+function array ([var1, var2, var3, var4]) {
+    console.log(var1, var2, var3, var4);
+}
+let arra = ['mario', 47, 'tenorio', 'teste']
+array(arra)
+array([100, 101, 200, 201])
+
+// utilizando rest operator
+function conta (operador, acumulador, ...numeros) {  // se for usar o res operator , ele tem que ser o ultimo parametro da função
+    acumulador = 0
+    for (let num of numeros) {
+        if ( operador === '+') acumulador += num   
+    }
+    console.log(acumulador)
+}
+conta('+', 0, 10, 20, 30)
+
+// function express
+const cont = function (operador, acumulador, ...numeros) {  // se for usar o res operator , ele tem que ser o ultimo parametro da função
+    acumulador = 0
+    for (let num of numeros) {
+        if ( operador === '+') acumulador += num   
+    }
+    console.log(acumulador)
+};
+cont("+", 0, 50, 100, 10);
+
