@@ -1,0 +1,3 @@
+/* Closures e bastante relacionado ao escopo lexico
+
+*/

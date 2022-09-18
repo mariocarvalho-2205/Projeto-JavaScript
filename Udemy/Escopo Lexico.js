@@ -3,7 +3,7 @@
 Ex:
 cosnt nome = "Mario"
 function pessoa () {
-    se a variavel for criada dentro do esxopo da função ira retornar o valor criado dentro do escopo
+    se a variavel for criada dentro do escopo da função ira retornar o valor criado dentro do escopo, ao inves de pegar o valor declarado fora
     -*-*-*-*-*-*-*
     console.log(nome)  // chamando a variavel criada fora do escopo da função 
     retornara // Mario
