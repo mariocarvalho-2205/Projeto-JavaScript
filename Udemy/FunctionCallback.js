@@ -69,20 +69,43 @@ function f3Callback() {
     console.log('Segundo Callback')
 }*/
 
-function myButton (text) {
+
+//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+// função para criar botao
+function myButton (text, callback) {
     const body = document.querySelector('body')
     const button = document.createElement('button')  // criando elemento
     button.textContent = text  // cria o texto no elemento criado
 
+    // callback inserido antes da criação do botão
+    // callback(parametro) nesse caso será passado o button
+    callback(button)
+
     body.insertAdjacentElement('beforeend', button)  // inserindo elemento no html
-    button.setAttribute('id', 'btn')  // adicionando atributo na tag
+    //button.setAttribute('id', 'btn')  // adicionando atributo na tag
+
+    return button
+    
+}
+// variavel recebe a função que tem um callback
+// OBS: para funcionar tem que utilizar parametro na função
+const enviar = myButton('enviar', (btn) => {
+    btn.style.backgroundColor = 'red'
+    btn.addEventListener('click', () => {
+        console.log('click')
+    })
+})
+const recolher = myButton('recolher', (btn) => {
+    btn.style.backgroundColor = 'green'
+})
 
 
-    /*const btn = document.getElementById('btn')
+
+
+
+
+/*const btn = document.getElementById('btn')
     const handleClick = () => {
         console.log('teste click agora')
     }
     btn.addEventListener('click', handleClick)  // addEvent chamando a função do click*/
-}
-myButton('envia')
-myButton('recolhe')
