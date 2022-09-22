@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada V3.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Formulario Modelo</h1>
+        <h2>Nome do Exercicio</h2>
+    </header>
+    <section>
+        <div>
+            <p>Tabuada V3.0</p>
+        </div>
+            <form>
+
+
+            <p>Escolha um operador!</p>
+            <fieldset class="select">
+                <label for="sum">Somar</label>
+                <input type="radio" name="sum" id="sum" value="sum" checked>
+
+                <label for="sub">Subtrair</label>
+                <input type="radio" name="sub" id="sub" value="sub">
+
+                <label for="mult">Multiplicar</label>
+                <input type="radio" name="mult" id="mult" value="mult">
+
+                <label for="divi">Dividir</label>
+                <input type="radio" name="divi" id="divi" value="divi">
+            </fieldset>
+            <p>Digite um numero: </p>
+            <div>
+                <input type="text" id="num">
+                <button id="btn">Calculo</button>
+            </div>
+            <div id="res">
+                <p>Resultado</p>
+            </div>
+            </form>
+    </section>
+    <footer>
+        <p>&copy; Mário Carvalho Developer</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
