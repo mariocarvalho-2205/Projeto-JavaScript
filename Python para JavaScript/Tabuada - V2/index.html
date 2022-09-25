@@ -13,22 +13,21 @@
     <section class="container">
         <h1>Exe: 10 - Tabuada Completa</h1>
         <p>Digite um numero para fazer sua tabuada</p>
-        <div>
+        
             <h4>Selecione um Operador</h4>
-            <select id="filter">
-                <option value="operador">Operador</option>
-                <option value="som">Somar</option>
-                <option value="sub">Subtrair</option>
-                <option value="mul">Multiplicar</option>
-                <option value="div">Dividir</option>
-            </select>
-        </div>
-        <form action="">
-            <label for="input-teste-1"></label>
-            <input type="text" id="num">
-            <input id="btn" type="button" value="Tabuada" onclick="tabuada()">
-        </form>
-
+            <form action="">
+                <select id="sinais" id="sinais">
+                    <option value="som">Somar</option>
+                    <option value="sub">Subtrair</option>
+                    <option value="mul">Multiplicar</option>
+                    <option value="div">Dividir</option>
+                </select>
+                <div>
+                    <label for="input-teste-1"></label>
+                    <input type="text" id="num">
+                    <input id="btn" type="submit" value="Enviar">
+                </div>
+            </form>
         <div id="res">
             <p></p>
         </div>

@@ -1,13 +1,28 @@
 
-const btn = document.getElementById('btn')
-const res = document.getElementById('res')
-const select = document.getElementsByClassName('select').value
+let radioBtns = document.querySelectorAll("input[name='sinais']")
+let res = document.getElementById('res')
 
-btn.addEventListener('click', (e) => {
+let findSelect = () => {
+    let selected = document.querySelector("input[name='sinais']:checked").value;
+    console.log(selected)
+}
+
+radioBtns.forEach(radioBtn => {
+    radioBtn.addEventListener("change", findSelect)
+})
+
+
+
+
+/*
+btn.addEventListener('submit', (e) => {
     e.preventDefault()
-    var num = Number(document.getElementById('num').value)
+     
     
-
+    //var num = Number(document.getElementById('num').value)
+    
+    
+    
     function soma () {
         for (let i = 1; i <= 10; i++) {
             res.innerHTML += `${num} + ${i} = ${num + i}<br />`
@@ -17,7 +32,7 @@ btn.addEventListener('click', (e) => {
     soma()
 
     
-}) 
+}) */
 
 
 
