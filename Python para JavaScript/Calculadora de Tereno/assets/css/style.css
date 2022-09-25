@@ -18,27 +18,34 @@ body {
     font-size: 1.3em;
     line-height: 1.5em;
 }
-
+p {
+    text-align: justify;
+}
 .container {
     max-width: 640px;
     margin: 50px auto;
     background-color: antiquewhite;
     padding: 20px;
-
+    border-radius: 15px;
+    box-shadow: -5px 5px 5px gray;
 }
 
 form input, form label, form button {
     display: block;
     width: 100%;
     margin-bottom: 10px;
+    border-radius: 15px;
 }
 
 form input {
     font-size: 24px;
     height: 50px;
     padding: 0 20px;
+    border: 1px solid gray;
 }
-
+.input-text {
+    text-align: left;
+}
 form input:focus {
     outline: 1px solid var(--primary-color);
     padding: 0 50px;
@@ -51,6 +58,7 @@ form button {
     font-weight: 700px;
     height: 50px;
     margin-top: 30px;
+    box-shadow: -5px 5px 5px gray;
 }
 
 form button:hover {
@@ -59,6 +67,14 @@ form button:hover {
 
 form button:active {
     background-color: beige;
+}
+
+#orca{
+    padding: 10px;
+    border-radius: 10px;
+}
+#res {
+    text-align: center;
 }
 
 footer {
