@@ -17,8 +17,14 @@ for (let i = 0; i < idade.length; i++) {
 }
 
 for (let i = array.length; i >= 0; i--) {
-    console.log(array[i])
+
+    if (array[i] % 2 === 0) {
+        console.log(`${array[i]} é par`);
+    } else {
+        console.log(`${array[i]} é impar`);
+    }
 }
+
 
 // Metodo reduce para somar array 
 let idade2 = [48, 49, 35];
@@ -40,3 +46,14 @@ for (index in objeto) {
 
 console.log(idade, totIdade)
 console.log(totalIdade2)
+
+const elementos = [
+  { tag: "p", texto: "um paragrafo" },
+  { tag: "div", texto: "uma div adicionada" },
+  { tag: "section", texto: "uma section" },
+  { tag: "footer", texto: "footer de rodape" },
+];
+
+for (let i = 0; i < elementos.length; i++) {
+  console.log(elementos[i].tag, elementos[i].texto);
+}
