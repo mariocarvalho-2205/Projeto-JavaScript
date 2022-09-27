@@ -27,6 +27,14 @@ body {
 
 }
 
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
 form input, form label, form button {
     display: block;
     width: 100%;
