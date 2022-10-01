@@ -1,4 +1,4 @@
-const num = '5'
+/*const num = '5'
 if (!isNaN(num)) { 
     console.log('é um numero') 
 } else {
@@ -25,4 +25,28 @@ console.log(cargo)
 
 for (let i = 0 ; i < array.length ; i++) {
     console.log(array[i])
+}*/
+
+const obj = [
+    {nome: 'mario', idade: 48, sexo: 'm'}, 
+    {nome: 'ady', idade: 49, sexo: 'f'},
+    {nome: 'joao', idade: 30, sexo: 'm'}
+]
+
+for (index in obj) {
+    console.log(obj[index].idade)
+}
+for (ind of obj) {
+    if (ind.idade > 40) {
+        console.log(`${ind.nome} e mais velho que 40 anos`)
+    } else if (ind.idade < 35) {
+        console.log(`${ind.nome} tem menos que 35 anos`)
+    }
+}
+for (ind in obj) {
+    if (obj[ind].sexo === 'm') {
+        console.log(`${obj[ind].nome} é masculino`)
+    } else {
+        console.log(`${obj[ind].nome} é feminino`)
+    }
 }
