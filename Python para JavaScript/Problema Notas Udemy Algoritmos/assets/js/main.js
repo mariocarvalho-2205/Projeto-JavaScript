@@ -10,10 +10,11 @@ form.addEventListener('submit', (e) => {
 })
 
 function media (n1, n2) {
+    let nFinal = n1 + n2
     let media = (n1 + n2) / 2
-    if (media > 6) {
-        return `Sua media foi ${media} - Aprovado`
+    if (media > 60) {
+        return `Sua nota final foi ${nFinal} - Aprovado`
     } else {
-        return `Sua media foi ${media} - Reprovado`
+        return `Sua nota final foi ${nFinal} - Reprovado`
     }
 }

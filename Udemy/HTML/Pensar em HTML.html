@@ -5,8 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            background-image: url(https://help.nflxext.com/396a2a39-8d34-4260-b07a-6391fe04ded5_what_is_netflix_2_en.png);
+            background-size: cover;
+        }
+        #heading {
+            background-color: rgba(0, 0, 0, 0.7);
+            background-position: top center;
+        }
+        #heading div{
+            width: 90%;
+            display: flex;
+            
+            justify-content: space-between;
+            margin: 0 auto;
+            
+        }
+        #heading .h1 {
+            padding: 10px ;
+            font-size: 26px;
+            text-transform: uppercase;
+            
+        }
+        
+        #heading a{
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
 </head>
 <body>
-    <div style="width: 120px; height: 120px; background: blue"></div>
+    <header id="heading">
+        <div>
+            <h1 class="h1">
+                <a href="#">MyFlix</a>
+            </h1>
+            <h2 class="h1">
+                <a href="#" type="submit">Login</a>
+            </h2>
+        </div>
+        
+    </header>
+    <!--<div style="width: 120px; height: 120px; background: blue"></div>-->
 </body>
 </html>
