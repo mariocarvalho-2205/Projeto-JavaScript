@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        #header {
+            background-color: green;
+            width: 400px;
+            height: 400px;
+            padding: 50px;
+            text-align: center;
+            
+        }
+        h1 {
+            background-color: white;
+            text-shadow: -1px 1px 1px gray;
+
+        }
+        .box-1, .box-2 {
+            
+            display: inline-block;
+            
+        }
+        .box-1 {
+            width: 100px;
+            height: 100px;
+            background-color: deeppink;
+            margin: 10px;
+            text-align: center;
+            border: 3px solid black;
+            border-radius: 100px;
+            box-shadow: -10px 10px 20px blue;
+            padding: 130px 15px 10px 60px;
+        }
+        .box-2 {
+            width: 100px;
+            height: 100px;
+            background-color: cyan;
+            padding: 20px;
+            border-left: 5px;
+            border-right: 10px;
+            border-bottom: 8px;
+            border-top: 3px;
+            border-style: solid;
+            border-top-color: blue;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <header id="header">
+            <h1 id="title-h1">Box Model</h1>
+            <div class="box-1">1</div>
+            <div class="box-2">2</div>
+        </header>
+    </section>
+</body>
+</html>
