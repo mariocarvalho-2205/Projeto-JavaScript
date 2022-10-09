@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta nhtml ame="viewport" content="width= , initial-scale=1.0">
+    <title>HTML Listas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .nav1 {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav1 a {            
+            padding: 0 50px;
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-transform: capitalize;
+            
+        }
+        .nav1 a:hover {
+            background-color: aqua;
+            color: black;
+            padding: 15px 50px;
+        }
+        .nav1 ul {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            background-color: black;
+            list-style: none;
+            
+        }
+        /* pode pegar o caminho completo
+        sintaxe:
+        body nav ul li a {
+
+        }
+        */
+    </style>
+</head>
+<body>
+    <!--
+        sitntaxe:
+        Unordered HTML List: ul
+        ul unordenad list - lista não ordenada
+            li list item - item da lista
+            <ul>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ul>
+        Ordered HTML List: ol
+        ol ordenaded list - lista ordenada
+            li list item - item da lista
+            <ol>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+            </ol>
+        HTML Description Lists: dl
+
+            <dl>
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+            </dl>        
+
+    -->
+    <nav class="nav1">
+        <ul>
+            <li><a href="3">home</a></li>
+            <li><a href="3">about</a></li>
+            <li><a href="3">products</a></li>
+        </ul>
+    </nav>
+    <nav class="nav2">
+        <ol type="a">
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ol>
+    </nav>
+
+    <nav class="nav3">
+        <dl>
+            <dt>text dt 1
+                <dd>item 1</dd>
+                <dd>item 2</dd>
+            </dt>
+            <dt>text dt 2
+                <dd>item 1</dd>
+                <dd>item 2</dd>
+            </dt>
+        </dl>
+    </nav>
+</body>
+</html>
