@@ -74,11 +74,13 @@
         }
 
         .nav3 {
-            display: flex;
+            max-width: 300px;
+            /*display: flex;
             align-items: center;
-            justify-content: left;
+            justify-content: left;*/
             background-color: blueviolet;
-            padding-right: 15px;
+
+            
         }
         .nav3 dl {
             padding: 10px;
@@ -86,19 +88,24 @@
             display: block;
             
         }
-        .nav3 dt {
-            background-color: aqua;
+        .nav3, dt, dd {
             padding: 5px;
-            margin: 10px;
+            margin: 8px;
+            border-radius: 10px;
+        }
+        .nav3 dt {
+
+            background-color: rgb(25, 0, 255);
+            color: #fff;
+            max-width: max-content;
+            
         }
         .nav3 dd {
-            
-            background-color: brown;   
-            display: flex;
-            justify-content: center;
-            
-            margin: 5px;
-            border-radius: 10px;
+            text-align: center;
+            color: #fff;
+            background-color: brown; 
+            max-width: 200px;
+            margin: 5px 0 5px 30px;
         }
         dd:hover {
             background-color: black;
@@ -144,7 +151,7 @@
         </ul>
     </nav>
     <nav class="nav2">
-        <ol type="a">
+        <ol type="i" start="5">
             <li><a href="">item 1</a></li>
             <li><a href="">item 2</a></li>
             <li><a href="">item 3</a></li>
@@ -154,12 +161,12 @@
     <nav class="nav3">
         <dl>
             <dt>text dt 1
-                <dd>item 1</dd>
-                <dd>item 2</dd>
+                <dd>item 1 bebida preta quente</dd>
+                <dd>item 2 bebida preta quente</dd>
             </dt>
             <dt>text dt 2
-                <dd>item 1</dd>
-                <dd>item 2</dd>
+                <dd>item 1 bebida preta quente</dd>
+                <dd>item 2 bebida preta quente</dd>
             </dt>
         </dl>
     </nav>
