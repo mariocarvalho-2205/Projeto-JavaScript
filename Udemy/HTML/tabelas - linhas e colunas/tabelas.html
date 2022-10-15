@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabelas HTML</title>
+    <style>
+        /*
+        table {
+            border-colapse: colapse;  remove os espaços entre as linhas e colunas
+        }
+        */
+        table {
+            border-collapse: collapse;
+            width: 800px;
+        }
+        table caption {
+            padding: 10px;
+            caption-side: top;
+            text-align: center;
+            font-style: italic;
+            background-color: aquamarine;
+        }
+
+        table td, table th {
+            border: 1px solid gray;
+            padding: 10px;
+            text-align: center;
+        }
+        table tfoot {
+            font-style: italic;
+            
+        }
+        .table-responsive {
+            max-width: 100%;
+            overflow-x: auto; /* overflow-x vai adicionar uma barra de rolagem latera na horizontal e o y na vertical*/
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <header>
+            <h1>Tabelas HTML</h1>
+            <p>Minha primeira tabela:</p>
+            <div class="table-responsive">
+            <table>
+                <!--thead e para a criação dos titulos da tabela -->
+                <thead>
+                    <caption>Titulo da Tabela</caption>
+                    <!-- tr criar o corpo da tabela -->
+                    <tr>
+                        <!-- th cria o titulo da tabela -->
+                        <th>Titulo 1</th>
+                        <th>Titulo 2</th>
+                        <th>Titulo 3</th>
+                    </tr>
+                </thead>
+                <!--tbody e para a criação dos conteudos da tabela -->
+                <tbody>
+                    <!-- tr criar o corpo da tabela -->
+                    <tr>
+                        <!-- td cria o titulo da tabela -->
+                        <td>linha 1 / coluna 1</td>
+                        <td>linha 1 / coluna 2</td>
+                        <td rowspan="2" style="color: red;">linha 1 / coluna 3</td>
+                    </tr>
+                    <tr>
+                        <td>linha 2 / coluna 1</td>
+                        <td>linha 2 / coluna 2</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>linha 3 / coluna 1</td>
+                        <td colspan="2" style="color: blue;">linha 3 / coluna 2</td>
+                    </tr>                    
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">rodape / col 2</td>
+
+                    </tr>                    
+                </tfoot>
+            </table>
+            </div>
+        </header>
+    </section>
+</body>
+
+</html>
