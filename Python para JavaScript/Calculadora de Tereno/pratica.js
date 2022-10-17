@@ -1,14 +1,13 @@
-function teste (a, b callback) {
-    const num1 = a
-    const num2 = b
-    const soma = num1 + num2
-
-    callback(soma)
+function mediaSoma (soma) {
+    const media = soma / 2
+    console.log(`o total é ${media}`)
 
 }
 
-teste(5., 10, (soma) => {
-    const media = soma / 2
+function som (a, b, callback) {
+    const soma = a + b
+    callback(soma)
+}
 
-})
+som(5, 18, mediaSoma)
 
