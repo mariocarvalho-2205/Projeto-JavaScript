@@ -9,16 +9,74 @@
 <body>
     <h1>Titulo principal</h1>  <!-- Elementos HTML -->
     <h2>Titulo Secundario</h2>
-    <p>Paragrafo</p>
-    <img src="" alt=""> <!-- Elementos vazios  -->
+    <p>Paragrafo<strong> em negrito </strong></p>
+    <p>texto em <b><em>italico</em></b></p>
+    <!-- Elementos vazios -> sao tags que não tem a tag de 
+        fechamento -->
+    
+    <img src="" alt=""> 
     <input type="text"> <!-- Elementos vazios  -->
 
-    <!-- 
+    <p><a href="" target="_blank">Saiba mais</a></p>
+
+    <!-- HTML - Hypertext Marckup Lnaguage
+        
+        Abertura de tag <tag>
+        fechamento da tag </tag>
+        
+        Atributos são informações extras e de configuração e identificação de uma tag
+        
+        Anatomia de um atributo -> nome="" separando os atributos com espaço
+        
+        Atributo booleano -> sao atributos que não precisam de conteudo 
+        retornam verdadeiro ou falso
+        
+        Aspas -> REcomendado usar aspas duplas se for usar aspa 
+                simples em palavras internas
+
         Atributos globais
-        class 
-        <div class="container" contenteditible="true"></div>
-        contenteditible="true"  -> permite editar o valor dentro do html    
-    -->
+        class -> usada para acessar varios elementos html no css ou 
+        javascript(grupo de elementos ou listas)
         <div class="container"></div>
+
+
+        <div class="container" contenteditible="true"></div>
+        contenteditible="true"  -> permite editar o valor dentro do html, 
+        pederndo a modificação ao salvar a pagina  
+        
+        data -> usado para extender 
+        <div class="container" data-id=""></div>
+
+        hidden -> usado para esconder uma tag no css ou javascript
+        <div class="container" hidden></div>
+
+        id usado para identificar um elemento html. OBS: So podemos usar um id por pagina(não repetir o nome)
+
+        style -> É usado para usar css na propria tag
+
+        tabindex -> é usado ára navegação tabular, determinando a 
+        ordem de seleção pela tecla tab
+
+        title -> Seve para definir o titulo de um elemento no html 
+        (quando passa o mouse em cima do elemento na pagina)
+        
+            =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+        
+        Aninhamento da tag
+        
+        Hierarquia -> sempre ficar atento a tag pai fica acima da tag filho
+        
+        Fluxo -> Cada tag é lida de acordo com sua ordem no 
+        codigo um depois do outro
+
+        posicionamento das tags -> existem tags que sao posicionadas
+         sem quebra de linha
+
+        Ex: p(tag pai) - em, br, b, i, strong são tags filhos e internos das tags
+
+        Tag de link
+
+    -->
+        
 </body>
 </html>
