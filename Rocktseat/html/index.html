@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +9,8 @@
 <body>
     <h1>Titulo principal</h1>  <!-- Elementos HTML -->
     <h2>Titulo Secundario</h2>
-    <p>Paragrafo<strong> em negrito </strong></p>
-    <p>texto em <b><em>italico</em></b></p>
+    <p>Paragrafo<strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;em negrito </strong></p>
+    <p>texto <br>em <b><em>italico</em></b></p>
     <!-- Elementos vazios -> sao tags que não tem a tag de 
         fechamento -->
     
@@ -29,7 +29,7 @@
         Anatomia de um atributo -> nome="" separando os atributos com espaço
         
         Atributo booleano -> sao atributos que não precisam de conteudo 
-        retornam verdadeiro ou falso
+        retornam verdadeiro ou falso (não precisa de conteudo)
         
         Aspas -> REcomendado usar aspas duplas se for usar aspa 
                 simples em palavras internas
@@ -76,7 +76,107 @@
 
         Tag de link
 
-    -->
+        Tags para texto 
+        e caracteres especiais e reservados 
+        &nbsp; -> espaço entre palavras
+        &lt; -> sinal de menor que <
+        &gt; -> sinal de maior que >
+        %amp; -> & comercial
+        &quot; -> haspas duplas
+        &apos; -> haspas simples
+
+
+        --=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+        Anatomia do documento
+
+        Doctype
+        meta
+        title
+
+            -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+        semantica - quanto mais semantica estiver a pagian, ela será melhor
+        hankeada nos sites de pesquisa
+
+        Caaabeçalhos e paragrafos
+        h1 - Titulo principal de preferencia se usa um por pagina
+        h2 - Subtitulos 
+        h3 a h6 - topicos ou subtopicos
+        nao e necessario ter mais de 3 tipos de h na pagina
+
+        a -  usado para link
+
+        listas nao ordenadas
+        ul
+            li
         
+        lista ordenada
+        ol
+            li
+
+        citações
+        usamos a tag blockquote
+    -->
+    <h2>Lista</h2>
+    <ul>
+        <li>5 kg arroz</li>
+        <li>3 kg tomate</li>
+        <li>1 kg farinha</li>
+    </ul>
+        
+    <ol>
+        <li>5 kg arroz</li>
+        <li>3 kg tomate</li>
+        <li>1 kg farinha</li>
+    </ol>
+    
+    <!--tag para citação 
+    -->
+    <blockquote cite="https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html">
+        <p>link <strong>para o site citado <code>&lt;blockquote&gt;</code>
+        com <em>enfase no texto</em> em negrito, italico</strong> e normal</p>
+    </blockquote>
+    <p>De acordo com <a href="https://pt.stackoverflow.com/questions/376806/preciso-de-ajudar-para-calcular-o-fatorial-em-ordem-crescente-e-decrescente-em-u">
+        <cite>Pagina stackoverflow</cite></a>
+    </p>
+    <!--tag q e usado para citações curtas-->
+    <q cite=""></q>
+
+    <!-- usando abreviações-->
+    <p>usamos <abbr title="Hyper Text Marckup">HTML</abbr> 
+        para estruturar documentos web</p>
+
+    <!-- taga Address  Usado para clocar detalhes de contatos do autor da pagina-->
+    <address>
+        <p>Mario Carvalho<br>
+            <strong>Salvador - BA</strong>
+        </p>
+    </address>
+
+    <!--Lista de descrição-->
+    <h2>Description List</h2>
+    <dl>
+        <dt>Hypertext</dt>
+        <dd>Linguagem de Marcação</dd>
+        <dt>Hypertext</dt>
+        <dd>Linguagem de Marcação</dd>
+        <dt>Hypertext</dt>
+        <dd>Linguagem de Marcação</dd>
+    </dl>
+
+    <!--Representando codigo na pagina-->
+    <pre>
+        <code>
+            console.log()
+            teste.addEventListener('click')
+        </code>
+    </pre>
+
+    <!--
+        Elementos genericos
+
+        <div> usado para separar blocos
+        <span> para separar linhas
+    -->
 </body>
 </html>
