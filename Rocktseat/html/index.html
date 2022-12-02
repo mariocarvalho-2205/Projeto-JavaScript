@@ -4,7 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mario Carvalho">
+    <meta name="description" content="Estudo HTML">
+    <meta name="robots" content="nofollow">
+
+
     <title>Rocktseat</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!--
+        tag <meta> - usada para configuração da pagina
+        charset="UTF-8" -> Usada para leitor de caracteres
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            Usada para portabilidade de dispositivos mobiles
+            viewport é toda a parte branca da pagina
+        
+        favicon basico
+            <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+            usado para inserir icones na pagina
+
+
+        Metas importantes para otimização no motor de busca da pagina
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="author" content="Mario Carvalho"> usada para definir o nome do autor da pagina
+
+        <meta name="description" content="Estudo HTML">  Essa tag e usada para mostrar ao navegador
+        quando a pagina for pesquisada, qual o conteudo sera mostrado
+
+        <meta name="robots" content="nofollow, noindex">  usada para dizer ao robos do google faça
+        folow ou nofolow - para nao seguir os links da pagina
+        index ou noindex - para não indexar a pagins
+
+        metas especiais para redes sociais // Open Graph: facebook
+
+        meta porperty="og:image" content="url imagem"
+
+        meta porperty="og:description" content="texto para ser mostrado ao compartilhar no facebook"
+
+        meta property="og:title" content="um site"
+
+        twitter
+        meta name="twitter:title" content="titulo pagina"
+
+    -->
+
 </head>
 <body>
     <h1>Titulo principal</h1>  <!-- Elementos HTML -->
@@ -218,6 +264,18 @@
     relativo -> relativo a pagina aberta no momento
     apontara para lugares diferentes
 
+    tabelas
+    usamos a tag table
+    
+    caption e usado para titulo
+    para linhas usamos a tag <tr> table row
+    para cabeçalho usamos <th> nas colunas
+    para as linhas usa <td>
+
+        atributos das tabelas
+    
+    
+
 -->
 
     <ul>
@@ -240,6 +298,53 @@
 
     <a href=""></a>
     <a href=""></a>
+
+    <table>
+        <caption><strong>produzidos x Vendidos por Loja</strong></caption>
+
+        <!-- Tecnica usada para estilizar a coluna -->
+
+        <colgroup>
+            <col>
+            <col span="2" style="background-color: red; ">  <!-- span tem a mesma função que o rowspan -->
+            <col span="2" style="background-color: blue; ">
+            
+        
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th rowspan="2"></th>
+                <th colspan="2" scope="colgroup">Americanas</th>  <!-- o scopo tem a ver com o agrupamento de colunas-->
+                <th colspan="2" scope="colgroup">Riachuelo</th>
+            </tr>
+            <tr>
+                <th scope="col">Produzidos</th>
+                <th scope="col">Vendidos</th>
+                <th scope="col">Produzidos</th>
+                <th scope="col">Vendidos</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th scope="row">Camisa</th>  <!--coluna 1-->
+                <td>45</td>  <!--coluna 2-->
+                <td>35</td>  <!--coluna 3-->
+                <td>74</td>  <!--coluna 4-->
+                <td>50</td>  <!--coluna 5-->
+                
+            </tr>
+            <tr>                
+                <th scope="row">Bermuda</th>  <!--coluna 1-->
+                <td>25</td>  <!--coluna 2-->
+                <td>15</td>  <!--coluna 3-->
+                <td>39</td>  <!--coluna 4-->
+                <td>15</td>  <!--coluna 5-->
+            </tr>
+        </tbody>
+        
+    </table>
 
 </body>
 </html>
