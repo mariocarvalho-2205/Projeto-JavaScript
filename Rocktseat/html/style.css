@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nerko+One&family=Titillium+Web&display=swap');
+
 /*
 Anatomia
 
@@ -5,6 +7,186 @@ selector {
     declaration é feita por propriedade e valor
     properties: property value;
 }
+Selectors
+    conecta um elemento HTML com o CSS
 
+Tipos
+    global -> * 
+    Element / Type selector -> h1, h2, p, div
+    ID selector -> #box, #container
+    Class selector -> .red, .m-4 
+    Attribute selector, pseudo-class, pseudo-element, e outros
+
+Agrupando propriedades para varios seletores
+    h1, h2, p {
+
+    }
+
+Box-model
+    caixas
+        quase tudo sao caixas do css
+        posicionamento, tamanhos, espaçamentos, bordas, cores
+        caixas podem ficar uma do lado da outra
+
+
+Adicionando CSS -> Existem 4 formas de se adicionar css
+
+    inline -> é adicionado o atributo style na tag
+        <h1 style="color: black">Titulo</h1>
+
+    <style> -> é adicionado uma tag style na head do HTML
+
+    link -> E utilizada a tag link:css onde temos atributos rel="com o typo do arquivo stylesheet" href="endereço do arquivo" 
+    Ex: <style rel="stylesheet" href="style.css">
+
+    @import -> Usado tambem para importar um arquivo css externo
+        A importação e inserida no inicio arquivo css, e não no arquivo HTML como a tag style
+        tambem usada para importar fontes, opu algum outro tipo externo
+        OBS: Para fazer a importação de fontes, e recomendado fazer usando o link
+            deixa o carregamento da pagina mais rapido
+
+Hierarquia de força na origem, seguindo a ideia da cascata
+    terá valor o que for lido por ultimo
+    1 - inline
+    2 - tag style no HTMl
+    3 - Arquivo externo
+
+
+Cascata - > faz a leitura do inicio para o fim
+
+Especificidade:
+        É um cálculo matemático,
+        onde cada tipo de seletor e origem do estilo possuem valores a serem considerados. 
+        
+        Os mais fracos são universal selector, combinators e negation pseudo-class,
+        com o valor de 0. Em seguida, com valor de 1, são os element type selector e pseudo-elements. 
+        
+        Também temos os classes e attribute selectors, com valor de 10, ou seja,
+        são mais fortes que os anteriores. 
+        
+        O segundo mais forte, ID selector, com um valor de 100,
+        vence todos os selectors anteriores. 
+        
+        Por fim, temos o inline, com o valor 1000, quaisquer desses selectors anteriormente citado
+
+    Grau de força
+    0 - Universal selector, combinators e negation pseudo-class (:not())
+    1 - Element type selector e pseudo-elements (::before, ::after)
+    10 - Classes e attribute selectors ([type="radio"])
+    100 - ID Selector
+    1000 - Inline
+
+    Regra !important -> Evitar o uso dessa regra
+    Não é considerada uma boa pratica
+    e quebra o fluxo natural da cascata
+
+Resumo: 
+    A escolha do browser de qual regra aplicar, caso haja muitas regras para o mesmo elemento.
+    * seu estilho é lido de cima para baixo.
+    É levado em consideração 3 fatores
+        1 - Origem do estilo
+        2 - Especificidade
+        3 - Importancia
+    Origem do Estilo:
+        inline > tag style > tag link
+
+    Grau de força 
+    0 - Universal selector, combinators e negation pseudo-class (:not()) 
+    1 - Element type selector e pseudo-elements (::before, ::after) 
+    10 - Classes e attribute selectors ([type="radio"]) 
+    100 - ID Selector 1000 - Inline
+
+At-rules
+    Está relacionado ao comportamento do CSS
+    Começa com o sinal de @ seguido do identificador e valor
+
+    Exemplos
+        @import  // inclui um css externo  com ou sem url()
+        @media  // regras condicionais para dispositivos
+            @media (min-width: 500px) {
+                regras
+            }
+        @font-face  // fontes externas
+            @font-face {
+                regras
+            }
+        @keyframes  // Animation
+            @keyframes nameofanimation {
+                regras
+            }
+
+Shorthand -> É basicamente a ideia de junção de propriedades,
+para que fiquem de forma resumida e legível. 
+Abaixo um exemplo de propriedades com e sem o shorthand: {
+        background properties 
+    background-color: #000;
+    background-image: url(images/bg.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+
+       background shorthand
+    background: #000 url(images/bg.gif) no-repeat left top;
+
+     font properties 
+    font-style: italic;
+    font-weight: bold;
+    font-size: .8em;
+    line-height: 1.2;
+    font-family: Arial, sans-serif;
+
+     font shorthand 
+    font: bold italic .8em/1.2 Arial, sans-serif;
+}
+
+Algumas das características do shorthand: 
+
+Não irá considerar propriedades anteriores, ou seja, caso faça um shorthand, apenas ele será considerado, quaisquer propriedades anteriores serão substituídas pelas do shorthand. 
+
+Os valores que não forem especificados irão assumir o valor padrão. 
+
+Por fim, geralmente, a ordem descrita não importa, mas, caso haja muitas propriedades com valores semelhantes, poderemos encontrar problemas.
+
+funçoes no css - > é usada nos parametros para efetuar calculos
+
+Ex: 
+h1 {
+    width: calc(100% - 10px)  // irá calcular o valor de 100% menos 10px
+}
+
+devtools -> 
+
+Vendor prefixes Descrição São coisas que permitem que browsers adiocionem features a fim de colocar em uso alguma novidade que vemos no CSS. 
+Exemplos: 
+p {
+    -webkit-background-clip: text;  -  Chrome, Safari, iOS e Android
+    -moz-background-clip: text;  -  Mozilla (Firefox)
+    -ms-background-clip: text;  -  Internet Explorer ou Edge
+    -o-background-clip: text;  -  Opera 
+}
+    Você também pode consultar se a feature pode ser utilizada através dos sites:
+
+        https: //ireade.github.io/which-vendor-prefix
+
+        https: //caniuse.com
+
+        Discover - Todos os direitos reservados
 */
+
+h1 {
+    border: 1px solid black;
+    text-align: center;
+    width: 300px;
+    margin-left: 500px;
+    background-color: aquamarine;
+}
+p strong, #p-1 em {
+    color: royalblue;
+    font-family: 'Nerko One', cursive;
+}
+
+#p-1 em {
+    color: green;
+    font-family: 'Nerko One', cursive;
+}
+
 
