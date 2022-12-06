@@ -329,5 +329,49 @@ Usar cor e imagem juntas
 Usar cor gradiente
 
 
+Background-origin-clip 
+Descrição A propriedade background-origin é quem define o ponto de origem de uma imagem específica.
 
+Principais valores 
+background-origin: border-box;
+background-origin: padding-box;
+background-origin: content-box;
+
+O background-clip define se a cor ou imagem do background iniciam debaixo de sua área de borda, preenchimento ou conteúdo.
+ 
+Principais valores 
+background-clip: border-box;
+background-clip: padding-box;
+background-clip: content-box;
+background-clip: text;
+
+Background-attachment Descrição A propriedade background-attachment determina se a posição da imagem vai ser fixa ou se vai rolar junto com o conteúdo.
+Principais valores 
+background-attachment: scroll;
+background-attachment: fixed;
+background-attachment: local;
+
+shorthand sintase
+background: color image repeat position / size origin(se deixar uma valor aplica-se a prigin e clip) clip attachment
+
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+Gradient Descrição 
+linear-gradient() é a função usada para criar gradient linear com o CSS. 
+background: linear-gradient(45deg, red, yellow) 
+radial-gradient() é a função usada para criar gradient circular. 
+background: radial-gradient(green, red, yellow) 
+background: radial-gradient(rgba(0, 200,000, .5), rgba(255, 0, 0, 0.2))
+Múltiplos valores 
+Descrição Podemos aplicar múltiplos backgrounds em um mesmo elemento,
+podendo ter cor sólida,
+gradiente ou imagem. Para isso basta separar por vírgula cada background.
 */
+header {
+    border: 7px dashed red;
+    height: 150px;
+    background-size: contain;
+    background-image: url(./photo_2022-07-09_21-12-37.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: padding-box  ;
+}
