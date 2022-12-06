@@ -176,8 +176,24 @@ h1 {
     border: 1px solid black;
     text-align: center;
     width: 300px;
-    margin-left: 500px;
+    margin: 15px 500px 50px;
     background-color: aquamarine;
+    padding: 30px 50px;
+    
+}
+
+h2 {
+    width: 250px;
+
+    border: 1px solid black;
+    text-align: center;
+    width: 150px;
+    padding: 30px 50px;
+    
+}
+
+h1, h2 {
+    display: block;
 }
 p strong, #p-1 em {
     color: royalblue;
@@ -189,4 +205,18 @@ p strong, #p-1 em {
     font-family: 'Nerko One', cursive;
 }
 
+/* box-sizing
+Caracteristicas block {
+    ocupa toda a lina, colocando o proximo elemento abaixo desse
+    width e height são respeitados
+    paddin, margin , border, irao funcionar normalmente
+}
 
+Caracteristicas sizing {
+    elemento ao lado do outro
+    width e height não funiconam
+    somente valores horizontais de margin, padding border
+}
+
+
+*/
