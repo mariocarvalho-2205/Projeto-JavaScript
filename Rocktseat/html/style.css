@@ -175,16 +175,16 @@ p {
 h1 {
     border: 1px solid black;
     text-align: center;
-    width: 300px;
+    width: 320px;
     margin: 15px 500px 50px;
     background-color: aquamarine;
-    padding: 30px 50px;
-    
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 h2 {
     width: 250px;
-
+    
     border: 1px solid black;
     text-align: center;
     width: 150px;
@@ -194,6 +194,7 @@ h2 {
 
 h1, h2 {
     display: block;
+    
 }
 p strong, #p-1 em {
     color: royalblue;
@@ -205,18 +206,128 @@ p strong, #p-1 em {
     font-family: 'Nerko One', cursive;
 }
 
-/* box-sizing
+/* 
+=-==-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+box-sizing
 Caracteristicas block {
     ocupa toda a lina, colocando o proximo elemento abaixo desse
     width e height são respeitados
     paddin, margin , border, irao funcionar normalmente
 }
 
-Caracteristicas sizing {
+Como será calculado o tamanho total da caixa?
+- content-box | border-box
+O tamanho e referente ao content-box - ao conteudo da caixa
+Sendo assim, tudo que for adicionado ao padding, será somado ao tamanho do content-box(conteudo da caixa)
+
+Para utilizarmos o tamanho real da caixa, utilizamos o 
+box-sizing: border-box;
+
+uma boa pratica é colocar o tamanho do box no reset do css
+* {
+    box-sizing: border-box;
+}
+```
+
+Caracteristicas inline {
     elemento ao lado do outro
     width e height não funiconam
-    somente valores horizontais de margin, padding border
+    somente valores horizontais de margin, padding border irao funcionar
 }
+=-==-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// margim
+- margin-top | margin-right | margin-bottom | margin-left
+- values: `<length>` em rem px | `<percetangem>` | auto
+// margin collapsing
+OBS: Cuidado com o margin collapsing (top se ajunda ao bottom)
+OBS 2 : A regra acima não se aplica quando são inline(elas somam uma com a outra)
+Ex: As margens não se soma uma com a outra, e prevalecerá o que tiver maior tamanho 
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-
+ - Shorthand
+ 4 lados: margin: top | right | bottom | left
+ 3 lados: margin: top | laterais | bottom
+ 2 lados: margin: top e bottom | laterais
+ 1 lado: margin: todos
+
+ margin auto / alinha o elemento ao meio da pagina
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==
+São as bordas da caixa Documentação do MDN: https: //developer.mozilla.org/en-US/docs/Web/CSS/border
+
+value: <border-style>| <border-width>| <border-color>
+style: solid | dotted | dashed | double | groove | ridge | inset | outset 
+width: <length>color: <color>
+
+div {
+     shorthand 
+    border-top: solid 2px;  // top | right | bottom | left 
+
+     style 
+    border: solid;
+
+     width <length> | style 
+    border: 2px dotted;
+
+     style | color 
+    border: outset #f33;
+
+     width | style | color
+    border: medium dashed green;
+
+}
+
+E o outline? 
+O outline é muito semelhante ao border,
+mas difere em 4 sentidos: 
+
+1 - Não modifica o tamanho da caixa, pois não é parte do Box Model
+2 - Poderá ser diferente de retangular 
+3 - Não permite ajuste individuais 
+4 - Mais usado pelo user agent para acessibilidade
+
+=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+cores:
+
+Tipos
+1 - background-color (para caixas)
+2 - color (para textos)
+3 - border-color (para bordas caixar)
+4 - outros
+
+Valores
+1 - palavra-chave (blue, transparent)
+2 - hexadecimal (#326544)   // red, green, blue  alfa(transparencia)
+3 - funções: rgb, rgba, hsl, hsla
+    rgba(255, 0, 0, .5)  // red, green, blue, transparencia
+    hsla(30, 100%, 50%, 0.6)  // hue, saturation, lumiance, transparencia
+
+Valores globais
+    color: inherit // herança, herdar a cor do elemnento anterior
+    color: initial  // volta a cor inicial
+    color: unset  // pega a cor do contexto que o elemento esta
+
+        https: //developer.mozilla.org/en-US/docs/Web/CSS/color_value
+        https: //convertacolor.com/
+
+=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==
+Background
+
+- Define um fundo para o nosso elemento
+- Sua area de atuação é a caixa toda
+- por padrao, é transparente
+
+Exe: 
+Usar cores solidas 
+Usar imagens 
+Controlar 
+    a posição das imagens,
+    se elas se repetem ou não
+    o tamanho delas na caixa 
+Usar cor e imagem juntas 
+Usar cor gradiente
+
 
 
 */
