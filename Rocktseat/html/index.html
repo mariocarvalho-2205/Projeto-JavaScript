@@ -353,6 +353,59 @@
         </tbody>
         
     </table>
+    <!-- 
+        Tag video
+    atributos
+
+    - src -> endereço onde está localizado o arquivo
+    - controls -> habilita os controles no browser
+    - se não funcionar?
+        - fallback content
+    Tag source - colocada dentro da tag video - alternativa
+    - source é uma alternativa para funcionar em alguns browsers
+        - src -> endereço onde está o arquivo
+        - type -> descrever p typo de video tyoe="video/mp4"
+        - autoplay -> inicia o video automaticamento quando a pagina e carregada
+        - loop -> toca o video novamente quando chegar no final video 
+        - preload - começa a fazer a leitura do video automatizada
+        - muted -> muta o som do video quando a pagina e carregada
+        - poster="endereço da imagem" -> mostra uma imagem antes do video ser tocado
+        obs: em alguns browsers o autoplay so funciona se tiver mutado
+    podemos usar as tags de largura e altura,
+
+    Tag audio -> aceita os atributos de video - porem tem que ir testando em cada browser
+
+    sintaxe
+        <audio controls>
+            <source src="endereço do arquivo" type="audio/mp3">
+
+    no javascript conseguimos muitos recursos adicionais
+
+
+    Tag iframe -> 
+
+    Tag figure - é usada para deixaar a imagem semantica
+    podendo utilizar a tag a para linjar um site e a tag figcaption para colocar texto na imagem
+
+
+
+    
+    -->
+    <video width="250" height="150" src="./2022-06-27 22-38-14.mkv" controls autoplay></video>
+
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/gOMK_xruAqc" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    <a href="https://app.rocketseat.com.br/discover/course/posso-ver-e-ouvir-o-html/images/praticando-images" target="_blank">
+        <img src="./Captura de tela 2022-10-11 223806.png" alt="mapa da area acs" title="area de cobertura acs" width="500px">
+    </a>
+    
 
 </body>
 </html>
