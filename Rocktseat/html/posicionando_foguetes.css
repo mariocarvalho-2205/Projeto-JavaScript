@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.box1 {
+    background-color: red ;
+    position: relative;
+    left: 300px;
+    top: 100px;
+}
+
+.box2 {
+    background-color: green ;
+    position: absolute;
+    top: 50px;
+}
+
+.box3 {
+    background-color: blue;
+}
+/*
+page layouts
+
+- tables
+- floats e clear
+- frameworks e grid systems
+- flexbos
+- grid
+
+posicionamentos
+
+controlar onde, na pagina, o elemento irá ficar,
+alterando o fluxo dos elementos.
+
+-name: position;
+value: static | relative | absolute | fixed
+
+por padra vem com static
+
+Posicionamento relative
+top, right, left, bottom, z-index
+*/
