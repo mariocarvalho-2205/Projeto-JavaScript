@@ -405,7 +405,44 @@
     <a href="https://app.rocketseat.com.br/discover/course/posso-ver-e-ouvir-o-html/images/praticando-images" target="_blank">
         <img src="./Captura de tela 2022-10-11 223806.png" alt="mapa da area acs" title="area de cobertura acs" width="500px">
     </a>
-    
+    <!-- 
+        tag figure e figcaption
+        semantico
+    -->
+    <a href="https://google.com" target="_blank">
+        <figure>
+            <img 
+                src="./car.jpg" 
+                alt="carro"
+                title="um carro legal">
+                <figcaption>Coloca um titulo na imagem</figcaption>
+        </figure>
+    </a>
+    <!--
+        tag svg
+        é uma marcação, estilo html, mas não é para textos, e sim para fazer imagens.
+        Possuimos elementos para gerar formas
 
+        Beneficios:
+        - mais leve
+        - mais detalhada
+         - maior acessibilidade
+         - pode ser editada via css ou atributos
+
+        desvantagens:
+        - pode ser mais complicado de trabalhar
+        - quanto mais complexa a imagem, mais trabalho para o navegador
+        - navegadores mais antigos não possuem suporte a essa tag
+
+        para fografias, ainda prefira usar imagens rasterizadas.
+
+    -->
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
+    </svg>
+
+    <svg width="100" height="100">
+        <rect width="40" height="40" fill="orange" stroke="purple" stroke-width="5"></>
+    </svg>
 </body>
 </html>
