@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+h1 {
+    color: #3db36b;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+
+#box1 {
+    background: linear-gradient(45deg, #3db36b, #0000ff, #000000, red);
+
+
+
+}
+#box2 {
+    background-color: #08f17d;
+}
+#box3 {
+    background-color: #1292ae;
+}
