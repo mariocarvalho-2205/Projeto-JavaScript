@@ -7,19 +7,20 @@
     width: 100px;
     height: 100px;
     border: 1px solid black;
+    margin: 0px;
 }
 
 .box1 {
     background-color: red ;
-    position: relative;
-    left: 300px;
+    position: fixed;
+    left: 20px;
     top: 100px;
 }
 
 .box2 {
     background-color: green ;
-    position: absolute;
-    top: 50px;
+
+
 }
 
 .box3 {
@@ -42,8 +43,47 @@ alterando o fluxo dos elementos.
 -name: position;
 value: static | relative | absolute | fixed
 
-por padra vem com static
+por padrao vem com static // ficando um abaixo do outro
 
-Posicionamento relative
+Relative // é referente a todos os outros elementos, ou seja, so e mexido o elemento, os ooutros ficam estaticos
+
+propriedades do position 
 top, right, left, bottom, z-index
+
+Absolute // Seu posicionamento e referente a pagina inteira ou se tiver uma tag pai como relative, ou seja os outros elementos ocupam a posição vazia, trabalhando por baixo da camada
+
+Fised // Seu posicionamento fica fixo na pagina ou com relação a tag pai, permitindo que os outros elementos se movimentem por baixo (traz) do elemento fixado
+
+Propriedade z-index // se refere ao posicionamento da camada
+trazendo para frente ou para traz dos outros elementos
+*/
+
+.box4 {
+    background-color: greenyellow;
+    position: absolute;
+    left: 200px;
+    top: 5px;
+    z-index: 3;
+}
+
+.box5 {
+    background-color:purple;
+    position: absolute;
+    left: 210px;
+    top: 10px;
+    z-index: 2;
+}
+
+.box6 {
+    background-color: pink;
+    position: absolute;
+    left: 215px;
+    top: 15px;
+    z-index: 1;
+}
+
+/*
+Flexbox  // direcionamento 
+
+
 */
