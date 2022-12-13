@@ -1,0 +1,164 @@
+<!--Estrutura do documentl html-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!--Configuração da pagina estrutura-->
+    <!-- Tag meta (metadados) da pagina e serve para configurar dados da pagina
+            charset configura o idioma de busca da pagina
+            name="viewport = configura a pagina para ser visualizada em qualquer dispositivo"-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomia do Documento</title>
+    <!--Title na parte <head> serve para colocar titulo na aba do site-->
+
+
+</head>
+
+<body>
+    <!--Configuração da estrutura do corpo do site, parte visual-->
+
+
+
+    <!--Tags de titulos-->
+    <h1>testes</h1>
+    <h2>testes2</h2>
+
+    <!--Elementos Vazios-->
+    <!--Tag para imagens-->
+    <img src="nome da imagem com .extensao" alt="">
+    <!--Atributos-->
+    <!--Tag para entrada de texto-->
+    <input type="texto">
+
+    <!--Atributos boleanos-->
+    <input type="texto3" disabled>
+
+    <!--Aspas 
+    duplas oara inicio e final de expressao
+    Simples ser usada apenas nas palavras que necessitam de Aspas
+    sempre dentro das aspas duplas-->
+
+    <!--Tag para links - Atributos-->
+    <a href="link do site" title="Isn't">nome do link para teste</a>
+    <a href="http://glass.google.com" target="_blank">Project Glass</a>
+    <!--Para criar um link em HTML5, basta criar uma âncora utilizando a tag A.
+    O parâmetro Hypertext Reference, ou HREF. 
+    Ele cria uma referência hipertexto para outras páginas.
+    O parâmetro TARGET da tag A vai permitir indicar em qual janela o conteúdo será aberto. 
+    O valor _blank vai permitir abrir em uma janela em branco, 
+    enquanto o parâmetro _self vai abrir o conteúdo na janela atual.-->
+
+    <!--Atributos Globais-->
+    <!--Atributos globais são atributos aplicáveis em todas as Tags, 
+    sendo as principais:
+    class — além de classificar as Tags, é usada para aplicar 
+    estilo css e também para acessar com o Java Script.
+    <div class="conteúdo">
+    </div>
+
+    contenteditable — usado para editar o conteúdo da página, 
+    porém não é mantido após salvar.
+    <div contentedtable="true">
+    </div>
+    
+    data-* — usado para expandir os tipos de atributos que 
+    podemos usar para fazer mais tarde lógica no Java Script ,
+    utilizado em css também.
+    <div data-qualquercoisaaqui="">
+    </div>
+    Escrito com "-" ou tudo junto.
+    
+    hidden — usado para esconder uma Tag.
+    <div class="carrinho" hidden>
+        conteúdo
+    </div>
+    
+    id — usado apenas 1 por Tag para identificação, 
+    para também mais tarde usar no Java Script e css.
+    <div id="texto">
+        conteúdo
+    </div>
+    
+    <div id="texto2">
+        conteúdo
+    </div>
+    
+    style — aplica a estilização na Tag, normalmente não se usa "style" 
+    dentro da Tag, mas sim em arquivos externos.
+    <div style="color: red">
+    
+    tabindex — usado para ordenar o Tab na página.
+        <div tabindex="3">
+        </div>
+    
+        <div tabindex="1">
+        </div>
+    
+        <div tabindex="2">
+        </div>
+        
+    title — serve para definir um título para a Tag, 
+    quando colocamos o mouse descansando em cima do conteúdo da página.
+
+    Se você quiser estudar outros Atributos Globais vá ao site https://developer.mozilla.org/pt-BR/-->
+
+    <!--class — além de classificar as Tags, é usada para aplicar estilo css e também para acessar com o Java Script.-->
+    <!--contenteditable — usado para editar o conteúdo da página, porém não é mantido após salvar.-->
+
+    <div class="carrinho" contenteditable="true">
+        testando as classes
+    </div>
+    <div class="carrinho">
+        testando as classes
+    </div>
+
+    <div class="carrinho2">
+        testando as classes
+    </div>
+    <p>
+        Usada <em>para</em> <strong>paragrafos</strong> e tambem para <br />quebra de linha e outra para quebrar
+        pala&nbsp;vras grandes como anti&shy;constitucionalissimamen&shy;te
+        <!--
+        <em> usada para dar enfase ao texto (italico)
+        <br> usada para quebrar linha dentro do paragrafo
+        <wbr> usada para quebrar palavras compostas (que tenham hifen)
+        &nbsp; usada para dar espeços entre palavras (caracteres)
+        &shy; usada para quebrar palavra e usar hifen
+
+    -->
+    </p>
+    <!--Estaremos vendo nesta aula como navegar pelos diretórios.-->
+
+    <a href="hyperlinks.html">arquivo na pasta anterior</a>
+    <br>
+    <a href="./urls-caminhos.html">arquivo no diretório raiz</a>
+    <br>
+    <a href="urls-caminhos.html">arquivo na mesma pasta</a>
+    <br>
+    <a href="..outros/conteudo-a-element.html">
+        <!--arquivo na pasta outros, que está na pasta anterior</a>
+Para o mesmo diretório, local, raiz apenas colocamos o nome do arquivo no href.
+
+Para entrar em um diretório colocamos o nome do diretório e /, como no exemplo "outros/conteudo-a-element.html"
+
+Para sair de um diretório colocamos ../ ,ele sairá do diretório, semelhante a sair de uma caixa que está dentro de
+outro.
+
+E por fim o diretório raiz especificamente, usamos apenas ./ , o próprio VSCode irá completar.
+
+Caso você coloque um arquivo que não existe ou mesmo está no diretório errado, vai dar erro de não ter encontrado o
+arquivo.
+
+No caminho absoluto inclui-se o protocolo e o nome de domínio e sempre apontará para o mesmo local, já que é absoluto.
+Como por exemplo esta URL http://www.rocketseat.com.br/projeto/index.html é absoluto(mesmo não levando a lugar nenhum, é
+apenas um exemplo).
+
+No caminho relativo, é relativo à página, pasta aberta, ou seja, se não tiver irá consequentemente dar erro, apontará
+para lugares diferentes. Como por exemplo apenas google.com.
+-->
+
+</body>
+
+</html>

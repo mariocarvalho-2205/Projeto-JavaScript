@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-
+/*
 .box {
     width: 100px;
     height: 100px;
@@ -12,7 +12,6 @@
 
 .box1 {
     background-color: red ;
-    position: fixed;
     left: 20px;
     top: 100px;
 }
@@ -25,7 +24,7 @@
 
 .box3 {
     background-color: blue;
-}
+}*/
 /*
 page layouts
 
@@ -57,7 +56,7 @@ Fised // Seu posicionamento fica fixo na pagina ou com relação a tag pai, perm
 Propriedade z-index // se refere ao posicionamento da camada
 trazendo para frente ou para traz dos outros elementos
 */
-
+/*
 .box4 {
     background-color: greenyellow;
     position: absolute;
@@ -80,10 +79,91 @@ trazendo para frente ou para traz dos outros elementos
     left: 215px;
     top: 15px;
     z-index: 1;
-}
+}*/
 
 /*
 Flexbox  // direcionamento 
+Nos permite posicionar os elementos dendro da caixa
+controle em uma dimensao (horizontal e vertical)
+Alinhamento, direcionamento, ordenar e tamanhos
+
+chave -> display: 
+Valor -> flex
+sintaxi display: flex;
+
+*/
+
+/*.container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flexbox {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}*/
+
+/*.flexbox1 {
+    background-color: yellow;
+}
+
+.flexbox2 {
+    background-color: brown;
+}
+
+.flexbox3 {
+    background-color: gray;
+}*/
+
+/*
+Grid
+
+- Posicionamento dos elementos dentro da caixa
+- Posicionamento horizontarl e vertical ao mesmo tempo
+- pode ser flexivel ou fixo
+- Cria espaços para os elementos filhso habitarem
 
 
 */
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+    /*Sitaxi 
+    linhas              1     2    3
+    grid-template-rows: 50px 1fr 40px;
+    
+    colunas                 1   2
+    grid-template-columns: 1fr 80px;
+    */
+    grid-template-rows: 50px 1fr 40px;
+    grid-template-columns: 1fr 80px;
+}
+
+header {
+    grid-area: header;
+    background-color: green;
+}
+main {
+    grid-area: main;
+    background-color: yellow;
+}
+
+aside {
+    grid-area: aside;
+    background-color: brown;
+}
+
+footer {
+    grid-area: footer;
+    background-color: gray;
+}
