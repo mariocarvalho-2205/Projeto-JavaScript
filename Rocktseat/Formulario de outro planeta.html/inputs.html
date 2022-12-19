@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags de Entrada de dados</title>
+</head>
+<body>
+    <!--
+        Inputs
+            <input> 
+                - Um dos mais usados em formularios
+                - Aceita os mais diversos tipos de dados
+                - Um dos mais poderosos e complexos
+                - Elevado numero de combinações
+
+            Atributos
+                - type
+                - name
+                - id
+            
+
+        -=-=-=-=-=-=-=-=-==-=-=-=-=-
+        Atributos comuns
+            - autocomplete // serve para habilitar o recurso de auto completar
+            - autofocus // significa que quando for carregada a pagina o focu está no input
+                somente um por pagina inteira
+            - disabled  // ira deixar o campo desabilitado
+            - readonly // é o irmao do disable, porem ele nao deixa a coloração mais fraca (quase todos)
+            - value // serve para colocar um valor editavel dentro do campo
+                diferente do placeholder
+            - form // serve para linkar o input com o formulario contido na pagina, O 
+                input pode estar em outro local da pagina (quase todos)
+                lembrando que para enviar os dados do input para o formulario, se faz necessario 
+                    usar o atributo name para identificar o input
+            
+            - name  // usado para nomear o input facilitando sua localização e associação para rsgatar os dados
+                desse input
+            - title // insere um titulo no campo de alerta do input
+            
+            * - required (quase todos)
+            * - placeholder // usado para nomear campos de input (quase todos)
+            !OBS 1: Alguns tipos de campo especifico não funcionaram (quase todos)
+            !OBS 2: Não trocamos o placeholder pelo label. Principalmente se precisar da utilização da acessibilidade
+
+            *-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=
+            !<input> type="password"
+
+                * - Usado para colocar senha de maneira segura
+                * - Esconde o que está sendo digitado no campo
+                * - O estilo da apresentação do campos, depende do User Agent
+
+            !Atributos
+                ? - minlength / maxlength
+                    * O numero minimo ou maximo de caracteres para este campo
+                ? - size
+                    * O numero aceistavél de caracteres que esse campo deverá conter
+                ? - pattern 
+                    * Expressão regular (REGEX) para validar o que está sendo digitado no campo
+                    * Altamente recomendado o uso de umpadrão de segurança alta de senhas
+                    * exemplo: queremos que a senha contenha caracteres hexadecimais com o 
+                        * limite de no minimo 4 e no maximo 8 caracteres
+                        ? pattern="[0-9a-fA-F]{4,8}"
+                ? - placeholder
+                    * Mostra um exemplo de texto a ser digitado no campo
+                ? - headonly / disabled
+                    * Atributo booleano indicado se o campo está habilitado ou não
+                ? - required
+                    * O campo será obrigatorio
+                ? - inputmode
+                    * poderá alterar o uso do teclado em smartphones
+                    * exemplo: queremos que o cliente so adicione numeros
+                        ? inputmode="numeric"
+                ? - autocomplete
+                    * on: permite a sugestão de: new-password ou 
+                        * current-password
+                    * off: desabilita a opção de autocompletar
+                    * new-password: o navegador poderá sugerir uma nova senha
+            
+    -->
+    <!-- Type Password -->
+    <form action="">Password(senha)
+        <input 
+        type="password" 
+        
+        pattern="[0-9a-fA-F]{4,8}"
+        placeholder="digite a senha"
+        required
+        >
+
+        <button type="submit">enviar</button>
+        </form>
+
+    <!-- 
+        !  input tyoe="email"
+
+            * - Espera que o usuario digite um email
+            * - irá validar se o valor digitado e um email
+
+        ! Atributos
+
+            ? - placeholder
+            ? - readyonly / disabled
+            ? - value
+
+            ? - required
+
+            ? - multiple
+                * o camppo irá receber um ou mais emails, separado por virgulas
+            
+            ? - minlength / maxlength
+                * O minimo e/ou maximo valor que o campo irá conter
+
+            ? - size
+                * valor numerico indicando quantos caracteres esse
+            ? - pattern
+                * uso de expressão regular para validar o campo
+                * exemplo: o usuario so poderá colocar email do dominio
+                    * rocktseat.com.br
+                        ? pattern=".+@rocketseat\.com\.br"
+            ? - list
+                * o id de uma tag <datalist> que está no mesmo documento
+                * <datalist irá conter uma lista de valores pré definidos
+                    * a fim de sugerir ao usuario, quais valores estão disponiveis
+                        * os valores <datalist> que não forem compativeis com o 
+                        * campo, não serão apresentados como sugestão
+                
+
+-->
+    <form action="">
+        <input type="email" 
+        placeholder="email@email.com"
+        multiple>
+        <button type="submit">enviar</button>
+    </form>
+    <!-- tag datalist -->
+
+    <form action="">
+        <datalist id="emailslist">
+            <option>joao@gmail.com</option>
+            
+        </datalist>
+        <input type="email" list="emailslist">
+        <button type="submit">enviar</button>
+    </form>
+
+    <!--
+        !  input type="url"
+
+            * - Espera que o usuario digite um email
+            * - irá validar se o valor digitado e um email
+
+        ! Atributos
+
+            ? - placeholder
+            ? - readyonly / disabled
+            ? - value
+
+            ? - required
+
+            ? - multiple
+                * o camppo irá receber um ou mais emails, separado por virgulas
+            
+            ? - minlength / maxlength
+                * O minimo e/ou maximo valor que o campo irá conter
+
+            ? - size
+                * valor numerico indicando quantos caracteres esse
+            ? - pattern
+                * uso de expressão regular para validar o campo
+                * exemplo: o usuario so poderá colocar dominio .com.br
+                        ? pattern=".*\.com\/.br.*"
+
+            ? - list
+                * o id de uma tag <datalist> que está no mesmo documento
+                * <datalist irá conter uma lista de valores pré definidos
+                    * a fim de sugerir ao usuario, quais valores estão disponiveis
+                        * os valores <datalist> que não forem compativeis com o 
+                        * campo, não serão apresentados como sugestão
+            ? - spellcheck
+                * habilita a verificação ortografica para esse input
+    * =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+    ! input type="file"
+
+        * usuario poderar escolher um ou mais arquivos para enviar no formulario
+
+    ! Atributos
+
+        ? - value
+            * contem o arquivo a ser enviado
+        ? - accept
+            * descreve que tipo de arquivos serão aceitos
+            * exemplo: .doc .docx . pdf, audio/*, image/png, .png
+                    ! /* significa que será aceito todo tipo de arquivo da categoria
+                    ! Ex.: accept="image/*"
+        ? - files
+            * a lista de arquivo ou arquivos
+        ? - multiple
+            * permite o envio de multiplos arquivos
+        
+            ! Envio dos arquivos
+            * para envio dos arquivos o formulario deverá utilizar o method="POST" e 
+            * o atributo enctype como enctype="multipart/form-data"
+
+    * =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+    ! input type="color"
+
+        * interface para selecionar cor
+        * color picker
+
+    ! Atributos
+
+        ? - value: RGB
+            * Se invalido, o preto será exibido
+        ? - list
+                * o id de uma tag <datalist> que está no mesmo documento
+                * <datalist irá conter uma lista de valores pré definidos
+                    * a fim de sugerir ao usuario, quais valores estão disponiveis
+                        * os valores <datalist> que não forem compativeis com o 
+                        * campo, não serão apresentados como sugestão
+            
+    
+
+-->
+
+    <input type="color" name="" id="">
+</body>
+</html>
