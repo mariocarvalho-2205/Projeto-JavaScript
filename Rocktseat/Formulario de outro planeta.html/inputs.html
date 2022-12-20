@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tags de Entrada de dados</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tags de Entrada de dados</title>
 </head>
+
 <body>
-    <!--
+	<!--
         Inputs
             <input> 
                 - Um dos mais usados em formularios
@@ -79,20 +81,14 @@
                     * new-password: o navegador poderá sugerir uma nova senha
             
     -->
-    <!-- Type Password -->
-    <form action="">Password(senha)
-        <input 
-        type="password" 
-        
-        pattern="[0-9a-fA-F]{4,8}"
-        placeholder="digite a senha"
-        required
-        >
+	<!-- Type Password -->
+	<form action="">Password(senha)
+		<input type="password" pattern="[0-9a-fA-F]{4,8}" placeholder="digite a senha" required>
 
-        <button type="submit">enviar</button>
-        </form>
+		<button type="submit">enviar</button>
+	</form>
 
-    <!-- 
+	<!-- 
         !  input tyoe="email"
 
             * - Espera que o usuario digite um email
@@ -128,24 +124,22 @@
                 
 
 -->
-    <form action="">
-        <input type="email" 
-        placeholder="email@email.com"
-        multiple>
-        <button type="submit">enviar</button>
-    </form>
-    <!-- tag datalist -->
+	<form action="">
+		<input type="email" placeholder="email@email.com" multiple>
+		<button type="submit">enviar</button>
+	</form>
+	<!-- tag datalist -->
 
-    <form action="">
-        <datalist id="emailslist">
-            <option>joao@gmail.com</option>
-            
-        </datalist>
-        <input type="email" list="emailslist">
-        <button type="submit">enviar</button>
-    </form>
+	<form action="">
+		<datalist id="emailslist">
+			<option>joao@gmail.com</option>
 
-    <!--
+		</datalist>
+		<input type="email" list="emailslist">
+		<button type="submit">enviar</button>
+	</form>
+
+	<!--
         !  input type="url"
 
             * - Espera que o usuario digite um email
@@ -222,10 +216,214 @@
                         * os valores <datalist> que não forem compativeis com o 
                         * campo, não serão apresentados como sugestão
             
-    
+    * =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+    ! input type="checkbox"
+
+        * - Caixas que podem ser marcadas
+        * - Selecionar um valor para ser enviado 
+        * - Se nçao for selecionado, não será enviado nenhum dado
+    ! Atributos
+        * - globais
+        * - value
+			* - valor que aquele campo contem
+			* - se não estiver presente, o padrão é "on"
+		* - checked
+			* - para deixar o campo marcado por padrão
 
 -->
 
-    <input type="color" name="" id="">
+	<input type="color" name="" id="">
+	<br>
+	<Fieldset>
+		<legend>Receber notificações</legend>
+			<div>
+				<label for="subscribe">conta</label>
+				<input type="checkbox" name="subscribe" id="subscribe" >
+			</div>
+			<div>
+				<label for="subscribe">codigo</label>
+				<input type="checkbox" name="subscribe" id="subscribe">
+			</div>
+
+	</Fieldset>
+	<!-- 
+		! input type="hidden"
+
+		* - invisivel ao usuario  // só é visivel no devtools
+		* - será enviado com o formulario
+		* - não receberá foco
+		* - leitores de tela não percebem esse campo
+
+		<input type="hidden" name="id" value="8">
+
+		* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+		! input type="radio"
+		
+			* - Projetado para selecionar uma unica opção de um grupo
+
+		! Atributos Esenciais
+			* - name
+				* - todos os campos precisam ter o mesmo nome
+			* - value
+				* - valor que aquele campo contem
+			* - checked
+				* - indica que o campo foi marcado
+	-->
+	<fieldset>
+		<legend>Vamor tomar um cafe</legend>
+		<label for="yep">yes</label>
+		<input type="radio" name="coffe" id="yep" value="yes" checked>
+		<label for="nono">no</label>
+		<input checked type="radio" name="coffe" id="nono" value="no">
+	</fieldset>
+	<!--
+		! input type="textarea"
+
+		! - <textarea>
+			* - ocupa mais de uma linha
+			* - util para textos grandes
+		
+		! Atributos
+
+			* - id
+			* - name
+			* - rows e cols
+			* - maxlength e minlength
+			* - wrap
+				* - off so ira quebrar a linha quando precionada enter
+				* - hard e soft tem a ver com o que será enviado
+			* ... Outros campos comuns aos inputs
+				* - autocomplete, readonly, form, required
+				* - placeholder,  autofocus, disabled
+
+	-->
+	<fieldset>
+		<legend>caixa de texto</legend>
+			<label for="mensage"></label>
+			<textarea id="mensage" wrap=""></textarea>
+	</fieldset>
+
+
+<!--
+		! <select>
+
+			* - controle que fornece um menu de opções
+
+		! <option>
+			* - contem as opções a serem selecionadas
+			* - atributos necessários
+				 * - value
+
+		! Atributos unicas
+			* - multiple
+			 	* - habilita multiplas opções
+			* - size
+				* - quando opções ficaram visivies ao abrir o seletor?
+	-->
+	<fieldset>
+		<legend>Select the model of car</legend>
+		<label for="car-model"></label>
+		<select name="" id="car-model" >
+			<option value="">Selecione</option>
+			<option value="numero">fiat</option>
+			<option value="preço">ford</option>
+			<option value="temperatura">gm</option>
+			<option value="temperatura">gm</option>
+		</select>
+	</fieldset>
+	<fieldset>
+		<legend>optgroup</legend>
+			<label for="pets">
+				<select name="pets" id="pets" multiple size="4">
+					<optgroup label="4-legged pets">
+						<option value="dog">dog</option>
+						<option value="cat">cat</option>
+						<option value="lion">lion</option>
+					</optgroup>
+					<optgroup label="animal pets">
+						<option value="tiger">tiger</option>
+						<option value="hippo">hippo</option>
+						<option value="donk">donk</option>
+					</optgroup>
+				</select>
+			</label>
+	</fieldset>
+	<!--
+		! input type="search"
+
+			* - para campo de busca
+			* - É igual ao campo do tipi "text" mas poderá ser um pouco diferente dependendo do user agent
+		
+		! Atributos
+
+			* - list / <datalist>
+			* - pattern / usa uma regex para saber determinar o que sera digitado
+			* - aria-label  / nesse caso ira substituir a tag label para acessibilidade
+	-->
+	<fieldset>
+		<legend>pesquisa</legend>
+		<!-- <datalist id="search-terms">
+			<option>win</option>
+			<option>mac</option>
+		</datalist> -->
+		<form action="">
+			<label for="">Pesquisa pelo ID:</label>
+			<input type="search" name="pesquisa" list="search-terms" title="digite o numero ID: 99" 
+			pattern="[0-9]{2}" aria-label="campo de pesquisa: digite sua pesquisa: ">
+			<button>pesquisar</button>
+		</form>
+		
+	</fieldset>
+	<!--
+		! input type="number"
+
+			* - só aceita numeros
+		! Atributos
+			* - min / max  ->  determina o valor minimo e o maximo 
+			* - step / determina o pulo
+			? pode ser utilizado a idea do <datalist> com <option>
+	-->
+	<!-- <datalist id="list-number">
+		<option>15</option>
+		<option>25</option>
+	</datalist> -->
+	<label for="">numero</label>
+	<input type="number" min="10" max="50" step="5" list="list-number">
+
+	<!--
+		! input type="range"
+		 	* - controle para selecionar um valor numerico
+			* - slider ou dial control
+
+		! Atributos
+			* - min/max
+			* - step
+	-->
+	<input type="range" min="0" max="50" step="10">
+	<!--
+		! Outros campos interessantes
+		! ( mas que ainda não tem um otimo suporte )
+
+		? Fique de olho em https://caniuse.com
+	-->
+	<input type="date" name="" id="">
+	<input type="datetime-local" name="" id="">
+	<input type="month" name="" id="">
+	<input type="time" name="" id="">
+	<input type="week" name="" id="">
+
+	<!--
+		! IMPORTANTE
+			*- Desenhar antes
+				? Pensar nos requisitos antes de escrever o codigo
+				? Ajuda a definir as necessidades
+			
+		! DICAS	
+			* - Simples e focado
+			* - Somente dados necessarios
+			* - Verifique o que te agrada
+	-->
+
 </body>
+
 </html>
