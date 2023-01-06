@@ -14,8 +14,18 @@ cont = intX
 do  {
     if (cont % 2 !== 0) {
         soma += cont
-        console.log(soma, cont)
+        console.log(Math.abs(soma), cont)
     }
     cont += 1
-} while (cont < intY)
+} while (cont < intY-1)
+/*
+for (intX; intX < intY-1; intX++) {
+    if (cont % 2 !== 0) {
+        soma += cont
+
+    }
+    cont += 1
+    console.log(Math.abs(soma), cont)
+
+}*/
 
