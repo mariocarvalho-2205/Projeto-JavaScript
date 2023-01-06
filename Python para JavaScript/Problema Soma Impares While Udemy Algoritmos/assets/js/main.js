@@ -11,13 +11,11 @@ if (intX > intY) {
 }
 cont = intX
 
-do {
+do  {
     if (cont % 2 !== 0) {
         soma += cont
         console.log(soma, cont)
     }
-
-
     cont += 1
-} while (cont <= intY - 1)
+} while (cont < intY)
 
