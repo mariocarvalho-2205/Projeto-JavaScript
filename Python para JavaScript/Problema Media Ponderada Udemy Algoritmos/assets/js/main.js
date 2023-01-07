@@ -1,7 +1,7 @@
 let qtdCasos = Number(prompt('Quantos casos você vai digitar? '))
 let caso;
 let peso;
-var soma = 0
+let soma = 0
 let somaPesos = 2 + 3 + 5
 let media;
 
