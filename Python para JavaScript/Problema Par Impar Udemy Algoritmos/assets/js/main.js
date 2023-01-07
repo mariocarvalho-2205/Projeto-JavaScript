@@ -1,23 +1,28 @@
 let qtdDezenas = Number(prompt('Quantos numeros você vai digitar? '))
-let dezenas = 0
-let imparNeg = dezenas % 2 !== 0 //&& dezenas < 0
-let imparPos = dezenas % 2 !== 0 //&& dezenas > 0
-let parNeg = dezenas  % 2 === 0 //&& dezenas < 0
-let parPos = dezenas % 2 === 0 //&& dezenas < 0
+let dezenas;
+let imparNeg = dezenas % 2 !== 0 && dezenas < 0
+//let imparPos = dezenas % 2 !== 0 && dezenas > 0
+//let parNeg = dezenas  % 2 === 0 && dezenas < 0
+//let parPos = dezenas % 2 === 0 && dezenas > 0
 
 let msg;
+
 for (let i = 1; i <= qtdDezenas; i++) {
     dezenas = Number(prompt(`Digite o ${i}º numero: `))
-    if (imparNeg) {
+    if (dezenas % 2 !== 0 && dezenas < 0) {
         msg = `${dezenas} é IMPAR NEGATIVO`
         console.log(msg)
-    } else if (parNeg) {
+    } else if (dezenas  % 2 === 0 && dezenas < 0) {
         msg = `${dezenas} é PAR NEGATIVO`
         console.log(msg)
-    } else if (imparPos) {
+    } else if (dezenas % 2 !== 0 && dezenas > 0) {
         msg = `${dezenas} é IMPAR POSITIVO`
-    } else if (parPos) {
+        console.log(msg)
+    } else if (dezenas % 2 === 0 && dezenas > 0) {
         msg = `${dezenas} é PAR POSITIVO`
+        console.log(msg)
+    } else if (dezenas === 0) {
+        msg = `${dezenas} é NULO`
+        console.log(msg)
     }
-    console.log(i, dezenas)
 }
