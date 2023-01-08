@@ -4,7 +4,6 @@ for (let i = 1; i <= casos; i++) {
     let divisao
     let numerador = Number(prompt('Entre com o numerador: '))
     let denominador = Number(prompt('Entre com o denominador: '))
-
     if (numerador < 0) {
         console.log('DIVISÃO IMPOSSIVÉL')
     } else {
