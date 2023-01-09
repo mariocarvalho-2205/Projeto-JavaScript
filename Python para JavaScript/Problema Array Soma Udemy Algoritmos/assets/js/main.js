@@ -10,21 +10,22 @@ function arrayColector () {
     return valueArray(arrayNumbers)
 }
 function valueArray (array) {
-    array.forEach(el => console.log(`VALORES = ${el}`))
+    console.log(`Valores = ${array.join(', ')}`)
+    //array.forEach(el => console.log(`${el}`))
     return sumArray(array)
 }
 
 
-function sumArray () {
-    let sum = arrayNumbers.reduce((acu, i) => acu + i, 0)
-    console.log(`Soma = ${sum}`)
-    return sum
+function sumArray (array) {
+    let sum = array.reduce((acu, i) => acu + i, 0)
+    media(sum, array)
 }
 
-function media(itemArray, qtd) {
-    let media = itemArray * qtd
-    return console.log(`${media}`)
+function media(sum, array) {
+    let media = sum / array.length
+    console.log(`Soma = ${sum.toFixed(2)}`)
+    console.log(`Media = ${media.toFixed(2)}`)
 }
-arrayColector()
+arrayColector(numberN)
 //valueArray(arrayNumbers)
 //console.log(arrayNumbers)
