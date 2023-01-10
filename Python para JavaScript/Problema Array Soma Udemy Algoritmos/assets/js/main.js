@@ -18,7 +18,7 @@ function valueArray (array) {
 
 function sumArray (array) {
     let sum = array.reduce((acu, i) => acu + i, 0)
-    media(sum, array)
+    return media(sum, array)
 }
 
 function media(sum, array) {
