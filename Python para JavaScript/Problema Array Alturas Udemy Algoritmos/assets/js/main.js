@@ -28,21 +28,23 @@ function personColect (num) {
 }
 
 function media (altura, num) {
+    let alt = altura.reduce((acu, val) => acu + val , 0)
+    let mediaIdade = alt / num
+    console.log(`Altura média ${mediaIdade.toFixed(2)}`)
+    /*
     let totalIdade = 0
     let alt = altura
     for (let i = 0; i < alt.length; i++) {
         totalIdade += alt[i]
     }
     let mediaIdade = totalIdade / num
-    console.log(`Altura média ${mediaIdade.toFixed(2)}`)
+    console.log(`Altura média ${mediaIdade.toFixed(2)}`)*/
 }
 
 function percentMenor (idade, qtd) {
     let qtdIdadeMenor = 0
-
     for (let i = 0; i < idade.length; i++) {
         if (idade[i] < 16) qtdIdadeMenor += 1
-
     }
     let percentMenor = (qtdIdadeMenor / qtd) * 100
     console.log(`Pessoas com menos de 16 anos: ${percentMenor.toFixed(1)}%`)
