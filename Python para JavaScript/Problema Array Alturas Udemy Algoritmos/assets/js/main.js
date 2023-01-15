@@ -27,34 +27,38 @@ function personColect (num) {
     return
 }
 
+// função para calcular a media
 function media (altura, num) {
     let alt = altura.reduce((acu, val) => acu + val , 0)
     let mediaIdade = alt / num
     console.log(`Altura média ${mediaIdade.toFixed(2)}`)
-    /*
-    let totalIdade = 0
-    let alt = altura
-    for (let i = 0; i < alt.length; i++) {
-        totalIdade += alt[i]
-    }
-    let mediaIdade = totalIdade / num
-    console.log(`Altura média ${mediaIdade.toFixed(2)}`)*/
-}
 
+}
+// função para calcular o percentual da menor idade
 function percentMenor (idade, qtd) {
     let qtdIdadeMenor = 0
+    let percentMenor = 0
+    idade.forEach(function (age) {
+        if(age < 16) qtdIdadeMenor += 1
+    })
+
+    percentMenor += (qtdIdadeMenor / qtd) * 100
+    console.log(`Pessoas com menos de 16 anos: ${percentMenor.toFixed(1)}%`)
+    /*let qtdIdadeMenor = 0
     for (let i = 0; i < idade.length; i++) {
         if (idade[i] < 16) qtdIdadeMenor += 1
     }
     let percentMenor = (qtdIdadeMenor / qtd) * 100
-    console.log(`Pessoas com menos de 16 anos: ${percentMenor.toFixed(1)}%`)
+    console.log(`Pessoas com menos de 16 anos: ${percentMenor.toFixed(1)}%`)*/
 }
 
-function menorIdade (name, idade, qtd) {
-
-    for (let i = 0; i < name.length; i++) {
+function menorIdade (name, idade) {
+    name.forEach((n, i) => {
+        if (idade[i] < 16) console.log(`${n} tem ${idade[i]} anos.`)
+    })
+    /*for (let i = 0; i < name.length; i++) {
         if (idade[i] < 16) console.log(`${name[i]} tem ${idade[i]} anos.`)
-    }
+    }*/
 }
 
 personColect(numberPerson)
