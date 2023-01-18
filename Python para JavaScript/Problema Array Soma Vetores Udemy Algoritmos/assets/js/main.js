@@ -1,7 +1,8 @@
 const qtdNum = Number(prompt('Quantos valores vai ter cada vetor?'))
-
+let vetA = []
+let vetB = []
 function vetorA (num) {
-    let vetA = []
+
     alert('Digite os valores do vetor A:')
     for (let i = 0; i < num; i++) {
         let inputNumA = Number(prompt(`Digite o ${i + 1}º valor`))
@@ -12,7 +13,7 @@ function vetorA (num) {
 vetorA(qtdNum)
 
 function vetorB (num, vetA) {
-    let vetB = []
+
     alert('Digite os valores do vetor B:')
     for (let i = 0; i < num; i++) {
         let inputNumB = Number(prompt(`Digite o ${i + 1}º valor`))
@@ -27,5 +28,5 @@ function somaVetores (vetA, vetB, num) {
     for (let i = 0; i < num; i++) {
         vetC.push(vetA[i] + vetB[i])
     }
-    console.log(`${vetC}`)
+    console.log(`Valor Resultante: ${vetC}`)
 }
