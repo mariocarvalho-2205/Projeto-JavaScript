@@ -7,21 +7,25 @@ function vetorA (num) {
         let inputNumA = Number(prompt(`Digite o ${i + 1}º valor`))
         vetA.push(inputNumA)
     }
-    console.log(vetA)
-    vetorB(num)
+    vetorB(num, vetA)
 }
 vetorA(qtdNum)
 
-function vetorB (num) {
+function vetorB (num, vetA) {
     let vetB = []
     alert('Digite os valores do vetor B:')
     for (let i = 0; i < num; i++) {
         let inputNumB = Number(prompt(`Digite o ${i + 1}º valor`))
         vetB.push(inputNumB)
     }
-    console.log(vetB)
+    console.log(vetA, vetB)
+    somaVetores(vetA, vetB, num)
 }
 
-function somaVetores (vetorA, vetorB) {
+function somaVetores (vetA, vetB, num) {
     let vetC = []
+    for (let i = 0; i < num; i++) {
+        vetC.push(vetA[i] + vetB[i])
+    }
+    console.log(`${vetC}`)
 }
