@@ -13,15 +13,21 @@ function criaVetor (qtd) {
 function arrayPar (array) {
     let arrayPares = []
     let numPares = array.forEach((value) => { if (value % 2 === 0) {arrayPares.push(value)}})
-    return mediaPares(arrayPares)
+    if (arrayPares.length > 0) {
+        return sumPares(arrayPares)
+    } else {
+        return console.log('NENHUM NUMERO PAR')
+    }
 }
 
-function mediaPares (array) {
+function sumPares (array) {
     let qtd = array.length
-    let numEach = array.forEach((value) => {})
-    console.log(media)
-    return //msg(media)
+    let sumPares = array.reduce((acu, ind) => acu + ind)
+    return mediaPares(sumPares, qtd)
 }
 
+function mediaPares (sum, qtd) {
+    return console.log(`MEDIA DOS NUMEROS PARES: ${(sum / qtd).toFixed(1)}`)
+}
 
 criaVetor(qtdNumber)
