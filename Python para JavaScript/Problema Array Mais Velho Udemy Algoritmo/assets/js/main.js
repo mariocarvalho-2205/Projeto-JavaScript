@@ -1,15 +1,28 @@
 const qtdPerson = Number(prompt('Quantas pessoas você vai digitar?'))
+let arrayPerson = []
 
-function criaPerson (num) {
-    let arrayPerson = []
-    let person = new Object()
+// colect - coleta dados do usuario.
+function colect (num) {
+    let name
+    let idade
+
     for( let i = 0; i < num; i++) {
-        person.name = prompt('Digite um nome:')
-        person.idade = Number(prompt('Digite a idade'))
-        arrayPerson.push(person)
+        name = prompt('Digite um nome:')
+        idade = Number(prompt('Digite a idade'))
+        criaPerson(name, idade)
     }
-
-    console.log(arrayPerson)
-    console.log(person)
 }
-criaPerson(qtdPerson)
+
+// criaPerson - cria usuario e adiciona array de objetos
+function criaPerson (name, idade) {
+    //let person = {name: name, idade: idade} ! pode ser criado objeto
+    // dentro da função e mandar a variavel
+    return arrayPerson.push({
+        name,
+        idade
+    })
+}
+
+
+colect(qtdPerson)
+console.log(arrayPerson)
