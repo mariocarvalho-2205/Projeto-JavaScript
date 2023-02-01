@@ -27,6 +27,10 @@ body {
 
 }
 
+ul li {
+    list-style: none;
+}
+
 form input, form label, form button {
     display: block;
     width: 100%;
