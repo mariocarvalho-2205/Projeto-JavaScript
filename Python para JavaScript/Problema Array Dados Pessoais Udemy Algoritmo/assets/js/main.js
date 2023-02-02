@@ -51,10 +51,11 @@ function menosAlto (altura, max) {
 }
 
 function mediaAlturaMulheres (qtdMulheres, totalIdadeMulheres) {
-    let media = totalIdadeMulheres / qtdMulheres
-    if (isNaN(media)) {
+    let media
+    if (qtdMulheres === 0) {  //(isNaN(media))
         console.log('Não tivemos mulheres nessa lista!')
     } else {
+        media = totalIdadeMulheres / qtdMulheres
         console.log(`Media das Alturas das Mulheres: ${media.toFixed(2)}`)
     }
 
