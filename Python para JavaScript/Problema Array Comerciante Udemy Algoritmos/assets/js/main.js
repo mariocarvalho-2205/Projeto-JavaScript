@@ -38,10 +38,11 @@ function lucro (compra, venda) {
     let lucroMenorQueDez = 0
     let lucroEntreDezeVinte = 0
     let lucroMaiorQueVinte = 0
-
-    for (let i = 0; i < compra.length; i++) {
+    venda.forEach((venda, index) => lucroProdutos.push(venda - compra[index]).toFixed(2))
+    //console.log('lucroProdutos ' + lucroProdutos)
+    /*for (let i = 0; i < compra.length; i++) {
         lucroProdutos.push(venda[i] - compra[i])
-    }
+    }*/
 
     // lucro * 100 / preço de compra
     for (ind in lucroProdutos){
