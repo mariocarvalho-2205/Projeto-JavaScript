@@ -7,8 +7,9 @@ function inputProducts (qtd) {
     let products = []
     let compra = []
     let venda = []
+
     for (let i = 1; i <= qtd; i++) {
-        //alert(`Produto ${i}:`)
+
         nome = prompt(`Nome ${i}`)
         priceCompra = Number(prompt(`Preço de compra ${i}`))
         priceVenda = Number(prompt(`Preço de venda ${i}`))
@@ -38,24 +39,19 @@ function lucro (compra, venda) {
     let lucroMenorQueDez = 0
     let lucroEntreDezeVinte = 0
     let lucroMaiorQueVinte = 0
-    venda.forEach((venda, index) => lucroProdutos.push(venda - compra[index]).toFixed(2))
-    //console.log('lucroProdutos ' + lucroProdutos)
-    /*for (let i = 0; i < compra.length; i++) {
-        lucroProdutos.push(venda[i] - compra[i])
-    }*/
 
-    // lucro * 100 / preço de compra
-    for (ind in lucroProdutos){
-        if ((lucroProdutos[ind] * 100) / compra[ind] < 10) {
-            lucroMenorQueDez += 1
+    // Lucro dos Produtos
+    venda.forEach((venda, index) => lucroProdutos.push(venda - compra[index]).toFixed(2))
+    // Lucro menor que 10%
+    compra.forEach((compra, index) => { if ((lucroProdutos[index] * 100) / compra < 10) lucroMenorQueDez += 1 })
+    // Lucro entre 10% e 20%
+    compra.forEach((compra, index) => {
+        if ((lucroProdutos[index] * 100) / compra >= 10 && (lucroProdutos[index] * 100) / compra <= 20) {
+        lucroEntreDezeVinte += 1
         }
-        if ((lucroProdutos[ind] * 100) / compra[ind] >= 10 && (lucroProdutos[ind] * 100) / compra[ind] <= 20) {
-            lucroEntreDezeVinte += 1
-        }
-        if ((lucroProdutos[ind] * 100) / compra[ind] > 20) {
-            lucroMaiorQueVinte += 1
-        }
-    }
+    })
+    // Lucro maior que 20%
+    compra.forEach((compra, index) => { if ((lucroProdutos[index] * 100) / compra > 20) lucroMaiorQueVinte += 1 })
 
     console.log(`
         Lucro abaixo de 10%: ${lucroMenorQueDez}
