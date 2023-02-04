@@ -38,45 +38,17 @@ function media (altura, num) {
 function percentMenor (idade, qtd) {
     let qtdIdadeMenor = 0
     let percentMenor = 0
-    idade.forEach(function (age) {
-        if(age < 16) qtdIdadeMenor += 1
-    })
+
+    idade.forEach((age) => { if (age < 16)  qtdIdadeMenor += 1 })
 
     percentMenor += (qtdIdadeMenor / qtd) * 100
     console.log(`Pessoas com menos de 16 anos: ${percentMenor.toFixed(1)}%`)
-    /*let qtdIdadeMenor = 0
-    for (let i = 0; i < idade.length; i++) {
-        if (idade[i] < 16) qtdIdadeMenor += 1
-    }
-    let percentMenor = (qtdIdadeMenor / qtd) * 100
-    console.log(`Pessoas com menos de 16 anos: ${percentMenor.toFixed(1)}%`)*/
 }
 
 function menorIdade (name, idade) {
     name.forEach((n, i) => {
         if (idade[i] < 16) console.log(`${n} tem ${idade[i]} anos.`)
     })
-    /*for (let i = 0; i < name.length; i++) {
-        if (idade[i] < 16) console.log(`${name[i]} tem ${idade[i]} anos.`)
-    }*/
 }
 
 personColect(numberPerson)
-
-
-
-/*
-function fraseBomDia (name, lastName) {
-    const frases = []
-
-    for (let i = 0; i < name.length; i++) {
-        const frase = `Olá ${name[i]} ${lastName[i]} bom dia`
-        frases.push(frase)
-    }
-    return frases.join(',  ')  // Transforma a saida em string
-}
-
-const nameA = ['Mário']
-const lastNameB = ['Carvalho']
-
-console.log(fraseBomDia(nameA, lastNameB))*/
