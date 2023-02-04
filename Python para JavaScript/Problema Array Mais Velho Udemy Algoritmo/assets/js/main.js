@@ -26,8 +26,6 @@ function criaPerson (name, idade) {
     })
 }
 
-
-
 let maisVelha = function (array) {
     let maiorIdade = 0
     let nomeMaisVelho
