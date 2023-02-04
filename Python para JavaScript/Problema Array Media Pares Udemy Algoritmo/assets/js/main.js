@@ -1,7 +1,7 @@
 let qtdNumber = Number(prompt('Quantos elementos vai ter o vetor?'))
-let vetor = []
-function criaVetor (qtd) {
 
+function criaVetor (qtd) {
+    let vetor = []
     let inputNumber
     for (let i = 0; i < qtd; i++) {
         inputNumber = Number(prompt('Digite um numero:'))
