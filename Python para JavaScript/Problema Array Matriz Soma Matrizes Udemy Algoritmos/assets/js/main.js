@@ -37,23 +37,23 @@ let matrizB = ((qtdLinha, qtdColunas) => {
 })
 
 function criaMatrizez (qtdLinhas, qtdColunas) {
-    matrizA(qtdLinhas, qtdColunas)
-    matrizB(qtdLinhas, qtdColunas)
 
+    matrizC(matrizA(qtdLinhas, qtdColunas), matrizB(qtdLinhas, qtdColunas))
 }
-matrizC(arrayMatrizA, arrayMatrizB)
+
 
 function matrizC (matA, matB) {
     let matrizC = new Array()
-    console.log(matA, matB)
+    console.table(matA)
+    console.table(matB)
 
     console.log('Matriz Soma:')
     for (let i = 0; i < qtdLinhas; i++) {
-        for (let j = 0; j < qtdLinhas; j++) {
+        for (let j = 0; j < qtdColunas; j++) {
             matrizC.push(matA[i][j] + matB[i][j])
         }
     }
-    console.log(matrizC)
-    //matrizC.forEach((value) => console.log(value))
+
+    matrizC.forEach((value) => console.log(value))
 }
 criaMatrizez(qtdLinhas, qtdColunas)
