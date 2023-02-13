@@ -7,12 +7,13 @@
 
 :root {
     --text-color: white;
-
+    --bg-url: url(./assets/bg-mobile.jpg);
 
 }
 
 .light {
     --text-color: black;
+    --bg-url: url(./assets/ligth-mode.jpg);
 }
 
 body {
@@ -27,7 +28,7 @@ body {
     !shorthand ou atalho
     * background: color image repeat position/size;
     */
-    background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+    background: var(--bg-url) no-repeat top center/cover;
 }
 
 body * {
