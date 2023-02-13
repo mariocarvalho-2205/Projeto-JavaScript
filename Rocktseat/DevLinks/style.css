@@ -5,6 +5,16 @@
     box-sizing: border-box;
 }
 
+:root {
+    --text-color: white;
+
+
+}
+
+.light {
+    --text-color: black;
+}
+
 body {
     /*
     background-image: url(./assets/bg-mobile.jpg);
@@ -22,7 +32,7 @@ body {
 
 body * {
     font-family: 'Inter', sans-serif;
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 #container {
@@ -49,13 +59,14 @@ body * {
     margin-top: 8px;
 }
 
-/*links*/
+/* Links */
 
 ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 16px;
+    padding: 24px 0;
 }
 
 ul li a{
@@ -70,39 +81,36 @@ ul li a{
     font-weight: 500;
     transition: background 0.5s;
 }
-
+/* pseudo-selector ou sudo-selector*/
 ul li a:hover {
     background: rgba(255, 255, 255, 0.05);
-    border: 1.5px solid rgba(255, 255, 255);
-}
-/*#links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 24px;
-    gap: 16px;
-    width: 360px;
-    height: 320px;
-    border: 1px solid red;
+    border: 1.5px solid var(--text-color);
 }
 
-.buttons {
-    box-sizing: border-box;
+/* Icons */
+#social-icons {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    padding: 24px 0;
+    font-size: 24px;
+}
+
+#social-icons a {
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px 24px;
-    width: 312px;
-    height: 56px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 16px;
+    border-radius: 50%;
+    transition: background 0.5s;
 }
 
-.link {
-    margin: 8px;
-    padding: 16px 24px;
-    border: 1px solid #ffffff;
-    border-radius: 15px;
-    list-style: none;
-}*/
+#social-icons a:hover {
+    background: rgba(172, 171, 171, 0.5);
+    transition: background 0.5s;
+}
+
+footer {
+    text-align: center;
+    padding: 24px 0;
+    font-size: 14px;
+}
