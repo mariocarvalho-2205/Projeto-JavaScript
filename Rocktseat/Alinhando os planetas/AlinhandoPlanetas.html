@@ -10,9 +10,64 @@
 <body>
     <header>
         <div>
-            <p>Texto com block <strong>inline</strong> dentro</p>
+            <h3>Normal Flow</h3>
+            <p>Texto com block e <strong style="background: red">inline</strong> dentro</p>
         </div>
         <div style="background: green">Outro texto</div>
     </header>
+    <h3>Table</h3>
+    <table class="table">
+        <tr class="te-table">
+            <td class="item">Hora</td>
+            <td class="item">22:00</td>
+        </tr>
+        <tr class="table">
+            <td class="item">Hora</td>
+            <td class="item">21:00</td>
+        </tr>
+    </table>
+    <h2>Tabless utilizando divs</h2>
+    <div class="tabless">Direita</div>
+    <div class="tabless" style="clear:both">Esquerda</div><br><br>
+
+    <div>
+        <h2>Flexbox</h2>
+        
+    </div>
+
+    <h3>Terminologia</h3>
+    <ul>
+        <li>Flex Container</li>
+        <ul>
+            <li>Flex item</li>
+        </ul><br>
+        <li>Nesting</li><br>
+        <li>Axis ou Eixo</li>
+        <ul>
+            <li>Main ou Principal</li>
+            <ul>
+                <li>start, end</li>
+            </ul>
+            <li>Cross ou Cruzado</li>
+            <ul>
+                <li>start, end</li>
+            </ul>
+        </ul><br>
+        <li>Flex Sizing ou Item Flexivel</li>
+        <ul>
+            <li>flexivel</li>
+            <li>altera width/height dos itens para preenchimento
+                dos espaços do flex Container
+            </li>
+        </ul>
+    </ul>
+
+    <div class="flex-container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+</div>
+
 </body>
 </html>

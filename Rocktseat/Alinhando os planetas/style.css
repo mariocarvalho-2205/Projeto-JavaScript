@@ -8,4 +8,57 @@
 * ou Flow Layout ´´e a maneira que os elementos `block` e `inline` ficam na pagina
 
 
+! tables
+
+    * É a maneira de tabelas onde a tag `table` recebe um display `table`
+    * fazendo com que os elementos internos como `td` e `tr` possam ser
+    * usados para montar uma tabela
+    ? <tr class="table">
+    ?        <td class="item">Hora</td>
+    ?        <td class="item">21:00</td>
+    ?    </tr>
+
+! tabless - é a ideia de se fazer uma tabela sem usar table(tabelas) utilizando as divs
+
+*    <div class="tabless">Direita</div> joga o texto a direita
+*    <div class="tabless" style="clear:both">Esquerda</div> // clear:both retorna ao estado inicial
+
+! Flexbox
+
+* É uma caixa que se torna flex, fazendo com que os elementos internos
+* possam receber melhor:
+
+* Por padrão vem como flex-direction: row(linha)
+* - Alinhamento
+* - Ordenação
+* - Tamanhos flexiveis
+
+! Propriedades do Flex Container
+
+
 */
+
+/* Tabless */
+
+.tabless {
+    float: left;
+}
+
+/* flexbox*/
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid blue;
+    height: 400px;
+    
+}
+
+.item {
+    border: 1px solid red;
+    
+}
+/* ordena a ordem dos itens
+.item:nth-child(1) {
+    order: 1;
+}*/
