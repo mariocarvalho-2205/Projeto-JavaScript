@@ -50,7 +50,7 @@
     flex-direction: column;
     justify-content: space-around;
     border: 1px solid blue;
-    height: 400px;
+    height: 100px;
     
 }
 
@@ -62,3 +62,11 @@
 .item:nth-child(1) {
     order: 1;
 }*/
+/* Eixo cruzado */
+.axis-container {
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+}
+
+/* Flex Sizing    */
