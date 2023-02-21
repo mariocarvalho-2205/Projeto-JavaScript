@@ -166,17 +166,52 @@
                     </ul>
                 </ul>
             </div>
-            <div class="propriedades-items">
+            <div id="propriedades-items">
                 <h2>Propriedades para os Items</h2>
 
                 <ul class="propri-items">
-                    <li>Flex-basis</li>
+                    <li>Flex-basis - largura e altura</li>
+                    <ul>
+                        <li>Por padão ele é auto e é relativo ao eixo principal e não pode ter largura ou altura fixa</li>
+                    </ul>
                     <li>Flex-grow</li>
-                    <li>Flex-shirink</li>
+                    <ul>
+                        <li>É o crescimento dentro do container em relação aos espaçoes vazios</li>
+                        <li>para que tenha efeito com o eixo invertido e necessario que tenha uma altura</li>
+                    </ul>
+
+                    <li>Flex-shrink</li>
+                    <ul>
+                        <li>É a capacidade do item encolher dentro do container</li>
+                    </ul>
                     <li>flex</li>
+                    <ul>
+                        <li>É um Shorthand para flex-grow | flex-shrink | flex-basis</li>
+                        <li>Podem ter 1, 2 ou 3 valores</li>
+                        <li>Por padrao, os valores sao 1, 1 e 0 - Caso use unidade de px na 2 propriedade,
+                            será ativado o basis</li>
+
+                    </ul>
                     <li>order</li>
                 </ul>
 
+                <div class="propriedade-items">
+                    <div class="items-propri">1</div>
+                    <div class="items-propri">2</div>
+                    <div class="items-propri">3</div>
+                    <div class="items-propri">4</div>
+                    <div class="items-propri">5</div>
+                </div>
+                <h3>Alinhando tamanho de multiplos items</h3>
+                <div class="page">
+                    <aside>Aside</aside>
+                    <main>
+                        Main
+                        <section>Content 1</section>
+                        <section>Content 1</section>
+                        <section>Content 1</section>
+                    </main>
+                </div>
             </div>
 
         </div>
