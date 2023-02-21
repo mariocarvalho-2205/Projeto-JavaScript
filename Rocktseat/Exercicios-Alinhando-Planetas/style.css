@@ -37,6 +37,7 @@ ul li:last-child {
     border: 1px solid black;
     display: flex;
     gap: 1rem;
+
 }
 
 aside, main {
@@ -52,7 +53,7 @@ main {
     flex-grow: 1;
 }
 
-/* minha solução */
+/* minha solução colunas */
 /*.items {
     border: 1px solid darkred;
     text-align: center;
@@ -64,3 +65,71 @@ main {
 .items:nth-child(2) {
     flex-grow: 2;
 }*/
+
+/* galeria fotos */
+
+.galeria {
+    padding: 20px;
+    border: 1px solid indianred;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+    justify-content: center;
+}
+
+.galeria-items {
+    width: 30%;
+    height: auto;
+}
+
+#div-button {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+    gap: .4rem;
+    padding: .5rem;
+}
+
+#btn-B {
+    flex-direction: row-reverse;
+}
+
+button img {
+    width: 2rem;
+    height: 2rem;
+}
+
+/*
+Minha solução
+
+#button {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+a {
+    background-color: #08f17d;
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+a img {
+    width: 2rem;
+}
+
+#button-b {
+    flex-direction: row-reverse;
+}
+*/
+
