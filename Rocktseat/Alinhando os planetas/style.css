@@ -44,6 +44,9 @@
     float: left;
 }
 
+div {
+    margin: 0;
+}
 /* flexbox*/
 .flex-container {
     display: flex;
@@ -65,8 +68,29 @@
 /* Eixo cruzado */
 .axis-container {
     display: flex;
-    margin: 0;
-    justify-content: space-between;
+    border: 1px solid red;
+    justify-content: space-around;
+}
+
+.axis-item {
+    border: 1px solid blue;
 }
 
 /* Flex Sizing    */
+
+.flex-sizing {
+    display: flex;
+    border: 1px solid green;
+    height: 100px;
+}
+
+.item-sizing {
+    display: flex;
+    margin: 10px;
+    border: 1px solid black;
+    flex: 1;
+
+
+
+
+}
