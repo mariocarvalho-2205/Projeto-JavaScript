@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Exercicio Menu */
+header {
+    padding: 4rem;
+    background: lightgrey;
+}
+
+img {
+    width: 80px;
+}
+nav {
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: .8rem;
+}
+
+ul li:last-child {
+    color: white;
+    background: cyan;
+    padding: .8rem;
+}
+
+/* Exercicio Colunas */
+.columns {
+    height: 100vh;
+    padding: 20px;
+    border: 1px solid black;
+    display: flex;
+    gap: 1rem;
+}
+
+aside, main {
+    text-align: center;
+    border: 1px solid darkred;
+}
+
+aside {
+    flex-basis: 25%;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* minha solução */
+/*.items {
+    border: 1px solid darkred;
+    text-align: center;
+}
+
+.items:nth-child(1) {
+    flex-grow: 1;
+}
+.items:nth-child(2) {
+    flex-grow: 2;
+}*/
