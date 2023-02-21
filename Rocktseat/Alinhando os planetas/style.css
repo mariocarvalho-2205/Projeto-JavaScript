@@ -81,7 +81,7 @@ div {
 .flex-sizing {
     display: flex;
     border: 1px solid green;
-    height: 100px;
+    height: 80px;
 }
 
 .item-sizing {
@@ -89,8 +89,51 @@ div {
     margin: 10px;
     border: 1px solid black;
     flex: 1;
+}
+
+.propriedade-flex-div {
+    width: 500px;
+    margin: 10px;
+    display: flex;
+    border: 1px solid deeppink;
+    flex-direction: row-reverse;
+}
+.propriedade-item {
+    height: 50px;
+    border: 1px solid hotpink;
+    margin: 10px;
+}
+
+.box-wrap {
+
+    display: flex;
+    flex-wrap: nowrap;
+
+    margin: 10px;
+    border: 1px solid orange;
+}
+
+.wrap-item {
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+    border: 1px solid orangered;
+}
+
+.align {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 
 
+    border: 1px dashed orangered;
+    margin: 10px 0;
+    width: 500px;
+    height: 150px;
+    /*gap: 150px;*/
+}
 
-
+.align-items {
+    margin: 10px 0;
+    border: 1px dashed orange;
 }

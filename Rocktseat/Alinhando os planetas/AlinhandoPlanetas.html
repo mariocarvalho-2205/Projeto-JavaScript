@@ -10,7 +10,7 @@
 <body>
     <header>
         <div>
-            <h3>Normal Flow</h3>
+            <h2>Normal Flow</h2>
             <p>Texto com block e <strong style="background: red">inline</strong> dentro</p>
         </div>
         <div style="background: green">Outro texto</div>
@@ -77,14 +77,111 @@
                 dos espaços do flex Container
             </li>
         </ul>
-    </ul>
+
 
     <div class="flex-sizing">
         <div class="item-sizing">A</div>
         <div class="item-sizing">B</div>
         <div class="item-sizing">C</div>
     </div>
-</div>
+
+    <div class="propriedade-flex">
+        <h2 class="propriedade-itens">Propiedades do Flex Container</h2>
+        <div class="propriedade-flex-lista">
+            <ul class="propriedade-ul">
+                <li class="">Direção dos itens</li>
+                <ul>
+                    <li>Flex é uma dimensão sendo (horizontal ou vertical)</li>
+                    <li>Podemos mudadr a direção com 'flex-direction' por padrão ele é row</li>
+                    <li>Valores: (row | row-reverse | column | column-reverse)</li>
+                </ul>
+
+                <div class="propriedade-flex-div">
+                    <div class="propriedade-item">A</div>
+                    <div class="propriedade-item">B</div>
+                    <div class="propriedade-item">C</div>
+                </div>
+
+                <li class="">Flex-Wrap ou Multi Linhas</li>
+                <ul>
+                    <li>Podemos usar multi linhas</li>
+                    <li>Cada nova linha, um novo flex container e se ajusta automaticamente</li>
+                    <li>Valores: wrap | wrap-reverse| nowrap</li>
+                </ul>
+                <div class="box-wrap">
+                    <div class="wrap-item">1</div>
+                    <div class="wrap-item">2</div>
+                    <div class="wrap-item">3</div>
+                    <div class="wrap-item">4</div>
+                    <div class="wrap-item">5</div>
+                </div>
+                <div>
+                    <p>Direção e multi linhas</p>
+                    <ul>
+                        <li>flex-flow</li>
+                        <ul>
+                            <li>É um Shorthand</li>
+                            <li>É a uniao do flex-direction e o flex-wrap</li>
+                            <li>Podemos usar uma ou mais propriedade do wrap ou do direction, ou apenas uma delas
+                                e será reconhecida</li>
+                        </ul>
+                    </ul>
+                </div>
+                    <li class="">Justify Content - Alinhamento</li>
+                        <ul class="itens-alinhamento">
+                            <li>Alinhamento dos elementos dentro do container</li>
+                            <li>Distribuição dos elementos</li>
+                            <li>Valores: flex-start | flex-end | center | space-around(ao redor) |
+                                space-between(entre) | space-evenly(constante) </li>
+                        </ul>
+                    <li class="">Espaço entre os itens</li>
+
+                <div class="eixo-cruzado">
+                    <h2>Alinhamento no eixo cruzado</h2>
+                    <p>Align Items - Alinhamento dos elementos no eixo cruzado</p>
+                    <ul class="eixo-cruzado">
+                        <li>valores</li>
+                        <ul>
+                            <li>stretch (esticados) / É o padrão do align-items</li>
+                            <li>flex-start</li>
+                            <li>flex-end</li>
+                            <li>center</li>
+                        </ul>
+                    </ul>
+                    <div class="align">
+                        <div class="align-items">1</div>
+                        <div class="align-items">2</div>
+                        <div class="align-items">3</div>
+                    </div>
+                </div>
+            </ul>
+            <div class="gap">
+                <h2>Gap</h2>
+                <p>Gap é o espaço entre os elementos e tem como valores as unidades de medidas</p>
+                <ul class="gap-list">
+                    <li class="gap-item">Valores:</li>
+                    <ul>
+                        <li class="gap-item">fixas: px, pt</li>
+                        <li class="gap-item">flexiveis: %, em, rem</li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="propriedades-items">
+                <h2>Propriedades para os Items</h2>
+
+                <ul class="propri-items">
+                    <li>Flex-basis</li>
+                    <li>Flex-grow</li>
+                    <li>Flex-shirink</li>
+                    <li>flex</li>
+                    <li>order</li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+
 
 </body>
 </html>
