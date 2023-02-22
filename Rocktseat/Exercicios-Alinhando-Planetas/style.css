@@ -106,6 +106,14 @@ button img {
     height: 2rem;
 }
 
+#footer {
+    background: #08f17d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:  8rem;
+}
+
 /*
 Minha solução
 
