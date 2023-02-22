@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+}
+
+div {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+    justify-content: center;
+}
+
+img {
+    width: 30%;
+    height: auto;
+}
