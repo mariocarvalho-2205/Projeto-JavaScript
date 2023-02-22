@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+}
+
+div {
+    padding: 1rem;
+    background: #8d9797;
+    height: 100vh;
+    display: flex;
+    gap: 1rem;
+
+
+}
+
+aside, main {
+
+    display: flex;
+    justify-content: center;
+
+    background: white;
+    border: 1px solid black;
+}
+
+aside {
+    flex-basis: 25%;
+}
+
+main {
+    flex-grow: 1;
+}
