@@ -144,3 +144,32 @@ div.innerText = 'Minha Div'
 body.insertBefore(div, ele.nextElementSibling)
 //body.insertBefore(div, ul)
 
+const event = document.getElementById('event');
+const myEvent = document.getElementById('my-event');
+
+function entrar () {
+    console.log('entrei')
+}
+
+event.addEventListener('click', entrar);
+
+myEvent.onkeyup = function () {
+    console.log('teclado acionado')
+}
+
+myEvent.addEventListener('click', click)
+
+
+function click () {
+    console.log('primeiro evento click h1')
+}
+
+myEvent.addEventListener('click', function(e) {
+    console.log(e)
+})
+
+myEvent.addEventListener('click', function() {
+    console.log('segundo evento click h1')
+})
+
+
