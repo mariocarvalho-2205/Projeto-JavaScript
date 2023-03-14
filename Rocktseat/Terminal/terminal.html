@@ -1,0 +1,98 @@
+<!--
+* Por que esse curso?
+* 
+* Descrição
+* 
+* É necessário entender o que é terminal, o que é shell, 
+* o que é bash e outros termos que envolvem o universo do terminal, 
+* sendo assim necessário estudar os comandos necessários para o seu sistema operacional, 
+* trazendo também mais clareza do que fazemos ao executar comandos via terminal, 
+* e o mais importante, enfim perder o medo daquela janelinha preta.
+
+! O que é o command line?
+
+? GUI
+? Nesta aula, veremos o que é Command Line, começando pela GUI, 
+? ou Graphical User Interface, a Interface Gráfica do Usuário, 
+? a forma grafica de mostrar as informações, porém temos uma outra 
+? forma de mostrar o que acontece com o computador, a CLI, ou 
+? Command Line Interface, ou Interface de Linha de Comando, 
+? onde se podem enviar comandos e ver seus resultados, ou seja, 
+? é possível operar a máquina apenas com textos, não sendo 
+? necessária uma interface gráfica. Para isso usamos o shell, 
+? também chamado de interpretador, que é o ambiente, responsável 
+? por executar os comandos, e além disso, ele conversa diretamente 
+? com o kernel, simplificando, O terminal vai receber os comandos, 
+? que serão executados no shell, que os levarão ao kernel, onde todo 
+? o processamento desses comandos ocorre.
+? 
+
+! Sintaxe da linha de comandos
+
+command -options /directory/folder
+
+? Dicas e truques
+* tab completion  - auxilia na duvida de qual comando ou pasta temos para acessar
+
+* teclas de atalho
+
+setas - acessa comandos anteriores
+
+Ctrl +
+    A - inicio da lina
+    E - final da lina
+    U - limpa a linha
+    K - Remove o cursor ate o final da linha
+    L - clear: cmd + k para o mac 
+
+
+    pwd mostra o endereço do diretorio atual
+
+    cd change directory
+    cd = muda o diretorio
+    cd. = diretorio atual
+    cd.. = voltar diretorios
+    cd- = volta de onde veio
+    cd../ = volta ao diretorio anterior
+
+    command ls
+
+    -l = lista arquivos e pastas
+    -a = mais informações - mostrar arquivos e pastas ocultas
+    -h = informações humanizadas
+    -R = informação recursivo
+    -S = Ordena pelo tamanho
+
+    command file
+
+    file - mostra o tipo de arquivo e suas informações
+    sintaxe - file nome_do_arquivo.extensao
+    stat - mostra o dono, modificações e tamanho do arquivo
+    sintaxe - stat nome_do_arquivo.extensao
+
+    !command mkdir -> Cria diretorio
+    *sintaxe - mkdir nome_diretorio
+    *varias pastas - mkdir nome_diretorio1 nome_diretorio2 nome_diretorio3
+    *-p cria sub pastas dentro do diretorio
+    ?sistaxe - mkdir -p nome_pasta/nome_subpasta nome_pasta/nome_subpasta_2
+
+    !command touch - altera o registro de data e hora de arquivos ou pastas
+    * Cria um ou mais arquivos
+    sintaxe touch nome_arquivo.extensao
+
+    !command copy - cp = copia arquivos e diretorios para outros diretorios
+    ?sitaxe - cp nome_arquivo ou diretorio nome_diretorio_destino
+    -r - copia tudo para dentro
+
+    ! command mv - move ou renomeia arquivos ou pastas
+    * copiar
+    ?sintaxe - mv arquivo_ou_pasta1 arquivo_ou_pasta2 pasta_destino
+    * renomear
+    ? sintaxe - mv arquivo.extensao arquivo_renomeado.txt
+
+    ! command rm - remove arquivos ou pastas para sempre
+    ? rm - so removerá arquivos ou pastas vazias
+    ? rm -r - irá remover diretorios e arquivos dentro das pastas
+    ? rm -f - força a remoção sem perguntar
+
+-->
