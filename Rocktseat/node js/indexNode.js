@@ -1,5 +1,7 @@
 /*
 * Variaveis globais
+
+ 
  */
 
 global.console.log(global)
