@@ -1,3 +1,6 @@
-const getFlagValues = require('./getFlag')
 
-console.log(`Oi ${getFlagValues('--name')}. ${getFlagValues('--greeting')}`)
+const myModule = require("./flags")
+
+
+//  Sintaxe -> chama a variavel com require('flag')
+console.log(`Oi ${myModule('--name')}. ${myModule('--greeting')}`)
