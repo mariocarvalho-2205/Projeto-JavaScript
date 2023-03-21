@@ -1,4 +1,5 @@
-
+// Require vai chamar o outro arquivo(pagina com o codigo)
+//Sintaxe -> require("endereço do arquivo")
 const myModule = require("./flags")
 
 
