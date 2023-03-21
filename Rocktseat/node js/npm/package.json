@@ -1,0 +1,15 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Teoria_e_instalação.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cfonts": "^3.1.1"
+  }
+}
