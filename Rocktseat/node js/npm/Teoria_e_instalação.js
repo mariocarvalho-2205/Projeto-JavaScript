@@ -72,8 +72,10 @@ exceto quando for um objeto ou um array
 
 
 
-*[] Criar scrips para rodar com o npm `npm run test` 
+*[x] Criar scrips para rodar com o npm `npm run test` 
     * vai rodar o script de test que está no package.json
+    * na chave do stript, sera rodado o script
+    * chave -> "test": "echo \"Error: no test specified\" && exit 1"
     * 
 *
 *
