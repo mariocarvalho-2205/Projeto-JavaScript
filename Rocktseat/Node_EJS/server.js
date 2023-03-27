@@ -31,12 +31,44 @@ app.get("/sobre", function (req, res) {  ou seja mario.com.br/sobre ou  o que el
 
 */
 app.get("/", function (req, res) {
-    res.render("index");  // ressignifica a resposta (responde) ao renderizar nosso index
-})
+
+    const items = [
+        {
+            title: "D",
+            message: "esenvolver Aplicações"
+        },
+        {
+            title: "E",
+            message: "JS usa Javascript para renderizar HTML"
+        },
+        {
+            title: "M",
+            message: "uito facil de usar"
+        },
+        {
+            title: "A",
+            message: "morzinho"
+        },
+        {
+            title: "I",
+            message: "nstall ejs"
+        },
+        {
+            title: "S",
+            message: "intaxe simples"
+        }
+
+    ];
+
+    res.render("pages/index", {
+        qualitys: items,
+
+    });  // res -> significa a resposta (responde) ao renderizar nosso index
+});
 
 app.get("/sobre", function (req, res) {
-    res.render("about");
-})
+    res.render("pages/about");
+});
 
 /*
 depois de configurar o servidor, iremos informar que ele agora tem que rodar
@@ -46,4 +78,4 @@ app.listen(8080); // isso quer dizer que o app está carregando tudo dentro do e
 // e que ele fica ouvindo uma porta
 // para a renderização funcionar, e necessario que o arquivo index esteja dentro da pasta views
 // como está sendo chamado no app.set("view engine", "ejs");
-console.log('rodando')
+console.log('rodando novamente')
