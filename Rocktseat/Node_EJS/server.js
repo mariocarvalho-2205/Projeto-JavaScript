@@ -60,8 +60,11 @@ app.get("/", function (req, res) {
 
     ];
 
+    const subtitle = "Conceito: É uma linguagem de modelagem para criação de paginas HTML!!"
+
     res.render("pages/index", {
         qualitys: items,
+        subtitle: subtitle,
 
     });  // res -> significa a resposta (responde) ao renderizar nosso index
 });
