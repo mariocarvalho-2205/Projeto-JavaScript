@@ -9,6 +9,14 @@ const hostname = "127.0.0.1";  // endereço localhost
 const port = 3000;  // porta localhost
 
 
+// Criando arquivo com node
+fs.writeFile('mario.txt', 'testando e exercitando', (err) => {
+    if(err) throw err
+    console.log('arquivo criado')
+})
+
+
+
 // criando o server
 const server = http.createServer((req, res) => {
 
