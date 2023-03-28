@@ -10,10 +10,10 @@ fs.writeFile('index.html', '<h1>Mario Carvalho</h1>\n', (err) => {
 })
 
 // bloco para criar novo arquivo ou inserir conteudo
-fs.appendFile('index.html', '<h2>Desenvolvedor</h2>', function (err) {
+fs.appendFile('index.html', `<h2>Desenvolvedor</h2>`, function (err) {
     if(err) throw err;
 
-    console.log('deu certo')
+    console.log('mais um conteudo')
 })
 
 
@@ -21,6 +21,16 @@ fs.appendFile('index.html', '<h2>Desenvolvedor</h2>', function (err) {
 const server = http.createServer(function (req, res) {
 
     if (req.url == '/') {
+
+        // =-=-=-=-=-=-=-=-=-=-=-=-=-
+        // esse bloco vai adicionar conteudo toda vez que a pagina for carregada
+        // fs.appendFile('index.html', `<h2>Desenvolvedor</h2>`, function (err) {
+        //     if (err) throw err;
+
+        //     console.log('mais um conteudo')
+        // })
+        // =-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
         fs.readFile('index.html', function (err, data) {
 
             res.writeHead(200, { 'Content-Type' : 'text/html'});
