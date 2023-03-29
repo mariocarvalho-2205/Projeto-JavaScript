@@ -4,13 +4,13 @@ const hostname = '127.0.0.1';
 const port = 3000;
 
 // bloco para criação de arquivo
-fs.writeFile('index.html', '<h1>Mario Carvalho</h1>\n', (err) => {
+fs.writeFile('index.html', '<h1>Mario Carvalho - Arquivo Criado com Sucesso</h1>\n', (err) => {
     if (err) throw err;
     console.log('arquivo criado com sucesso')
 })
 
-// bloco para criar novo arquivo ou inserir conteudo
-fs.appendFile('index.html', `<h2>Desenvolvedor</h2>`, function (err) {
+// bloco para criar novo arquivo ou inserir conteudo depois do que ja existe
+fs.appendFile('index.html', `<h2>Desenvolvedor - mais um conteudo</h2>`, function (err) {
     if(err) throw err;
 
     console.log('mais um conteudo')
