@@ -59,6 +59,67 @@ OBS: O igual so irá funcionar em campos que contenham number
 
 para pesquisar textos temos que usar o comando like e envolver o texto em aspas
 
+! Operadores Logicos 
 
+AND -> Sintaxe
+SELECT * FROM aluno WHERE nome like "J%" AND matricula < 2
+
+-=-=-=-=-=-=-=-=-=-=-
+
+OR -> Sintaxe
+                                        OU
+SELECT * FROM aluno WHERE matricula > 1 OR nome like 'm%'
+
+? BETWEEN - Irá retonar dados entre um valor e outro
+                                                ENTRE     E
+Sintaxe -> SELECT * FROM aluno WHERE matricula BETWEEN 4 AND 7
+
+? NOT BETWEEN - Irá retonar TODOS OS dados CUJO VALOR seja diferente do intervalo informado
+
+SELECT * FROM funcionarios WHERE id_funcionario NOT BETWEEN 4 AND 7
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+? IN - Irá retorna os valores de diversas posições na tabela
+
+Sintaxe
+SELECT * FROM funcionarios WHERE id_funcionario IN (2, 4, 6)
+
+? NOT IN - Irá retorna os valores de diversas posições na tabela
+Sintaxe                                                 posições
+SELECT * FROM funcionarios WHERE id_funcionario NOT IN (2, 4, 6)
+
+? IS ou E - Irá retornar o campo cujo valor seja NULL
+
+Sintaxe 
+SELECT * FROM funcionarios WHERE id_departamento  IS NULL
+
+? IS NOT ou NÃO E - Irá retornar o campo cujo valor NÃO seja NULL
+
+Sintaxe
+SELECT * FROM funcionarios WHERE id_departamento  IS NOT NULL
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+? INSERT - Irá permitir que possamos adicionar mais campos na tabela
+
+Sintaxe
+INSERT INTO nome_tabela(campos_para_preencher)
+INSERT INTO funcionarios (nome, cpf) VALUES ('Mário', 52345678911)
+
+? UPDATE - Irá atualizar dados na tabela
+! OBS: se não utilizar o comando WHERE, Ele mudará todos os campos da tabela
+
+Sintaxe
+                                dado atual        dado atual      local para atualizar
+UPDATE funcionarios SET nome='Mário Carvalho', cpd=98765432199 WHERE id_funcionario=12
+
+? DELETE - Apaga o registro da tabela toda, ou seja, toda a linha(Registro completo)
+! OBS: Ele não apaga o registro, apaga apenas os dados
+! OBS2: Não pode executar o DELETE sem USAR O WHERE, ISSO APAGARA TODOS OS DADOS DO BANCO DE DADOS!!!
+
+Sintaxe
+DELETE 
+DELETE FROM funcionarios WHERE id_funcionario = 12
 
 */
