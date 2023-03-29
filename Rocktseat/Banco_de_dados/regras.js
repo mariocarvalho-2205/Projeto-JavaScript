@@ -34,6 +34,30 @@ SELECT-> Usado para buscar e vai mostar as informaçõe
 - * ira selecionar todas as informações
 FROM está de onde, ou seja em qual tabela
 nome da tabela em seguida
+Sintaxe -> SELECT * FROM nome_tabela
+
+SELECT ESPECIFICANDO CAMPO
+
+
+Sintaxe -> SELECT nome_coluna, nome_coluna2 FROM tabela
+OBS: A ordem de visualização, será exibida de acordo com a ordem escrita no comando
+
+SELECT WHERE -> ira procurar na tabela os dados referentes a um campo especifico
+Sintaxe -> SELECT * FROM nome_tabela WHERE nome_campo_referencia
+Ex: SELECT * FROM aluno WHERE matricula = 1
+
+Utilizando like -> irá buscar dados por que contenham trecho ou caractere
+"j%" -> nesse caso que dizer que ira buscar todos os nomes que começão com J e desconsiderando o restante da palavra
+"%G%" -> dessa forma, vai retornar os dados que contenham a letra G no inicio ou no meio da palavra
+
+
+Sintaxe -> SELECT coluna1, coluna2 FROM nome_tabela WHERE campo_especifico like "%G%"
+
+
+! Operador Relacional = vai retornar os dados especificos de um usuario
+OBS: O igual so irá funcionar em campos que contenham number
+
+para pesquisar textos temos que usar o comando like e envolver o texto em aspas
 
 
 
