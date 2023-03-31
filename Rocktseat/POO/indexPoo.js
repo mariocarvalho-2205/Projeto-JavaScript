@@ -174,5 +174,9 @@ class Moto extends Veiculo {
     }
 }
 
+!! Um objeto pode estender de outro objeto que pode estender de outro objeto
+!! Facil reutilização de codigo
+!! POR PADRÃO JA EXISTE HERANÇA DE PROTOTIPOS DEPENDENDO DO TIPO
+
  */
 
