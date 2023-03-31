@@ -1,5 +1,15 @@
 /*
 
+Siga o passo a passo abaixo: 
+
+Troque a porta do mysql da seguinte forma: acesse xampp / mysql / bin e procure pelo arquivo my.ini
+
+e então procure por port = 3306 e alter para outra, ex: port = 3307 
+
+Procure por port = 3306 em todo o documento my.ini e altere de 3306 para 3307 ou outro. 
+
+Salve o arquivo my.ini e então reinicie o seu servidor xampp.
+
 
 
 
@@ -28,7 +38,32 @@ video: TEXTE
 data: DATATIME
 id_user: NUMBER FOREING KEY(perfil)
 
-Comandos:
+! Comandos:
+
+// mysql -u root -p // -> para acessar o banco de dados
+
+// show databases;  // lista todas as databases que exeistentes no servidor local
+
+// Criando catabases 
+* create database 
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// Selecionar databases
+*  use nome_database;
+// Ex: use curso_banco_de_dados;
+
+
+// Criando tabelas
+* CREATE TABLE `nome_tabela` (`nome_coluna` TIPO NÃO_VAZIO AUTO_INCREMENT)
+* Ex: 
+? CREATE TABLE `posts` (`id` INT NOT NULL AUTO_INCREMENT, `titulo` VARCHAR(255) NOT NULL, `Conteudo` TEXT NOT NULL, `autor_id` INT NOT NULL, primary key (`id`) ) ENGINE=InnoDB; 
+? CREATE TABLE `autores` (`id` INT NOT NULL AUTO_INCREMENT, `nome` VARCHAR(255) NOT NULL, primary key (`id`) ) ENGINE=InnoDB; 
+
+// Exibindo tabelas
+* show tables;
+
+// Selecionando
+* SELECT * FROM autores
 
 SELECT-> Usado para buscar e vai mostar as informaçõe
 - * ira selecionar todas as informações
