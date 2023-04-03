@@ -178,5 +178,105 @@ class Moto extends Veiculo {
 !! Facil reutilização de codigo
 !! POR PADRÃO JA EXISTE HERANÇA DE PROTOTIPOS DEPENDENDO DO TIPO
 
+? Polimorfismo - É quando um objeto estende de outro (herança) talvez haja a necessidade de resscrever uma ou mais caracteristica
+? (atributos e metodos) nesse novo objeto.
+
+* Recriaremos então um metodos (ou mais) da classe herdada
+* Significa muitas formas
+
+Ex: Entendedo o polimorfismo no codigo
+
+* criação da classe
+class Atleta{
+    peso;
+    categoria;
+
+    * construtor
+    constructor(peso) {
+        this.peso = peso;
+    }
+
+    * metodos
+    definirCategoria() {
+        if(peso <= 50) {
+            this.categoria = 'infantil'
+        } else if (peso <= 65) {
+            this.categoria = 'juvenil'
+        } else {
+            this.categoria = 'adulto'
+        }
+        console.log(this.categoria)
+    }
+}
+
+* criando classe Lutador
+class Lutador extends Atleta{
+    * construtor de Lutador
+    constructor(peso) {
+        super(peso)
+    }
+
+    * metodos de lutador
+    definirCategoria() {
+        if(peso <= 50) {
+            this.categoria = 'pluma'
+        } else if (peso <= 60) {
+            this.categoria = 'leve'
+        } else if (peso <= 75) {
+            this.categoria = 'meio-leve'
+        } else {
+            this.categoria = 'pesado'
+        }
+        console.log(this.categoria)
+    }
+}
+
+
+? Abstração - Template ou Identidade de uma classe que será construida no futuro
+
+* Atributos e metodos podem ser criados na classe de Abstração (Superclasse) MAS
+* A implementação dos metodos e atributos, ´so poderá ser feita na classe que irá herdar essa Abstração
+* classe abstrata não poderá ser instanciada
+
+Ex: 
+
+// definir
+class Parafuso{
+    construtor() {
+        if(this.constructor === Parafuso)
+            throw new Error('Classe abstrata não pode ser instanciada')
+    }
+
+    get tipo() {
+        throw new Error('Metodo "get tipo() " precisa ser implementado')
+    }
+}
+
+class Fenda extends Parafuso {
+    constructor() { super() }
+
+    get tipo() {
+        return 'fenda'
+    }
+}
+
+class Philips extends Parafuso{
+    constructor() { super() }
+
+    get tipo() {
+        return 'philips'
+    }
+}
+
+class Allen extends Parafuso {}
+
+// criar e usar
+new Parafuso() // 'Classe abstrata não pode ser instanciada'
+let fenda = new Fenda()
+let philis = new Philips()
+let allen = new Allen()
+
+console.log(fenda.tipo, philips.tipo)
+console.log(allen.tipo)  // 'Metodo "get tipo() " precisa ser implementado' 
  */
 
