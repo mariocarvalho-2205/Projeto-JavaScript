@@ -37,7 +37,7 @@ post: TEXT
 video: TEXTE
 data: DATATIME
 id_user: NUMBER FOREING KEY(perfil)
-
+! =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  Danki Code =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 ! Comandos:
 
 // mysql -u root -p // -> para acessar o banco de dados
@@ -62,9 +62,18 @@ id_user: NUMBER FOREING KEY(perfil)
 // Exibindo tabelas
 * show tables;
 
-// Selecionando
+// Exibir Selecionando - Visulizar conteudo inseridono no registro da tabela
 * SELECT * FROM autores
 
+// Visualizar colunas
+* SHOW COLUMNS FROM nome_coluna;
+
+// Inserindo dados na coluna
+* INSERT INTO `posts` VALUES (null, "Meu primeiro post", "Conteudo do primeiro post", 0);
+
+
+
+! =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  Danki Code =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 SELECT-> Usado para buscar e vai mostar as informaçõe
 - * ira selecionar todas as informações
 FROM está de onde, ou seja em qual tabela
