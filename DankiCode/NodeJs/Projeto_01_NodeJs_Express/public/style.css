@@ -1,0 +1,15 @@
+h1 {
+    color: red
+}
+
+.tarefas {
+    color: blue;
+    background: gray;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+}
+
+
+
