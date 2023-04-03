@@ -27,7 +27,17 @@ class Reptile {
     }
 }
 
-const smaug = new Reptile('The Robbit')
+
+// herança
+
+class Dragon extends Reptile{
+    constructor(firstAppearance){
+        super(firstAppearance)
+    }
+
+}
+
+const smaug = new Dragon('The Robbit')
 
 console.log(smaug)
 
