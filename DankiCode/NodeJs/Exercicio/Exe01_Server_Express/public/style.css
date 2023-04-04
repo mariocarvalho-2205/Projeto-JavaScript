@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: orange;
+}
+h1 {
+    margin: 50px;
+    text-align: center;
+    padding: 10px;
+}
+
+.tarefas{
+    margin: 10px auto;
+    max-width: 500px;
+    background-color: red;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+a {
+    padding: 5px;
+    border-radius: 5px;
+}
