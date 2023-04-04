@@ -64,6 +64,11 @@ id_user: NUMBER FOREING KEY(perfil)
 
 // Exibir Selecionando - Visulizar conteudo inseridono no registro da tabela
 * SELECT * FROM autores
+* SELECT nome_coluna FROM autores
+    podemos selecionar os dados ordenados de maneira crescente ou decrescente
+    comando: order by
+    Sintaxe:
+    * SELECT * FROM nome_coluna ORDER BY valor_coluna DESC OU ASC;
 
 // Visualizar colunas
 * SHOW COLUMNS FROM nome_coluna;
@@ -71,6 +76,36 @@ id_user: NUMBER FOREING KEY(perfil)
 // Inserindo dados na coluna
 * INSERT INTO `posts` VALUES (null, "Meu primeiro post", "Conteudo do primeiro post", 0);
 
+// UPDATE - Irá atualizar dados na tabela
+! OBS: se não utilizar o comando WHERE, Ele mudará todos os campos da tabela
+
+?Sintaxe
+                                dado atual        dado atual      local para atualizar
+* UPDATE funcionarios SET nome='Mário Carvalho', cpd=98765432199 WHERE id_funcionario=12
+
+// DELETE - Apaga o registro da tabela toda, ou seja, toda a linha(Registro completo)
+! OBS: Ele não apaga o registro, apaga apenas os dados
+! OBS2: Não pode executar o DELETE sem USAR O WHERE, ISSO APAGARA TODOS OS DADOS DO BANCO DE DADOS!!!
+
+? Sintaxe
+? DELETE 
+* DELETE FROM funcionarios WHERE id_funcionario = 12
+
+// GROUP BY
+
+? Usado para agrupar os dados por uma determinada coluna retornando o primeiro valor de um grupo
+Ex: selecionando os dados de um determinado usuario
+
+Sintaxe
+* SELECT * FROM tabela GROUP BY nome_coluna; 
+* SELECT * FROM posts GROUP BY autor_id;
+
+// AGRUPANDO E ORDENANDO
+* SELECT * FROM tabela GROUP BY nome_coluna ORDER BY desc;
+* SELECT * FROM post GROUP BY autor_id ORDER BY desc;
+
+* SELECT * FROM tabela WHERE nome_coluna = 'valor_procurado' GROUP BY coluna_para_agrupar ORDER BY coluna_para _ordenar DESC;
+* SELECT * FROM posts WHERE titulo = 'Inserindo valores' GROUP BY autor_id ORDER BY id DESC;
 
 
 ! =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-  Danki Code =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
