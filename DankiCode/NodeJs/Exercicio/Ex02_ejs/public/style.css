@@ -5,5 +5,48 @@
 }
 
 body {
-    background: cyan;
+    background: rgb(128, 1, 1);
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 20px;
+}
+
+.menu-item {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(184, 179, 179);
+    width: 70px;
+    height: 40px;
+}
+li a {
+    color: rgb(88, 3, 3);
+    text-decoration: none;
+
+}
+
+#list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
+
+footer nav {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul {
+    list-style: none;
 }
