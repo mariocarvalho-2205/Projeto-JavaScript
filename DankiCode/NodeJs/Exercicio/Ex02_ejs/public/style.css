@@ -26,6 +26,16 @@ body {
     width: 70px;
     height: 40px;
 }
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+
 li a {
     color: rgb(88, 3, 3);
     text-decoration: none;
