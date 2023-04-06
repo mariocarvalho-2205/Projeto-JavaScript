@@ -32,7 +32,7 @@ var pessoas = [
 
 app.post('/', (req,res) => {
     console.log(req.body.pessoas)
-    // pessoas.push(req.body.pessoas)
+    pessoas.push(req.body.pessoas)
 
     res.render('index', { pessoas: pessoas })
 })
@@ -43,15 +43,17 @@ app.get('/', (req, res) => {
 
 })
 
-// app.get('/deletar/:id', (req, res) => {
-//     pessoas = pessoas.filter((val, ind) => {
-//         if(ind != req.params.id) {
-//             return val
-//         }
-//     })
+app.get('/deletar/:id', (req, res) => {
+    pessoas = pessoas.filter((val, ind) => {
+        if(ind != req.params.id) {
+            
+            return val
+        }
+            
+    })
 
-//     res.render('index', { pessoas: pessoas })
-// })
+    res.render('index', { pessoas: pessoas })
+})
 
 app.get('/teste', function (req, res) {
     res.send('Entendendo agora!!!')
