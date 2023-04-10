@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias MC Developer</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="/public/style.css">
@@ -18,7 +20,7 @@
     <header>
         <div class="center">
             <div class="logo">
-                <h2>MarioNews</h2>
+                <h2><span style="font-weight: lighter;">Mario</span><b>News</b></h2>
             </div> 
             <div class="form-busca">
                 <form action="">
@@ -26,8 +28,51 @@
                     <input type="text" class="" placeholder="Busca..." name="busca">
                 </form>
             </div>
+             
         </div>
     </header>
 
+    <section class="noticia-destaque">
+        <div class="center">
+            <div class="img-destaque">
+                <div class="overlays-destaque"></div>
+
+                <div class="title-destaque-descricao">
+                    <h2>Que fugir das praias do litorial?</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                    dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                    book.</p>
+                </div>
+                <img src="/public/image/landscape.jpg" alt="">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="outras-noticias">
+        <div class="title-outras-noticias">
+            <h2>Ultimas Noticias</h2>
+            <br><br>
+            <div class="center">
+                <div class="ultimas">
+                    <div class="box-ultimas-single">
+                        <img src="/public/image/noticia.jpg" alt="">
+                        <h3>Natureza Geral</h3>
+                        <h2>Como encarar o surf em Salvador</h2>
+                        <p>A agua gelada e o vento podem acabar com a sua feliciada de ir ara a agua.</p>
+                    </div>
+                    <div class="box-ultimas-single">
+                        <img src="/public/image/noticia.jpg" alt="">
+                        <h3>Natureza Geral</h3>
+                        <h2>Como encarar o surf em Salvador</h2>
+                        <p>A agua gelada e o vento podem acabar com a sua feliciada de ir ara a agua.</p>
+                    </div>
+                </div>
+                <div class="mais-lidas">
+                    <h3>Mais Lidas</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
