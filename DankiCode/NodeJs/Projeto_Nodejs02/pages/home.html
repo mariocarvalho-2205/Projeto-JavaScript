@@ -6,13 +6,12 @@
                 <div class="overlays-destaque"></div>
 
                 <div class="title-destaque-descricao">
-                    <a href="/public">
-                        <h2>Que fugir das praias do litorial?</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. and scrambled it to make a type specimen
-                        book.</p>
-                    </a>
+                    <a href="<%= posts[0].slug %>"><h2><%= posts[0].titulo %></h2></a>
+                        
+                        <p><%- posts[0].conteudo %></p>
+                    
                 </div>
-                <img src="/public/image/landscape.jpg" alt="">
+                <img src="<%= posts[0].imagem %>" alt="">
 
             </div>
         </div>

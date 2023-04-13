@@ -2,7 +2,7 @@
 const express = require('express');
 const ejs = require('ejs');
 const app = express();
-const mongoose = require('mongoose');
+var mongoose = require('mongoose');
 const port = process.env.PORT || 3000;
 const path = require('path');
 var bodyParser = require('body-parser');
@@ -10,7 +10,7 @@ var bodyParser = require('body-parser');
 
 const Posts = require('./Posts.js')
 
-mongoose.connect('mongodb+srv://root:Msct.2205@cluster0.we4or8k.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true}).then(function() {
+mongoose.connect('mongodb+srv://root:Msct.2205@cluster0.we4or8k.mongodb.net/noticias?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true}).then(function() {
     console.log('conectado com sucesso')
 }).catch(function(err) {
     console.log(err.message)
@@ -32,10 +32,19 @@ app.get('/', (req, res) => {
     //console.log(req.query)  // query vai mostar a busca na url
 
     if(req.query.busca == null) {
-        Posts.find({}).sort({'_id': -1}).exec(function(err, posts) {
-            console.log(posts[0])
+        Posts.find({}).sort({'_id': -1}).then(function(err, posts) {
+            //console.log(posts)
+            posts = posts.map(function(val) {
+                return {
+                    titulo: val.titulo,
+                    conteudo: val.conteudo,
+                    imagem: val.imagem,
+                    slug: val.slug,
+                    categoria: val.categoria
+                }
+            });
+            res.render('home', {posts:posts});
         })
-        res.render('home', {})    
     } else {
         res.render('busca', {})
         // res.send(`Voce buscou por ${req.query.busca}`)
