@@ -128,7 +128,7 @@ Pronto assim sua máquina está funcionando junto com a do GitHub.
 
 
 
-* 
+ 
 
 
 
@@ -141,4 +141,3 @@ Pronto assim sua máquina está funcionando junto com a do GitHub.
 
 
 
-*/ 
