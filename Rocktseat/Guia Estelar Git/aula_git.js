@@ -1,4 +1,8 @@
 /*
+Editor de texto do git
+vim nome_do_arquivo.extensão
+para sair usa o -> :q para sair e -> :wq para sair e salvar
+
 
 *Tipos de controles de versão
 //Descrição
@@ -133,7 +137,22 @@ todos os detalhes e arquivos, tudo que estamos fazendo dentro do projeto.
 * 
 * git commit -m "mensagem do commit, é obrigatória, então não se esqueça!"
 * E assim criamos nosso primeiro ponto na história!
+
+* git commit -am "mensagem" -> -a e para usar quando o arquivo ja estiver
+* na staged area
+! So funciona quando os arquivos ja estão rastereados
 *
+
+// Git show
+? descrição
+* É usado para visualizar a um determinado commi
+
+* git show iniciais_do_numero_do_commit mostra a modificação no ponto da historia
+* git show 885c9af89ae62 -- src -> dessa forma vemos todas as modificações feitas no diretorio
+* git show --color-words -> mostra a modificação exata feita no arquivo
+* git show mostra as linhas modificadas por completo
+
+
 // Git log
 ? Descrição
 * Assim que rodar o comando no seu projeto, verá que temos uma hash, 
@@ -278,6 +297,8 @@ todos os detalhes e arquivos, tudo que estamos fazendo dentro do projeto.
 * A ferramenta git diff é muito poderosa para ver a diferença entre os arquivos que temos no nosso 
 * repositório e no nosso working directory.
 git diff
+git diff --color-words -> mostra as palavras que foram modificadas
+
 
 // Git diff staged
 ? Descrição
@@ -335,7 +356,101 @@ git diff
 * Podemos rodar o comando git status para conferir a remoção do(s) arquivo(s) do stage area.
 
 
+// Corrigindo o último commit
+? Descrição
+* Caso queiramos alterar algo de importante no nosso mais recente commit, 
+* como a mensagem, vamos usar uma opção do comando commit, que é a --amend, dessa forma:
+* 
+* git commit --amend -m "nova mensagem"
+* O git commit --amend também serve para modificar o conteúdo do commit, 
+* podendo servir para remover arquivos ou adicionar novos arquivos mas apenas válidos 
+* para o último commit, não tente modificar outros commits, pois isso é algo muito avançado 
+* e vai ser uma grande dor de cabeça.
+
+// Recuperando arquivos
+? Descrição
+* Podemos recuperar nossos commits antigos usando o comando git checkout.
+* 
+* Primeiramente usamos o git log para encontrar o commit que precisamos, 
+* e copiamos os primeiros caracteres da hash, após isso, podemos rodar o comando, da seguinte forma:
+* 
+* git checkout HASH -- nomedoarquivo
+* (Cuidado, caso haja um arquivo de mesmo nome e formato, será inteiramente substituído, fazendo com
+* que você precise pegar a versão mais recente num último commit)
+
+// Removendo arquivos não rastreados
+? Descrição
+* Veremos nesse vídeo como remover um ou mais arquivos não rastreados.
+* 
+! O comando git clean vai deletar tudo que não está rastreado no seu master branch, 
+! mas cuidado, ele será apagado para sempre, não será possível recuperá-los, pois não vão para um lixeira.
+* 
+* Caso queira confirmar o que o comando vai fazer use a opção -n, que vai mostrar os arquivos que o git 
+* vai apagar.
 
 
+// Revertendo um commit
+? Descrição
+* Agora veremos como reverter um commit, como pegar um ponto antigo da história, 
+* revertê-lo e adicionar um novo ponto.
+* 
+* O primeiro passo é ter um diretório limpo, sem nenhum arquivo não rastreado, sem nada na stage area.
+* 
+* Usaremos então o comando git log, e onde nossa HEAD estiver, a cada commit subtrairemos 1, 
+* então, considere o commit atual como 0, o abaixo desse -1, o abaixo desse -2 e por aí vai.
+* 
+* Use o comando git revert, mas ao invés de um sinal de menos(-), use um til (~), da seguinte maneira:
+* 
+* git revert HEAD~5
+* Também há outra forma de fazer isso, que é usando a hash de onde exatamente você deseja reverter, 
+* hash que pode ser obtida facilmente através do comando git log --oneline, ficaria parecido com:
+* 
+* git revert 7f121d7
+
+
+// Staging e commits com atalho
+? Descrição
+* Agora que pelo git status temos a noção de que o arquivo foi alterado, vamos commitá-lo.
+* 
+* Porém, como nós já temos todos os arquivos desse projeto no repositório, podemos pular a etapa do git add, já que após a modificação ele vai direto para a stage area, pois já é um arquivo rastreado e vamos fazer a execução do comando git commit com a opção -a, da seguinte forma:
+* 
+* git commit -am "lembre que podemos usar várias opções na mesma declaração"
+
+// Ver modificações em diversos pontos da história
+? Descrição
+* Nessa aula nos aprofundaremos nas modificações, em como vê-las e em tudo que já fizemos no histórico do projeto.
+* 
+* Podemos usar o comando git show e as letras iniciais da hash de um commit, da seguinte forma:
+* 
+* git show 7f121d7
+* Assim, veremos exatamente aonde essas mudanças ocorreram, e o que foi retirado ou adicionado, e podemos ser ainda mais específicos, usando a seguinte opção:
+* 
+* git show 7f121d7 --color-words
+* Essa opção vai nos permitir ver as palavras exatas que foram alteradas no nosso commit.
+* 
+* Podemos também ver as mudanças que houveram dentro de um diretório específico (nesse caso o diretório views, dentro do diretório src) através do --, usado da seguinte forma:
+* 
+* git show 7f121d7 -- src/views/*
+* Diferentemente do git diff, o git show serve como um atalho para mostrar exatamente o que há em um repositório em qualquer momento da história, enquanto o git diff vai apresentar as diferenças encontradas no working directory e stage area.
+
+// Ignorando arquivos e diretórios indesejados
+? Descrição
+* Veremos aqui como fazemos para ignorar arquivos e diretórios que não queremos no nosso repositório, através do .gitignore.
+* 
+* O primeiro passo é criar o arquivo .gitignore, adicionar o nome do arquivo ou diretório que desejamos ignorar, e adicionar o nosso .gitignore ao nosso repositório, primeiro com o comando git add, e depois o git commit.
+* 
+* O seu .gitignore já foi para dentro do repositório e está pronto para rastrear os arquivos.
+* 
+* Caso tenha algum arquivo no seu repositório que você tenha adicionado ao .gitignore, como no exemplo do vídeo, o .DS_Store, apenas rode o comando abaixo:
+* 
+* git rm -r --cached .
+* Esse comando vai fazer o git parar de rastrear todos os arquivos, deixando-os no working directory apenas.
+* 
+* Após isso, executaremos o comando git add . que vai colocar todos os arquivos novamente na stage area, exceto os que serão ignorados pelo nosso .gitignore.
+* 
+* Depois, apenas fazemos um commit com uma mensagem que reflita o que fizemos.
+* 
+* 
+* 
 
 */
