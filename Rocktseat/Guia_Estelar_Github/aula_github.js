@@ -123,6 +123,33 @@ Por fim copiaremos ssh-add -K ~/.ssh/id_rsa.
 Pronto assim sua máquina está funcionando junto com a do GitHub.
 
 
+// Linkando um repositório remoto com local
+? Descrição
+* Fizemos nosso primeiro repositório apenas online, mas agora criaremos seguindo um outro caminho.
+* 
+* vamos em new para criar um novo repositório, colocamos o nome, descrição, mesmo opcional é 
+* bem importante, escolhemos se é privado ou público para as outras pessoas, pularemos essa etapa 
+* de adicionar coisas pela nuvem, pois faremos ele todo manualmente, criado, estaremos vendo os 
+* passos que deveremos seguir.
+* 
+* Estaremos criando um repositório escrevendo no terminal mkdir nome do diretório , cd nome do 
+* diretório , damos um git init para iniciarmos o nosso git, damos o vim [README.md](http://readme.md) 
+* no caso estaremos escrevendo algumas coisas como nome e descrição, saímos e damos um git status para 
+* apenas darmos uma olhada, o arquivo não está sendo rastreado, então vamos dar um git add . , 
+* git commit -m ":tada: first commit" o nosso primeiro commit o :tada: é apenas um ícone, agora 
+* precisaremos adicionar nosso repositório remoto, usando a parte de ssh que é muito mais seguro 
+* do que HTTPS, estaremos escrevendo add origin git@github.com:maykrbrito/demo.git este é somente 
+* um exemplo, já que o de cada um será diferente apenas copie ao lado do SSH, agora que adicionamos 
+* podemos dar um git remote -v para vermos os repositórios que estão na nuvem, mas por enquanto apenas 
+* estamos a focar em somente 1, que é no GitHub, damos um git branch -M main , pois ainda não temos 
+* a branch main, da forma com que estamos a trabalhar de padrão a branch vem na master, então mudamos 
+* o padrão para o main.
+* 
+* Agora damos um git push -u origin mainpara enviarmos nossos repositórios para nuvem, damos um yes 
+* para liberar a conexão, as chaves foram adicionada.
+* 
+* Voltando para parte code vemos que foi criado e linkado, olha que legal.
+
 */
 
 
