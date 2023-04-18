@@ -145,11 +145,30 @@ Pronto assim sua máquina está funcionando junto com a do GitHub.
 * a branch main, da forma com que estamos a trabalhar de padrão a branch vem na master, então mudamos 
 * o padrão para o main.
 * 
-* Agora damos um git push -u origin mainpara enviarmos nossos repositórios para nuvem, damos um yes 
+* Agora damos um git push -u origin main para enviarmos nossos repositórios para nuvem, damos um yes 
 * para liberar a conexão, as chaves foram adicionada.
 * 
 * Voltando para parte code vemos que foi criado e linkado, olha que legal.
 
+
+// Modificando arquivos local e enviando para repositório remoto
+? Descrição
+* Agora estaremos fazendo uma alteração, no terminal, acessamos o nosso arquivo README que fizemos 
+* na aula passada escrevendo vim[README.md](http://readme.md) , damos um enter e modificamos o que 
+* queremos, saindo dando um git status podemos ver que ele não foi colocado no stage area, precisamos 
+* colocar, mas como o arquivo já está sendo rastreado pelo git, não precisaremos fazer o git add . , 
+* faremos o git commit -am ":sparkles: changing readme" m sendo a mensagem e o a ele vai adicionar a 
+* modificação que não está na stage area automaticamente junto ao commit tudo em uma linha só, isso 
+* somente funcionaria caso você já tenha posto na stage area alguma vez. não vamos precisar fazer o 
+* git remote, pois a nuvem já existe, dando o git push não vamos precisar fazer o -u origin , porque 
+* estamos na branch main já que a branch já existe aqui para o git.
+
+// Modificando arquivos remotos e puxando para repositório local
+? Descrição
+* Se alterarmos o arquivo e dermos commit changes, estaríamos fazendo direto online, mas se fizermos 
+* um git log --oneline, veremos que está a faltar um commit, sendo que na nuvem há mais, como faremos 
+* para puxar alteração da nuvem para máquina é bem simples, apenas damos um git pull e só, e se vermos 
+* novamente estará atualizada.
 */
 
 
