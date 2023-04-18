@@ -169,6 +169,49 @@ Pronto assim sua máquina está funcionando junto com a do GitHub.
 * um git log --oneline, veremos que está a faltar um commit, sendo que na nuvem há mais, como faremos 
 * para puxar alteração da nuvem para máquina é bem simples, apenas damos um git pull e só, e se vermos 
 * novamente estará atualizada.
+
+
+// Corrigindo conflitos de merge
+? Descrição
+* Nesta aula estaremos fazendo uma configuração e corrigir conflito e erros por causa de um processo.
+* 
+* Entrando no diretório cd demo/ como exemplo, quando dermos um git pull ele vai avisar que está 
+* havendo um conflito, para corrigir apenas faremos o padrão pedido pelo git que é 
+* git config --global pull.rebase false que é o padrão merge, dando novamente o git pull estará 
+* tudo certo.
+* 
+* Agora forçaremos um erro para criarmos uma situação, vamos supor que nós tenhamos feito uma 
+* alteração no repositório e demos commit apenas na nuvem e esquecemos de dar git pull e quando 
+* chegamos em casa, nós fazemos uma alteração no local, quando formos dar um git pull vai mostrar 
+* que deu erro, se abrirmos pelo vim[README.md](http://readme.md) , poderemos ver que é possível 
+* escolher entre a alteração local e pela remota, e para fazermos isso apenas apagamos a cabeça, 
+* os ====== e os >>>>>> e dizemos qual alteração que queremos, mas existe outro modo usando o VSCode, 
+* abrindo ele, no terminal damos um open . e colocamos ele no VSCode, ele automaticamente irá 
+* perceber o conflito e irá lhe dar certas opções, como a de aceitar as alterações locais ou as da 
+* nuvem, aceitando qualquer uma automaticamente o VSCode vai alterar de acordo com a escolha, 
+* então damos um git commit -am "mensagem" , agora o git pull e depois por fim o git push, 
+* atualizando vemos as alterações no GitHub.
+
+// Pesquisando no Github
+? Descrição
+* Uma outra função que possuímos no GitHub é a de pesquisar repositórios.
+* 
+* Vamos supor que queremos fazer um filtro de busca de JavaScript, digitamos search filter javascript, 
+* no caso fica com o nome do user, mas queremos procurar por todo GitHub, então retiramos o nome e 
+* damos enter novamente.
+* 
+* Há muitos códigos enquanto procuramos, por isso podemos filtrar também, para ver apenas sobre 
+* repositórios, códigos, commits, issues, discussões e muito mais, há também como ordenar os 
+* resultados por tanto de estrelas, melhor match, pelas mais recentes.
+* 
+* Clicando naquilo que mais te interessa, podemos ver as ideais de códigos, avaliar, corrigir 
+* fazendo o fork clicando no lápis, e mandar para pessoa, que vai receber um pull request, colaborando 
+* com ela e ajudando assim no projeto.
+* 
+* Podemos também procurar na mesma barra de pesquisa no nosso próprio GitHub, os repositórios, 
+* digitando user:username coisa que você estiver procurando, filtrando da mesma forma que procurar 
+* pelo GitHub todo.
+
 */
 
 
