@@ -95,6 +95,22 @@
 * depois do domínio por um carácter :, e também a Âncora, que serve para apontar algum lugar específico de algum 
 * documento.
 
+
+// URN
+? Descrição
+* Para encontrar um recurso pelo nome, ao invés da URL, utilizamos a URN, Uniform Resource Name. Um exemplo de 
+* URN é urn:isbn:0451450523, porém a URL é bem mais usada na web.
+
+// Revisão Resource
+? Descrição
+* Nessa aula nós revisaremos o que aprendemos nesse módulo. 
+* O URI (Uniform Resource Identifier) é a forma de encontrar um recurso, que se trata de qualquer entidade 
+* indentificável, na internet pelo seu nome ou pelo seu local, a forma mais usada é pelo local, usando a 
+* URL (Uniform Resource Locator), que possui 2 componentes obrigatórios, o Protocolo e o Domínio, e 5 opcionais, 
+* o subdomínio, o Path, os Parâmetros, a Porta e a Âncora.
+
+
+
  * 
  * 
  * 
