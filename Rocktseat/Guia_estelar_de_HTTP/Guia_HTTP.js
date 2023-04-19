@@ -257,9 +257,20 @@ curl -I http://localhost:3000/posts\?q\=json
 * resposta de uma mesma requisição, o verbo POST tem Body tanto na requisição quanto na resposta, pode ser 
 * usado em formulários e é cacheable.
 
-curl -d "{}"
+curl -d '{"id": 2, "title": "json-server-2", "author": "mario"}' -H "Content-type: application/json" -X POST http://localhost:3000/posts/
+
+// PUT
+? Descrição
+* Nessa aula falaremos sobre o método PUT, que serve para criar ou atualizar um recurso, porém, diferentemente 
+* do POST é idempotente e normalmente usado para atualizar recursos. O status code de criação do PUT é 201, 
+* e o de atualização é o 204 ou 200. O verbo PUT não é seguro, pois altera dados no servidor, mas é 
+* idempotente, tem Body na requisição mas não na resposta e não é usado em formulários nem é cacheable.
 
 
-
+// PATCH
+? Descrição
+* Nesta aula falaremos sobre o método PATCH, que serve para modificar parcialmente um recurso, diferentemente
+* do PUT, que é usado para modificar o recurso inteiro. Ele não é um verbo seguro nem idempotente, e recebe 
+* um Body tanto na requisição quanto resposta, não é usado em formulários e não é cacheable.
 
 */
