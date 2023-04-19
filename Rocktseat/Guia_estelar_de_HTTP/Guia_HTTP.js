@@ -41,7 +41,8 @@
 * papel do cliente, ao invés do navegador, com a ferramenta, também conseguimos ver o corpo da resposta, o 
 * que não era possível com o DevTools, e para também pegar os headers com o cURL, podemos adicionar -i ao 
 * comando antes do link, com o parâmetro -v podemos ver todos os headers, tanto os de saída quanto de chegada.
-
+* Acessar o manual do curl 
+* man curl
 * 
  * 
  * 
