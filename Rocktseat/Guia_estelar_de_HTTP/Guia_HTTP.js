@@ -43,6 +43,18 @@
 * comando antes do link, com o parâmetro -v podemos ver todos os headers, tanto os de saída quanto de chegada.
 * Acessar o manual do curl 
 * man curl
+
+
+
+// Conceitos HTTP
+? Descrição
+* Nessa aula vamos esclarecer alguns conceitos relacionados ao HTTP, que foi feito pra ser um protocolo simples e 
+* fácil de entender pra qualquer pessoa. Ele foi baseado na estrutura de cliente/servidor, ou seja, sempre vão 
+* ter uma requisição e uma resposta acontecendo, como um exemplo, voce pode pensar na forma de comprar um lanche, 
+* você faz um pedido, especificando a comida que você quer, e o estabelecimento te "responde" com a comida. 
+* O HTTP foi criado para também ser stateless, traduzindo, não guardar estado, ou seja, ele não vai guardar 
+* nenhuma informação, e não existe nenhuma relação entre as conexões. Outra característica do protocolo é ser 
+* extensível, podendo fazer diversas trocas de informação entre o cliente e o servidor, conforme a necessidade.
 * 
  * 
  * 
