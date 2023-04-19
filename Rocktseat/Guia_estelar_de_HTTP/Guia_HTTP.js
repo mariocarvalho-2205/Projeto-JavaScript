@@ -128,6 +128,39 @@
 * A mensagens de resposta tem a versão do protocolo, o status code, os headers e a status message.
 
 
+// Verbos HTTP
+// Methods
+? Descrição
+* Nessa aula vamos estudar os Métodos, ou verbos do HTTP que apesar de poderem ser chamados assim não 
+* necessáriamente tem formato de verbos. Eles servem para indicar o intuito da operação que o cliente 
+* está realizando, e cada um possui seu significado, que vamos estudar nas próximas aulas. Os métodos 
+* podem ter 2 características, seguro e idempotente. Métodos seguros não alteram o servidor, são de 
+* apenas leitura, então não apresentam carga extra para o servidor e são mantidos seguros por ele, 
+* métodos considerados seguros são: GET, HEAD e OPTIONS. Os métodos Idempotentes são os métodos que 
+* não mudam de resposta, por isso a parte de "idem" no nome, mas podem ter status codes diferentes os 
+* métodos idempotentes são todos os métodos seguros, PUT e DELETE.
+
+
+
+// JSON Server
+? Descrição
+* Nesta aula iremos ensinar como instalar a ferramenta JSON Server, que nos permite pegar respostas 
+* em formato JSON. Antes de tudo temos que já ter o Node.js instalado na máquina, depois disso podemos 
+* executar o comando npm install -g json-server, depois do comando terminar, crie um diretório chamado 
+* http-course e entre nele, copie as linhas de código:
+* 
+* {
+*   "posts": [
+*     { "id": 1, "title": "json-server", "author": "typicode" }
+*   ],
+*   "comments": [
+*     { "id": 1, "body": "some comment", "postId": 1 }
+*   ],
+*   "profile": { "name": "typicode" }
+* }
+* Agora pra iniciar o servidor, podemos usar o comando json-server --watch db.json e assim podemos acessar 
+* esses conteúdos.
+
  * 
  * 
  * 
