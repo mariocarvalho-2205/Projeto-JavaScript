@@ -168,8 +168,86 @@
 * disponibilidade de métodos da requisição. Ele é um método seguro, pois não faz alteração alguma, e é 
 * idempotente, pois sempre retornará a mesma coisa para a mesma requisição, o OPTIONS não manda nem recebe 
 * um Body, não é usado em formulários e nem é cacheable.
- * 
- * 
- * 
- * 
- */
+* curl -X OPTIONS http://localhost:3000/posts  -> não ira retornar nada porque não tem um corpo
+* 
+* curl -X OPTIONS http://localhost:3000/posts -i -> REtorna o cabeçalho de volta
+* 
+* HTTP/1.1 204 No Content
+* X-Powered-By: Express
+* Vary: Origin, Access-Control-Request-Headers
+* Access-Control-Allow-Credentials: true
+* Access-Control-Allow-Methods: GET,HEAD,PUT,PATCH,POST,DELETE
+* Content-Length: 0
+* Date: Wed, 19 Apr 2023 14:51:40 GMT
+* Connection: keep-alive
+* Keep-Alive: timeout=5
+
+// GET
+? Descrição
+* * Nesta aula falaremos sobre o método GET, que serve para pegar um recurso, ou seja, só pode receber dados. 
+* * Ele é um método seguro e idempotente, que não pode enviar um Body no request, mas pode receber no response,
+* * ele também pode ser cacheable e é usado em alguns formulários.
+* 
+* curl http://localhost:3000/posts
+* [
+*   {
+*     "id": 1,
+*     "title": "json-server",
+*     "author": "typicode"
+*   }
+* ]
+* mario@MARIO-CARVALHO MINGW64 ~
+
+
+* curl -v http://localhost:3000/posts
+* *   Trying 127.0.0.1:3000...
+* *   Trying [::1]:3000...
+* * Connected to localhost (::1) port 3000 (#0)
+* > GET /posts HTTP/1.1
+* > Host: localhost:3000
+* > User-Agent: curl/7.88.1
+* > Accept: **
+* >
+* < HTTP /1.1 200 OK
+* < X - Powered - By: Express
+* < Vary: Origin, Accept - Encoding
+* < Access - Control - Allow - Credentials: true
+* < Cache - Control: no - cache
+* < Pragma: no - cache
+* < Expires: -1
+* < X - Content - Type - Options: nosniff
+* < Content - Type: application / json; charset = utf - 8
+* < Content - Length: 77
+* < ETag: W / "4d-49G7XbVRP2NKipc5uj9Z4hcUq3Y"
+* < Date: Wed, 19 Apr 2023 15: 00: 44 GMT
+* < Connection: keep - alive
+* < Keep - Alive: timeout = 5
+* <
+* [
+* {
+* "id": 1,
+* "title": "json-server",
+* "author": "typicode"
+* }
+* ] * Connection #0 to host localhost left intact
+* 
+
+curl http://localhost:3000/posts\?q\=json
+[
+  {
+    "id": 1,
+    "title": "json-server",
+    "author": "typicode"
+  }
+]
+* 
+* 
+// HEAD
+? Descrição
+* Nesta aula falaremos sobre o método HEAD, que é semelhante ao GET, porém é recebido somente o cabeçalho. 
+* Ele é um método seguro e idempotente, não tem Body nem no envio nem na resposta, não é usado em 
+* formulários e é cacheable.
+
+
+
+*/
