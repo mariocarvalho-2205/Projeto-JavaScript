@@ -58,6 +58,21 @@
 * 
  * 
  * 
+// Cliente
+? Descrição
+* Nessa aula falaremos do Cliente, que na maioria das vezes é o Browser, ou no nosso caso, também pode ser o cURL. 
+* O Cliente é a entidade que dá inicio à toda comunicação com um pedido, fora em algumas poucas exceções. 
+* Esses pedidos são feitos através de ações, que usam os métodos do HTTP, como GET, POST, PUT e DELETE, 
+* que vamos ver com mais detalhes em uma próxima aula.
+
+
+// Servidor
+? Descrição
+* Nessa aula nós falaremos do Servidor, que é uma máquina em algum lugar do mundo preparada para lidar com as 
+* requisições do cliente e mandar uma reposta. A resposta sempre tem um Status Code, e pode ter headers e body.
+
+
+
  * 
  * 
  * 
