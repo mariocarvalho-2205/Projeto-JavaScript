@@ -116,6 +116,18 @@
 * onde eram feitas em formato de textos legíveis, agora na versão 2, para serem melhor otimizadas, serão feitas em 
 * uma estrutura binária, mas basicamente estão no mesmo jeito.
 
+
+// Request
+? Descrição
+ * A mensagem do pedido consiste no método, por exemplo GET, a versão do protocolo e a URI, dependendo do método usado, 
+ * pode se levar headers e body.
+
+
+// Response
+? Descrição
+* A mensagens de resposta tem a versão do protocolo, o status code, os headers e a status message.
+
+
  * 
  * 
  * 
