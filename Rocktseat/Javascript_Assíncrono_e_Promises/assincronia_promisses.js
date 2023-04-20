@@ -155,7 +155,7 @@ promessa
 
 
 */
-
+/*
 function print (dado) {
     console.log('testando')
     console.log(dado())
@@ -170,4 +170,47 @@ print(function () {
 setTimeout(function() {
     console.log('com tempo')
 }, 1000)
+
+*/
+// =-=-=-= Promise =-=-=-=-=-=-=
+let aceitar = false
+
+console.log('Pedir Uber')
+const promessa = new Promise((resolve, reject) => {
+
+	if ( aceitar) {
+		return resolve('carro chegando')
+	}
+
+	return reject('pedido negado')
+})
+
+promessa
+	.then(result => console.log(result))
+	.catch(erro => console.log(erro))
+	.finally(() => console.log('Finalizado!'))
+
+console.log('Aguardando!!!')
+
+/*
+//encadeamendo confuso
+fetch('https://api.github.com/users/maykbrito')
+.then((response) => {
+	response.json()
+	.then( data => {
+		fetch(data.repos_url)
+		.then(res => res.json()
+			.then(d => console.log(d)))
+  })
+})
+
+
+// encameamento de promessas quando precisa fazer varias chamadas
+fetch('https://api.github.com/users/maykbrito')
+.then((response) => response.json())
+.then( data => fetch(data.repos_url))
+.then(res => res.json())
+.then(d => console.log(d))
+.catch(erro => console.log(erro))  // mensagem de erro
+*/
 
