@@ -248,5 +248,14 @@ axios
   .then(repos => console.log(repos.data))
   .catch(erro => console.log(erro))
 
+//Executando Promessas em Paralelo com Promise all
+
+utilizamos um array de promessas
+
+Promise.all([
+	axios.get('https://api.github.com/users/mariocarvalho-2205')
+	axios.get('https://api.github.com/users/mariocarvalho-2205/repos')
+])
+
 */
 
