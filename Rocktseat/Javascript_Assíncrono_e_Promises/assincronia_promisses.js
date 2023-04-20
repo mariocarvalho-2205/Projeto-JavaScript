@@ -194,6 +194,8 @@ console.log('Aguardando!!!')
 
 /*
 //encadeamendo confuso
+https://api.github.com/users/mariocarvalho-2205
+
 fetch('https://api.github.com/users/maykbrito')
 .then((response) => {
 	response.json()
@@ -212,5 +214,39 @@ fetch('https://api.github.com/users/maykbrito')
 .then(res => res.json())
 .then(d => console.log(d))
 .catch(erro => console.log(erro))  // mensagem de erro
+
+
+
+// axios dependence
+
+importando
+
+import axios from "axios";
+axios.get('https://api.github.com/users/maykbrito')
+  .then(res => {
+    console.log(res.data)
+  });
+
+  // usando uma maneira confusa para ler o codigoimport axios from "axios";
+axios
+  .get('https://api.github.com/users/mariocarvalho-2205')
+  .then(response => {
+    const user = response.data
+
+    axios.get(user.repos_url)
+      .then(res => console.log(res.data))
+  })
+  .catch(erro => console.log(erro))
+
+
+// simplificado
+
+import axios from "axios";
+axios
+  .get('https://api.github.com/users/mariocarvalho-2205')
+  .then(response => axios.get(response.data.repos_url))
+  .then(repos => console.log(repos.data))
+  .catch(erro => console.log(erro))
+
 */
 
