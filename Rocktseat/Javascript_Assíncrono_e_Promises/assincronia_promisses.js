@@ -194,9 +194,10 @@ console.log('Aguardando!!!')
 
 /*
 //encadeamendo confuso
+
 https://api.github.com/users/mariocarvalho-2205
 
-fetch('https://api.github.com/users/maykbrito')
+fetch('https://api.github.com/users/mariocarvalho-2205')
 .then((response) => {
 	response.json()
 	.then( data => {
@@ -252,10 +253,20 @@ axios
 
 utilizamos um array de promessas
 
+
+import axios from "axios";
 Promise.all([
 	axios.get('https://api.github.com/users/mariocarvalho-2205')
 	axios.get('https://api.github.com/users/mariocarvalho-2205/repos')
 ])
+
+.then( response => {
+	console.log(responses[0].data.login)
+	console.log(responses[1].data.length)
+})
+.catch( err => console.log(err))
+
+
 
 */
 
