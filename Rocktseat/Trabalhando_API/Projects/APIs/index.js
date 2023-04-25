@@ -4,7 +4,7 @@ const port = 3000
 const route = '/'
 
 
-let author = 'Mário Carvalho'
+let author = 'Mário Carvalho agora vai'
 
 
 // rodando o server
@@ -13,7 +13,7 @@ app.listen(port, () => {
 })
 
 
-// middleware
+// middleware irá inicializar o json()
 app.use(express.json())
 
 
@@ -32,7 +32,7 @@ app.route(route).put( (req, res) => {
 
 // delete
 app.route(route + ':identificador').delete( (req, res) => {
-    res.send(req.params.identificador)
+    res.send('apagado agora'/*req.params.identificador*/)
 })
 
 
@@ -40,7 +40,7 @@ app.route(route + ':identificador').delete( (req, res) => {
 
 // Metodo post
 app.route("/").post((req, res) => 
-    res.send(req.body)
-    /*console.log(req.body)  // retorna o json no terminal*/
+    res.send(req.body),
+    //console.log(req.body)  // retorna o json no terminal*/
 )
 
