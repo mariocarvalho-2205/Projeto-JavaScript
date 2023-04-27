@@ -11,9 +11,9 @@ app.use(express.json())
 
 let users = [{
   id: 1,
-  name: "Jakeliny Gracielly",
-  avatar: "https://avatars.githubusercontent.com/u/17316392?v=4",
-  city: "São Paulo"
+  name: "Mário Carvalho",
+  avatar: "https://avatars.githubusercontent.com/u/100026592?v=4",
+  city: "Salvador"
 }]
 
 
@@ -39,7 +39,7 @@ app.route('/api').post((req, res) => {
     id: lastId + 1,
     name: req.body.name,
     avatar: req.body.avatar,
-    city: req.body.city
+    city: req.body.city,
   })
   res.json('Saved user')
 })
