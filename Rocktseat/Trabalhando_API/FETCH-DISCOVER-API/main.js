@@ -17,9 +17,9 @@ function getUser() {
         .then(response => response.json())  // retorna o objeto completo
         // retorna o dados individuais
         .then(data => {  
-            userName.textContent = data.name  // retorna texto
+            userName.textContent = data.name 
             userCity.textContent = data.city
-            userAvatar.src = data.avatar  // para retornar a foto usamos o src da tag img
+            userAvatar.src = data.avatar  
         })
         .catch(error => console.error(error))
 }
@@ -32,7 +32,7 @@ function addUser(newUser) {
     fetch(url, {
         method: "POST",
         body: JSON.stringify(newUser),  // JSON.stringfy() vai transformar o objeto em texto de json
-        header: {
+        headers: {
             "Content-type": "application/json; charset=UTF-8"
         }
     })
@@ -43,13 +43,48 @@ function addUser(newUser) {
 }
 
 
+function updateUser (userUpdate, id) {
+    fetch(`${url}/${id}`, {
+        method: "PUT",
+        body: JSON.stringify(userUpdate),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+        .then(response => response.json())
+        .then(data => alertApi.textContent = data)
+        .catch(error => console.log(error))
+}
+
+
+function deleteUser (id) {
+    fetch(`${url}/${id}`, {
+        method: "DELETE",
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+    .then(response => response.json())
+    .then(data => alertApi.textContent = data)
+    .catch(error => console.log(error))
+}
 // passar dados e incluir um novo usuario
+
+let userUpdate = {
+    name: "Joao",
+    avatar: "https://picsum.photos.com/200/300",
+    city: "Minas Gerais",
+};
 
 let newUser = {
     name: "Adilma Matos",
     avatar: "https://picsum.photos.com/200/300",
-    city: "Salvador"
+    city: "Salvador",
 };
-getUser()
+
+
 getUsers()
-addUser(newUser)
+getUser()
+//addUser(newUser)
+// updateUser(userUpdate, 5)
+deleteUser(3)
