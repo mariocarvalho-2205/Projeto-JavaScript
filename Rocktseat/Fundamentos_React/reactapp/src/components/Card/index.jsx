@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import "./styles.css"
 
-export function Card() {
+export function Card({name, time}) {  // desestruturando
     return (
         <div className="card">
-            <strong>Mário Carvalho</strong>
-            <small>10:10:55</small>
+            <strong>{name}</strong>
+            <small>{time}</small>
         </div>
     )
 }
