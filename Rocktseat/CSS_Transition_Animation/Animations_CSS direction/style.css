@@ -1,0 +1,89 @@
+/*
+
+Animation direction
+Descrição
+A propriedade animation-direction define 
+a direção que a animação vai funcionar, 
+podendo ser: normal | reverse | alternate 
+| alternate-reverse.
+
+normal: começa pela primeira chave do 
+@keyframes e vai ate a última, se o 
+iteration count estiver setado, no 
+momento de repetir, será também da 
+primeira chave do @keyframes ate a 
+ultima
+reverse: começa pela última chave do 
+@keyframes e vai ate a primeira, se o 
+iteration count estiver setado, no 
+momento de repetir, será também da última chave do 
+@keyframes ate a primeira.
+alternate: começa pela primeira chave 
+do @keyframes e vai ate a última, se o 
+iteration count estiver setado, no momento de repetir, 
+será da última chave do @keyframes ate a primeira, 
+e na próxima repetição volta a ser da primeira chave para a 
+última e assim por diante alternando.
+alternate-reverse.: começa pela última 
+chave do @keyframes e vai ate a primeira, se o iteration 
+count estiver setado, no momento de repetir, será da primeira 
+chave do @keyframes ate a última, e na próxima repetição volta
+ a ser da última chave para a primeira e assim por diante 
+ alternando.
+
+*/
+
+.box-red {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    animation: exemplo-2;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes exemplo {
+    from {
+        background-color: aqua;
+    }
+    
+    to {
+        background-color: black;
+    }
+}
+
+@keyframes exemplo-2 {
+    0% {
+        background-color: red;
+        
+        left: 0;
+        top: 0;
+    }
+
+    25% {
+        background-color: blue;
+        top: 0px;
+        left: 400px;
+    }
+    50% {
+        background-color: yellow;
+        left: 400px;
+        top: 400px;
+    }
+    75% {
+        background-color: black;
+
+        top: 400px;
+        left: 0px;
+    }
+    100% {
+        background-color: red;
+
+        left: 0px;
+        top: 0px;
+    }
+}

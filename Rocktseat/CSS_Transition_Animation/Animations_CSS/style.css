@@ -1,0 +1,25 @@
+/*
+Animation name e duration
+Descrição
+animation-name - é o nome da animação criada com @keyframes
+
+animation-duration - é o tempo de duração da animação em uma escala de segundos*/
+
+.box-red {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    animation: exemplo-2 10s;
+}
+
+@keyframes exemplo {
+    from {
+        background-color: aqua;
+    }
+    
+    to {
+        background-color: black;
+    }
+}

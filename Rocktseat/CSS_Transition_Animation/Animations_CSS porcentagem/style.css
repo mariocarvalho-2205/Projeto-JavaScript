@@ -1,0 +1,47 @@
+/*
+Keyframes com porcentagens
+Descrição
+Essa é uma forma útil quando queremos ter uma animação que execute vários comportamentos em sua duração, então podemos colocar o inicio da animação como 0% e o fim da animação como 100%, usando qualquer outro valor de porcentagem nos referimos ao momento da duração daquela animação em porcentagem e definimos seu comportamento.*/
+
+.box-red {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    animation: exemplo-2 10s;
+}
+
+@keyframes exemplo {
+    from {
+        background-color: aqua;
+    }
+    
+    to {
+        background-color: black;
+    }
+}
+
+@keyframes exemplo-2 {
+    0% {
+        background-color: purple;
+        width: 150px;
+    }
+
+    25% {
+        background-color: blue;
+        width: 100px;
+    }
+    50% {
+        background-color: yellow;
+        width: 200px;
+    }
+    75% {
+        background-color: black;
+        width: 350px;
+    }
+    100% {
+        background-color: red;
+        width: 500px;
+    }
+}
