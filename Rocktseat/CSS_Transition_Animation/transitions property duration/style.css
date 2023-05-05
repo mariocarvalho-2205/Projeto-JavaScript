@@ -1,0 +1,40 @@
+/* 
+transistion-property - é a propriedade css que queremos 
+aplicar a transição
+
+transition-duration - é o tempo de duração da transição
+
+Somente valores quantificáveis podem ser animados. 
+Isso quer dizer que não é possível fazer uma animação 
+de display indo de none para block, mas sim de opacity de 0 para 1;
+*/
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.box-red {
+    width: 100px;
+    height: 100px;
+}
+
+.box-red {
+    background: red;
+    transition-property: all;
+    transition-duration: 3s;
+    /* border-radius: 100%; */
+}
+
+.box-red:hover {
+    background-color: brown;
+    transition-property: all;
+    transition-duration: 1.5s;
+    border-radius: 100%;
+    width: 100%;
+    box-shadow: 10px 10px 10px gray;
+    
+    
+}

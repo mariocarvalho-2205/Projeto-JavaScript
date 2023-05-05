@@ -1,0 +1,61 @@
+/*
+Transition property all
+Descrição
+transition-property: all, é usado para aplicar transição em todos os elementos quantificáveis disponíveis e que estejam sofrendo alteração
+*/
+
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.box-red {
+    background: red;   
+}
+
+.box-yellow {
+    background: yellow; 
+    transition: all 1s ease-in 1s;  
+}
+
+.box-blue {
+    background: blue; 
+    transition: width 1s linear 1s;  
+}
+
+.box-green {
+    background: green; 
+    transition: width 1s linear 1s;  
+}
+
+.box-red:hover {
+    background-color: aqua;
+    transition: background-color 1s ease 2s;
+}
+
+
+.box-yellow:hover {
+    transition: all 1s cubic-bezier(.29, 1.01, 1, -0.68);
+    background-color: rgb(255, 0, 179);
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+}
+
+.box-blue:hover {
+    transition: width 2s ease-out 0s;
+    width: 200px;
+}
+
+.box-green:hover {
+    opacity: 0.5;
+    transition: opacity 1s linear 0s;
+}
