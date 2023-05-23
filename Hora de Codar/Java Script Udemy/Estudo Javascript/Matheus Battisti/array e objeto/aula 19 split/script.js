@@ -1,11 +1,7 @@
-// split
+// join
 
-// divide uma string por um separador e retorna um array
+// junta os elementos em um array em uma frase, por meio de um separador
 
-let frase = 'O rato roeu a roupa'
+let arr = ['mario', 'e', 'top']
 
-let palavras = frase.split(' ')
-
-console.log(frase)
-
-console.log(palavras)
+console.log(arr.join(' - '))
