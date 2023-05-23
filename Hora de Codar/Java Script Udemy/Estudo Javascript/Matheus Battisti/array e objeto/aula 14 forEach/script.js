@@ -1,17 +1,9 @@
-// forEach
+// includes
 
 /*
-forEach - itera por cada elemento do array
+includes - verifica se o array tem um determinado elemento
 */
 
-let dados = ["mario", 'joao', 'maria', 'jorge']
+let nomes = ['mario', 'joao', 'maria']
 
-dados.forEach(dado => console.log(dado))
-
-let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-numeros.forEach(numero => {
-    if (numero % 2 == 0) {
-        console.log(numero + ' numero e par')
-    } 
-})
+console.log(nomes.includes('mario'))
