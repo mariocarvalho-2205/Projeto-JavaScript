@@ -1,16 +1,9 @@
-let nomes = ['joao', 'mario', 'jorge', 'maria']
-let cinco = ['um', 'dois', 'tres', 'quatro', 'cinco']
-let palavras = ['joia', 'massa', 'aqui', 'talves','coisa', 'foi']
-
-function qtdNomes (arr) {
-    if (arr.length >= 5 ) {
-        console.log('muitos elementos')
-    } else {
-        console.log('poucos elementos')
-    }
+let json = {
+    "nome": "joao",
+    "age": 48,
+    "frutas": ["maça", "pera", "morango"]
 }
 
-qtdNomes(nomes)
-qtdNomes(palavras)
-
-cinco.forEach(um => console.log(um))
+console.log(json.age)
+console.log(json.nome)
+console.log(json.frutas[0])
