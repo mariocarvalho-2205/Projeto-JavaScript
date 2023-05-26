@@ -24,7 +24,7 @@ begin
             and (high[0] > high[2])
             and (close < media(21, close))
             then
-                SellShortStop(low-0.02, low-0.02) 
+                SellShortStop(low-0.02, low-0.02);
 
         end
 
@@ -37,11 +37,26 @@ begin
             // SellToCoverStop = envia uma ordem de venda para sair de uma operação de compra
             
             // Alvo
-            SellToCoverStop((((high[candle]-low[candle]) * 2)+high[candle])+10000,(((high[candle]-low[candle]) * 2)+high[candle]));  // verificar o tamanho do cancle de entrada
+            SellToCoverStop((((high[candle]-low[candle]) * 2)+high[candle])+10000,
+            (((high[candle]-low[candle]) * 2)+high[candle]));  // verificar o tamanho do cancle de entrada
 
 
             // stop
-            SellToCoverStop(abs((high[candle]-low[candle]*2)-low[candle]),abs((high[candle]-low[candle]*2)-low[candle])-10000);
+            SellToCoverStop(abs((high[candle]-low[candle] * 1)-low[candle]),
+            abs((high[candle]-low[candle]*2)-low[candle])-10000);
+        end;
+
+    if (SellPosition = 1) then
+        begin
+            candle:=candle+1;
+
+            // alvo
+            BuyToCoverStop(abs(((high[candle]-low[candle]) * 2)-low[candle])-10000,
+            abs(((high[candle]-low[candle]*2)-low[candle]));
+
+            // Stop
+            BuyToCoverStop(((high[candle]-low[candle]) * 1)+high[candle],
+            (((high[candle]-low[candle]) * 2)+high[candle])+10000);  // verificar o tamanho do cancle de entrada
         end;
 end;
 
