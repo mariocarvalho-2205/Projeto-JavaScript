@@ -62,6 +62,99 @@ end;
 
 
 
+// tipos de ordem para entrada na compra
 
+* Ordens de entrada na operação
+BuyAtMarket; // compra no fechamento do candle que der as condições de entrada no grafico
+BuyStop(ponto de entrada, ponto de entrada limite); // compra em determindado ponto especifico  Essa ordem precisa de dois parametros
+
+* Ordens de saida da operação
+SellToCoverAtMarket;  //
+SellToCoverStop();  //
+ClosePosition;  //
+
+
+// Tipos de entrada para compra
+
+begin 
+    if (BuyPosition = 0) then
+        begin
+            if (SlowStochastic(5) < 30) then
+                begin
+                    //BuyAtMarket;
+                    BuyStop(close, close);
+                    PaintBar(clRed);
+                end;
+
+        end;
+
+    if (BuyPosition = 1) then
+      begin
+        if (SlowStochastic(5) > 70) then
+
+        begin
+
+            //SelltoCoverAtMarket;  //1
+            SellToCoverStop(open, open);    //2
+            //ClosePosition;
+
+        end; 
+      end;
+        
+end; 
+
+// tipos de ordem para entrada na venda
+
+* Ordens de entrada na operação
+SellShortAtMarket; // compra no fechamento do candle que der as condições de entrada no grafico
+SellShortStop(ponto de entrada, ponto de entrada limite); // compra em determindado ponto especifico  Essa ordem precisa de dois parametros
+
+* Ordens de saida da operação
+BuyToCoverAtMarket;  //
+BuyToCoverStop();  //
+ClosePosition;  //
+
+! Tipos de alvo
+
+// Bloco de Saida
+
+    if (BuyPosition  = 1) then
+    begin
+    // Alvo
+          SellToCoverStop((BuyPrice+4.01)+100000, BuyPrice+4.01);
+          * financeiro - BuyPrice é o preço de entrada na operação, preço de compra da nota de corretagem
+    //Stop
+          SellToCoverStop(BuyPrice-2.99, (BuyPrice-2.99)-100000);   
+     
+    end;
+
+    if (SellPosition = 1) then
+    begin
+    // Alvo
+        BuyToCoverStop((SellPrice-4.01)-100000, (SellPrice-4.01);
+          
+    // Stop
+        BuyToCoverStop(SellPrice+2.99, (SellPrice+2.99)+100000);
+    end;
+
+
+    -0-0-0-
+
+    // SellToCoverStop(BuyPrice+((high - low)*2), BuyPrice+((high - low)*2));
+//          SellToCoverStop(BuyPrice+((high - low)*2), BuyPrice+((high - low)*2));
+            SellToCoverStop((BuyPrice+6)+50, BuyPrice+6);
+    //Stop
+          SellToCoverStop(BuyPrice-2, (BuyPrice-2)-50);   
+     
+    end;
+
+    if (SellPosition = 1) then
+    begin
+    // Alvo
+        BuyToCoverStop((SellPrice-2)-50, SellPrice-2);
+          
+    // Stop
+        BuyToCoverStop(SellPrice+2, (SellPrice+2)+50);
+    end;
 
 */
