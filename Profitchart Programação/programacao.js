@@ -123,6 +123,10 @@ ClosePosition;  //
     // Alvo
           SellToCoverStop((BuyPrice+4.01)+100000, BuyPrice+4.01);
           * financeiro - BuyPrice é o preço de entrada na operação, preço de compra da nota de corretagem
+          * Valores financeiro
+          * 4.00  - equivale a R$ 400,00 financeiro
+          * 400 para indice equivale a 400 pontos 
+          * 4 equivale a 4 pontos no dolar
     //Stop
           SellToCoverStop(BuyPrice-2.99, (BuyPrice-2.99)-100000);   
      
@@ -130,8 +134,10 @@ ClosePosition;  //
 
     if (SellPosition = 1) then
     begin
+    ! usado para swing trade o valor adicionado e para sair quando tiver um gap
+    * financeiro
     // Alvo
-        BuyToCoverStop((SellPrice-4.01)-100000, (SellPrice-4.01);
+        BuyToCoverStop((SellPrice-4.01)-100000, (SellPrice-4.01);  
           
     // Stop
         BuyToCoverStop(SellPrice+2.99, (SellPrice+2.99)+100000);
@@ -139,7 +145,7 @@ ClosePosition;  //
 
 
     -0-0-0-
-
+* pontos indice e dolar
     // SellToCoverStop(BuyPrice+((high - low)*2), BuyPrice+((high - low)*2));
 //          SellToCoverStop(BuyPrice+((high - low)*2), BuyPrice+((high - low)*2));
             SellToCoverStop((BuyPrice+6)+50, BuyPrice+6);
@@ -157,4 +163,133 @@ ClosePosition;  //
         BuyToCoverStop(SellPrice+2, (SellPrice+2)+50);
     end;
 
+    Alvos fixo usamos uma variavel de contagem para referenciar o candle de entrada
+
+    // Alvo
+        BuyToCoverStop((BuyPrice+AvgTrueRange(10, 0)[candle])+10000, BuyPrice+AvgTrueRange(10, 0)[candle]);
+
+
+! Stops moveis utilizando HiloActivator como exemplo
+
+// Bloco de saida -- Versão 1.0
+// Compra
+if (BuyPosition = 1) then
+    begin
+        candle := candle + 1;
+  
+        // Stop Padrão fixo v 1.0
+        SellToCoverStop(BuyPrice-400, (BuyPrice-400)-10000);
+
+        // Stop movel inicial V1.0 - Será necessario criar uma variavel para armazenar o Hilo
+        * Variavel Hilo
+        HiloAbaixoFechamento : float;
+
+        if (close > BuyPrice+200) then
+            begin
+                * Dessa forma o stop está subindo e saindo na virada do hilo no fechamento do candle
+                SellToCoverStop(HiloActivator(7), HiloActivator(7)-10000)  
+            end;
+
+
+    end
+
+
+
+// Bloco de saida -- Versão 2.0
+// Compra
+if (BuyPosition = 1) then
+    begin
+        candle := candle + 1;
+    
+        // Stop movel inicial V 2.0 // so movera se atender as duas condições
+        if (close > BuyPrice+200) and (close > HiloActivator(7)) then
+            begin
+                * Atribuindo valor a variavel do hilo
+                HiloAbaixoFechamento := HiloActivator(7);  // variavel declarada para guardar valor do hilo
+                end;
+            
+            if (close > BuyPrice+200) then
+                begin
+                * Dessa forma o stop será coduzido pelo Hilo e irar parar quando o Hilo virar de lado
+                SellToCoverStop(HiloAbaixoFechamento, HiloAbaixoFechamento-100000);  
+                end;
+
+        ! para nosso stop fixo, precisaremos criar uma condição agora
+        // Stop fixo para V 2.0
+        if (close<BuyPrice+200) then
+            begin
+                SellToCoverStop(BuyPrice-400, (BuyPrice-400)-10000);
+            end;
+
+
+    end;
+
+
+// Bloco de saida -- Versão 3.0
+* Nessa versão será corrigido o movimento do stop mesmo que o preço chegue ate a primeira condição e volte,
+* Sendo conduzido automaticamente pelo hilo sem precisar referenciar o fechamento dos candles
+* para isso sera declarada uma varivel como inteiro para usarmos as chaves.
+
+chave: integer;
+// Compra
+if (BuyPosition = 1) then
+    begin
+        candle := candle + 1;
+    
+        // Stop movel inicial V 2.0 // so movera se atender as duas condições
+        if (close > BuyPrice+200) and (close > HiloActivator(7)) then
+            begin
+                * Atribuindo valor a variavel do hilo
+                StopQueSobe := HiloActivator(7);  // variavel declarada para guardar valor do hilo
+                chave:=1;  nesse ponto sera atribuido a variavel chave o valor 1
+                end;
+            // Stop Hilo
+            ! Importante depois que for encerrada as operações, e necessario zerar a varivel chave 
+            ! No bloco onde a variavel candle recebe o valor zero
+            if (chave = 1) then
+                begin
+                * Dessa forma o stop será coduzido pelo Hilo ate ser stopado
+                SellToCoverStop(StopQueSobe, StopQueSobe-100000);  
+                end;
+
+            
+            // Stop fixo principal
+            if (chave=0) then
+                begin
+                    SellToCoverStop(BuyPrice-400, (BuyPrice-400)-10000);
+                end;
+
+
+    end
+
+// Venda
+if (SellPosition = 1) then
+    begin
+        candle := candle + 1;
+    
+        // Stop movel inicial V 2.0 // so movera se atender as duas condições
+        if (close < SellPrice-200) and (close < HiloActivator(7)) then
+            begin
+                * Atribuindo valor a variavel do hilo
+                StopQueDesce := HiloActivator(7);  // variavel declarada para guardar valor do hilo
+                chave:=1;  nesse ponto sera atribuido a variavel chave o valor 1
+                end;
+            // Stop Hilo
+            ! Importante depois que for encerrada as operações, e necessario zerar a varivel chave 
+            ! No bloco onde a variavel candle recebe o valor zero
+            if (chave = 1) then
+                begin
+                * Dessa forma o stop será coduzido pelo Hilo ate ser stopado
+                BuyToCoverStop(StopQueDesce, StopQueDesce+100000);  
+                end;
+
+            
+            // Stop fixo principal
+            if (chave=0) then
+                begin
+                    BuyToCoverStop(SellPrice+400, (SellPrice+400)+100000);
+                end;
+
+
+    end
 */
