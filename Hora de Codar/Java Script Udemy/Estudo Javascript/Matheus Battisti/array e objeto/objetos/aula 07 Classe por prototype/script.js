@@ -18,6 +18,7 @@ function Cachorro (raca) {
     this.raca = raca
 }
 
+// Dessa forma podemos criar a classe apenas com as propriedades e os metodos separados
 Cachorro.prototype.uivar = function () {
     console.log('Auuuuu)
 }
