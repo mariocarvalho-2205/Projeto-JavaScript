@@ -1,32 +1,18 @@
-let cachorro = {
-    raca: 'SRD',
-    latir: function () {
-        console.log('au, au, au');
-    },
-    rosnar: () => {
-        console.log('grrrrrr')
-    },
-    nome: function (nome) {
-        console.log(`O cachorro se chama ${nome}.`)
-    },
-    setRaca: function (raca) {
-        this.raca = raca;
-        
-        // if(raca == "Pastor") {
-        // } else if (raca == "Pixi") {
-        //     return `Que raça chata`;
-        // }
+/*
+// prototypes - Um objeto fallback de outro objeto
+Quando um objeto recebe uma requisição de uma propriedade que nao tem, 
+ela e procura no prototype deste objeto
 
-    },
-    getRaca: function () {
-        return `A raça é ${this.raca}`
-    } 
+O prototype de um objeto criado do zero é o Object, que tem os metodos nativos da linguagem
+
+
+*/
+
+const pessoa = {
+    maos: 2
 }
 
-cachorro.latir();
-cachorro.rosnar();
-cachorro.nome('mike');
-cachorro.setRaca('pastor alemão')
-console.log(cachorro.getRaca())
+console.log(Object.getPrototypeOf(pessoa));  // [Object: null prototype] {}
+console.log(Object.getPrototypeOf(pessoa) === Object.prototype);  // true
 
-
+console.log(pessoa.hasOwnProperty('maos'))  // true - confirma se tem a propriedade no objeto
