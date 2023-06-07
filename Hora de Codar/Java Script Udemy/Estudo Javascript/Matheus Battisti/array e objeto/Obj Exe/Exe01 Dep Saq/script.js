@@ -1,4 +1,4 @@
-class Conta {
+class Carrinho {
     constructor(saldo) {
         this.saldo = saldo
     }
@@ -11,16 +11,3 @@ class Conta {
         this.saldo -= valor
     }
 }
-
-let conta = new Conta(1000); 
-
-conta.deposito(1000)
-
-console.log(conta.saldo)
-
-conta.saque(500)
-
-console.log(conta.saldo)
-
-conta.deposito(750)
-console.log(conta.saldo)
