@@ -46,19 +46,19 @@ class Carrinho {
 
 let carrinho = new Carrinho([
     {
-        id: 01,
+        id: 1,
         nome: "camisa",
         qtd: 1,
         preco: 20,
     },
     {
-        id: 02,
+        id: 2,
         nome: "bermuda",
         qtd: 2,
         preco: 50,
     },
     {
-        id: 03,
+        id: 3,
         nome: "calca",
         qtd: 2,
         preco: 50,
@@ -70,7 +70,7 @@ let carrinho = new Carrinho([
 console.log(carrinho)
 
 carrinho.addItens({
-    id: 01,
+    id: 1,
     nome: 'camisa',
     qtd: 2,
     preco: 20
@@ -80,7 +80,7 @@ carrinho.addItens({
 console.log(carrinho)
 
 carrinho.addItens({
-    id: 04,
+    id: 4,
     nome:'bone',
     qtd: 3,
     preco: 15,
@@ -88,7 +88,7 @@ carrinho.addItens({
 console.log(carrinho)
 
 carrinho.removeItem({
-    id: 01,
+    id: 1,
     nome: 'camisa',
     qtd: 2,
     preco: 20,
