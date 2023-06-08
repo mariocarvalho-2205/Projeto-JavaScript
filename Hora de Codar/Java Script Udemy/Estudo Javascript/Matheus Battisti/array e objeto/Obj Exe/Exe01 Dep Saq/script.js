@@ -1,98 +1,30 @@
-class Carrinho {
-    constructor(itens, qtd, valor) {
-        this.itens = itens
-        this.qtd = qtd
-        this.valor = valor
-
+class Conta {
+    constructor(saldo) {
+        this.saldo = saldo
     }
 
-    addItens (item) {
-
-        let contador = 0
-        for(let itemCarrinho in this.itens) {
-            if (this.itens[itemCarrinho].id == item.id) {
-                this.itens[itemCarrinho].qtd += item.qtd
-                contador = 1
-            }
-
-        }
-        if(contador == 0) {
-            this.itens.push(item)
-        }
-
-
-        this.qtd += item.qtd
-        this.valor += item.preco
+    aberturaConta() {
+        
+        console.log(`Sua conta Foi aberta com  ${this.saldo}`)
     }
 
-    removeItem(item) {
-        for (let itemCarrinho in this.itens) {
-            if (this.itens[itemCarrinho].id == item.id) {
-
-                let obj = this.itens[itemCarrinho]
-                let index = this.itens.findIndex(function (obj) { return obj.id == item.id})
-
-                
-                this.qtd -= this.itens[itemCarrinho].qtd
-                this.valor -= this.itens[itemCarrinho].preco * this.itens[itemCarrinho].qtd
-                this.itens.splice(index, 1)
-            }
-        }
-
+    deposito(valor) {
+        this.saldo += valor
+        console.log(`Seu deposito foi de  ${valor}`)
+        console.log(`Seu saldo agora é ${this.saldo}`)
     }
-    
+
+    saque(valor) {
+        this.saldo -= valor
+        console.log(`Saque no valor de  ${valor}`)
+        console.log(`Seu saldo agora é ${this.saldo}`)
+    }
 }
 
 
-let carrinho = new Carrinho([
-    {
-        id: 1,
-        nome: "camisa",
-        qtd: 1,
-        preco: 20,
-    },
-    {
-        id: 2,
-        nome: "bermuda",
-        qtd: 2,
-        preco: 50,
-    },
-    {
-        id: 3,
-        nome: "calca",
-        qtd: 2,
-        preco: 50,
-    }
-
-
-], 3, 220 )
-
-console.log(carrinho)
-
-carrinho.addItens({
-    id: 1,
-    nome: 'camisa',
-    qtd: 2,
-    preco: 20
-})
-
-
-console.log(carrinho)
-
-carrinho.addItens({
-    id: 4,
-    nome:'bone',
-    qtd: 3,
-    preco: 15,
-})
-console.log(carrinho)
-
-carrinho.removeItem({
-    id: 1,
-    nome: 'camisa',
-    qtd: 2,
-    preco: 20,
-})
-
-console.log(carrinho)
+let myConta = new Conta(1000)
+//console.log(myConta.saldo)
+myConta.aberturaConta()
+myConta.deposito(500)
+myConta.saque(250)
 
