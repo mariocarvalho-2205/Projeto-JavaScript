@@ -1,36 +1,20 @@
-class Endereco {
-    constructor(rua, bairro, cidade, estado) {
-        this.rua = rua
-        this.bairro = bairro
-        this.cidade = cidade
-        this.estado = estado
+class Automovel {
+    constructor(marca, cor, gasolina) {
+        this.marca = marca
+        this.cor = cor
+        this.gasolina = gasolina
+
     }
 
-    set novaRua(novaRua) {
-        this.rua = novaRua
-    }
+    dirigir (combustivel) {
+        let cont = 0
+        this.gasolina
 
-    set novoBairro(novoBairro) {
-        this.bairro = novoBairro
-    }
 
-    set novaCidade(novaCidade) {
-        this.cidade = novaCidade
-    }
-
-    set novoEstado(novoEstado) {
-        this.estado = novoEstado
     }
 }
 
 
+let carro = new Automovel('Ford', 'Preto', 50)
 
-let myEndereco = new Endereco('Aroeira Vermelha', 'Periperi', 'Salvador', 'Bahia')
-
-console.log(myEndereco)
-
-myEndereco.novaRua = 'Rua Daniel Ferreira'
-myEndereco.novoBairro = 'Itacaranha'
-myEndereco.novaCidade = 'Belo Horizonte'
-myEndereco.novoEstado = 'Minas'
-console.log(myEndereco)
+console.log(carro)
