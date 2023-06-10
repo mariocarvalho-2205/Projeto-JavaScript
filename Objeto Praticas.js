@@ -1,4 +1,4 @@
-const cachorro = {
+/*const cachorro = {
     nome: 'SRD',
     setNome: function (novoNome) {
         this.nome = novoNome
@@ -109,11 +109,75 @@ class Product {
     }
 }
 
+// adicionando propriedade via prototype
 Product.prototype.validade = function() {
     console.log('valido')
 }
+Product.prototype.tipo = 'cereal'
 
 let arroz = new Product('tio joao', 'arroz')
 console.log(arroz.marca, arroz.produto)
 arroz.validade()
 arroz.vencido()
+console.log(arroz.tipo)
+
+class Deposito {
+    constructor(material, tipo) {
+        this.material = material
+        this.tipo = tipo
+    }
+
+
+}
+
+Deposito.prototype.tipo = 'Generico'
+
+let deposito = new Deposito('bloco', 'pesado')
+console.log(Deposito.prototype.tipo)
+console.log(deposito.tipo)
+let deposito2 = new Deposito('areia', 'areia')
+console.log(deposito2.tipo)
+console.log(Deposito.prototype.tipo)
+
+//-=-=-==symbol
+
+let dep = Symbol()
+
+Deposito.prototype[dep] = '321654987'
+
+let agora = new Deposito('sala', 'jantat')
+
+console.log(dep.prototype[val])*/
+
+class Cachorro {
+    constructor(raca) {
+        this.raca = raca
+    }
+
+    get getPorte() {
+        return this.porte
+    }
+
+    set setPort(porte) {
+        this.porte = porte
+    } 
+
+}
+
+
+let patas = Symbol()
+let pelo = Symbol()
+
+
+Cachorro.prototype[pelo] = 'peludo'
+Cachorro.prototype[patas] = 4
+
+console.log(Cachorro.prototype[pelo])
+
+let pastor = new Cachorro('pastor', 'sem tamanho')
+
+pastor.setPort = 'grande'
+
+console.log(pastor.getPorte)
+
+
