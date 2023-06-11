@@ -255,6 +255,9 @@ class Carteira{
         this.money += value
     }
 
+    saque(value) {
+        this.money -= value
+    }
 }
 
 let minhaCarteira = new Carteira(1000)
@@ -263,4 +266,7 @@ minhaCarteira.deposito = 500
 
 console.log(minhaCarteira)
 minhaCarteira.deposito = 500
+console.log(minhaCarteira.total)
+
+minhaCarteira.saque(300)
 console.log(minhaCarteira.total)
