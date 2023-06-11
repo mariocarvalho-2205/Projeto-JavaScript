@@ -147,7 +147,7 @@ Deposito.prototype[dep] = '321654987'
 
 let agora = new Deposito('sala', 'jantat')
 
-console.log(dep.prototype[val])*/
+console.log(dep.prototype[val])
 
 class Cachorro {
     constructor(raca) {
@@ -181,3 +181,86 @@ pastor.setPort = 'grande'
 console.log(pastor.getPorte)
 
 
+class Car {
+    constructor(marca) {
+        this.marca = marca
+    }
+
+    get getCar() {
+        return `Carro ${this.marca}`
+    }
+
+    set setCar(value) {
+        this.marca = value
+    }
+
+}
+
+class Moto extends Car{
+    constructor(marca, rodas) {
+        super(marca, marca)
+        this.rodas = rodas
+    }
+
+
+}
+
+let moto = new Moto('Yamaha', 2)
+
+let carro = new Car('Ford')
+
+console.log(carro.marca)
+
+carro.setCar = 'Toyota'
+
+console.log(carro.getCar)
+
+//=-=-=-=-=-=-= Herança
+
+class Mamifero {
+    constructor(patas) {
+        this.patas = patas
+    }
+    
+
+}
+
+class Gato extends Mamifero {
+    constructor(patas, raca) {
+        super(patas, patas)
+        this.raca = raca
+    }
+}
+
+let cat = new Gato(4, 'Bulldog')
+
+console.log(cat.patas)
+
+console.log(new Gato instanceof Mamifero)
+
+console.log(moto)
+console.log(moto.marca)
+console.log(new Moto instanceof Car)
+*/
+class Carteira{
+    constructor(money) {
+        this.money = money
+    }
+
+    get total() {
+        return `Tenho ${this.money} na carteira`
+    }
+
+    set deposito(value) { 
+        this.money += value
+    }
+
+}
+
+let minhaCarteira = new Carteira(1000)
+console.log(minhaCarteira)
+minhaCarteira.deposito = 500
+
+console.log(minhaCarteira)
+minhaCarteira.deposito = 500
+console.log(minhaCarteira.total)
