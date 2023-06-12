@@ -270,7 +270,7 @@ console.log(minhaCarteira.total)
 
 minhaCarteira.saque(300)
 console.log(minhaCarteira.total)*/
-
+/*
 class Carrinho{
     constructor(itens, qtd, total) {
         this.itens = itens
@@ -357,5 +357,40 @@ carrinho.removeItem({
     preco: 20
 })
 console.log(carrinho)
+*/
+
+class Carro {
+    constructor(marca, cor, combustivelRestante, consumo) {
+        this.marca = marca
+        this.cor = cor
+        this.combustivelRestante = combustivelRestante
+        this.consumo = consumo
+
+    }
+
+    dirigir(km) {
+        let litrosConsumidos = km / this.consumo
+
+        this.combustivelRestante -= litrosConsumidos
+
+        return `Voce teve um conumo de ${litrosConsumidos.toFixed(2)} litros nessa viagem, restando ${this.combustivelRestante.toFixed(2)} litros para uso.`
+    }
+
+    abastecer(litros){
+        this.combustivelRestante += litros
+        return `Agora voce tem ${this.combustivelRestante.toFixed(2)} litros para viajar`
+    }
+}
+
+let myCarro = new Carro('Ford', 'Vermelho', 100, 12)
+
+console.log(myCarro)
+
+console.log(myCarro.dirigir(100))
+
+console.log(myCarro.abastecer(20))
+
+
+
 
 
