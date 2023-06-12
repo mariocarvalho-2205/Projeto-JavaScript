@@ -1,36 +1,34 @@
-class Endereco {
-    constructor(rua, bairro, cidade, estado) {
-        this.rua = rua
-        this.bairro = bairro
-        this.cidade = cidade
-        this.estado = estado
+class Carro {
+    constructor (marca, cor, combustivel, consumo) {
+        this.marca = marca
+        this.cor = cor
+        this.combustivel = combustivel
+        this.consumo = consumo
     }
 
-    set novaRua(novaRua) {
-        this.rua = novaRua
+    viajar(km) {
+        
+        let litrosConsumidos = km / this.consumo
+
+        if (litrosConsumidos > this.combustivel) {
+            return `Voce só tem ${this.combustivel} litros, é necessario abastecer para completar a viagem!! Você ira precisar de mais ${Math.abs(this.combustivel -= litrosConsumidos).toFixed(2)} litros!`
+            
+        } else {
+            this.combustivel -= litrosConsumidos
+            return `Você teve um consumo de ${litrosConsumidos.toFixed(2)} litros, e ficou com ${this.combustivel.toFixed(2)} litros para rodar.`
+        }
     }
 
-    set novoBairro(novoBairro) {
-        this.bairro = novoBairro
+    abastecer(litros) {
+        this.combustivel += litros
     }
 
-    set novaCidade(novaCidade) {
-        this.cidade = novaCidade
-    }
 
-    set novoEstado(novoEstado) {
-        this.estado = novoEstado
-    }
 }
 
-
-
-let myEndereco = new Endereco('Aroeira Vermelha', 'Periperi', 'Salvador', 'Bahia')
-
-console.log(myEndereco)
-
-myEndereco.novaRua = 'Rua Daniel Ferreira'
-myEndereco.novoBairro = 'Itacaranha'
-myEndereco.novaCidade = 'Belo Horizonte'
-myEndereco.novoEstado = 'Minas'
-console.log(myEndereco)
+let myCarro = new Carro('Ford', 'Vermelho', 45, 12)
+console.log(myCarro)
+console.log(myCarro.viajar(1000))
+myCarro.abastecer(40)
+myCarro.abastecer(40)
+console.log(myCarro.viajar(100))
