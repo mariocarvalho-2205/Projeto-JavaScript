@@ -242,7 +242,7 @@ console.log(moto)
 console.log(moto.marca)
 console.log(new Moto instanceof Car)
 */
-class Carteira{
+/*class Carteira{
     constructor(money) {
         this.money = money
     }
@@ -269,4 +269,93 @@ minhaCarteira.deposito = 500
 console.log(minhaCarteira.total)
 
 minhaCarteira.saque(300)
-console.log(minhaCarteira.total)
+console.log(minhaCarteira.total)*/
+
+class Carrinho{
+    constructor(itens, qtd, total) {
+        this.itens = itens
+        this.qtd = qtd
+        this.total = total
+    }
+
+    addItens(item){
+
+        let contador = 0
+        for (let itemCarrinho in this.itens) {
+            console.log(this.itens[itemCarrinho].item)
+            if (this.itens[itemCarrinho].id == item.id) {
+                this.itens[itemCarrinho].qtd += item.qtd
+                contador = 1
+             }
+        }
+
+        if (contador == 0) {
+            this.itens.push(item)
+        }
+        this.qtd += item.qtd
+        this.total += item.preco * item.qtd
+    }
+
+    removeItem(item) {
+        for (let itemCarrinho in this.itens) {
+            //console.log(this.itens[itemCarrinho].item)
+            if (this.itens[itemCarrinho].id == item.id) {
+                
+                let obj = this.itens[itemCarrinho]
+                let index = this.itens.findIndex(function(obj) { return obj.id == item.id})
+
+                
+                this.qtd -= this.itens[itemCarrinho].qtd // item.qtd
+                this.total -= this.itens[itemCarrinho].preco * this.itens[itemCarrinho].qtd  //item.preco * item.qtd
+                this.itens.splice(index, 1) 
+
+            }
+             }
+        }
+
+}
+
+let carrinho = new Carrinho([
+    {
+        id: 1,
+        item: 'Camisa',
+        qtd: 1,
+        preco: 20
+    },
+    {
+        id: 2,
+        item: 'Calça',
+        qtd: 2,
+        preco: 50
+    }
+
+], 3, 120)
+
+//console.log(carrinho)
+//carrinho.addItens()
+carrinho.addItens({
+    id: 1,
+    item: 'Camisa',
+    qtd: 3,
+    preco: 20
+})
+console.log(carrinho)
+
+carrinho.addItens({
+    id: 3,
+    item: 'Bone',
+    qtd: 1,
+    preco: 15
+})
+
+console.log(carrinho)
+
+carrinho.removeItem({
+    id: 1,
+    item: 'Camisa',
+    qtd: 1,
+    preco: 20
+})
+console.log(carrinho)
+
+
