@@ -1,29 +1,16 @@
-// class WordCounter{
-//     constructor() {}
+class WordCounter{
+    constructor() {}
 
-//     countWords(string) {
-//         let words = string.split(' ')
-//         console.log(words.length)
-//     }
-// }
-
-// let palavras = new WordCounter()
-
-// palavras.countWords(' minha pequena frase agora')
-
-class WordCounter {
-    constructor() {
-        
-    }
-    
     countWords(string) {
-        let palavras = string.split(' ')
-        let qtdPalavras = palavras.length
-        
-        return qtdPalavras
+
+        if(string.trim() === '') {
+            return 0
+        }
+        let words = string.split(/\s+/)
+        console.log(words.length)
     }
 }
 
-let qtdPalavras = new WordCounter()
+let counter = new WordCounter()
 
-console.log(qtdPalavras.countWords('algumas palavras escritas'))
+counter.countWords('minha casa')
