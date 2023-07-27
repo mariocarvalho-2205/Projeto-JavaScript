@@ -16,4 +16,6 @@ console.log(/testando/.teste("asdflkjhasd"));
 */
 
 let reg1 = new RegExp("testando");
-console.log(/testando/.test(reg1))
+console.log(/testando/.test(reg1));
+let reg2 = /testando/;
+console.log(/testandosss/.test(reg2))
