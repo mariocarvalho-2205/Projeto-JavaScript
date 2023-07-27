@@ -11,3 +11,9 @@
 . - Qualquer caractere, menos nova linha
 
 */
+
+let dia = /\d\d/;
+
+console.log(dia.test('10'));
+console.log(dia.test('2010'));
+console.log(dia.test('ano'));
