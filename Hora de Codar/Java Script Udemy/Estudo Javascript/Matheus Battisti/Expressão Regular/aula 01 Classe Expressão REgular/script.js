@@ -16,6 +16,22 @@ console.log(/testando/.teste("asdflkjhasd"));
 */
 
 let reg1 = new RegExp("testando");
-console.log(/testando/.test(reg1));
+console.log(/testando/.test("ta testando ")); // pode ser utilizado com string ou variavel 
 let reg2 = /testando/;
-console.log(/testandosss/.test(reg2))
+console.log(/testandosss/.test(reg2));
+let reg3 = new RegExp('Fé');
+
+console.log(reg3.test('Tem Fé?'));
+console.log(reg3.test('Não tem'))
+
+let text = 'minha frase com Fé';
+console.log(reg3.test('Tem Fé'));
+console.log(reg3.test('Não Tem'));
+console.log(reg3.test(text));
+// utlizando o teste sem variavel
+
+console.log(/quantidade/.test(text));
+console.log(/quantidade/.test("minha frase tem quantidade"));
+console.log(/quantidade/.test("lkjashdfoiuyqwerquantidadeoiausdyfoiasudyf"));
+
+
