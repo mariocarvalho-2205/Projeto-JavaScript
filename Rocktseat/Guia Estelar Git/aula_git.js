@@ -361,7 +361,8 @@ git diff --color-words -> mostra as palavras que foram modificadas
 * Caso queiramos alterar algo de importante no nosso mais recente commit, 
 * como a mensagem, vamos usar uma opção do comando commit, que é a --amend, dessa forma:
 * 
-* git commit --amend -m "nova mensagem"
+* git commit --amend -m "nova mensagem"  -- 
+    ! Se não passa o -m ele abre o editor para fazer a alteração, para sair do editor usamos esc:  e o w para escrever e q para sair
 * O git commit --amend também serve para modificar o conteúdo do commit, 
 * podendo servir para remover arquivos ou adicionar novos arquivos mas apenas válidos 
 * para o último commit, não tente modificar outros commits, pois isso é algo muito avançado 
@@ -406,7 +407,17 @@ git diff --color-words -> mostra as palavras que foram modificadas
 * hash que pode ser obtida facilmente através do comando git log --oneline, ficaria parecido com:
 * 
 * git revert 7f121d7
-
+// Desfazendo um commit e retornar para um commit anterior
+* soft 
+* Utilizamos o comando git reset, ele tem 3 opções que são soft, mixed e hard
+* sintaxe: git reset --soft hash do commit 
+! Ele coloca os arquivos do commit anterior e coloca na staged area para ser commitados
+* mixed
+* sintaxe: git reset --mixed hash do commit 
+! Ele coloca os arquivos do commit posterior ao indicado e coloca na arvore de trabalho para serem adicionados e commitados
+* hard
+* sintaxe: git reset --hard hash do commit 
+! Ele vai apagar o commmit e tambem os arquivos retornando ao estado do commit anterior
 
 // Staging e commits com atalho
 ? Descrição
