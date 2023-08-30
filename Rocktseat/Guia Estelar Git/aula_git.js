@@ -1,4 +1,5 @@
 /*
+! Para abrir o editor VS no Github, é so paertar a tecla .(ponto)
 Editor de texto do git
 vim nome_do_arquivo.extensão
 para sair usa o -> :q para sair e -> :wq para sair e salvar
