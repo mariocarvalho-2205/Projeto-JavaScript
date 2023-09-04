@@ -12,8 +12,12 @@
 
 */
 
-let dia = /\d\d/;
+let dia = /\d\d/;  // OBS: Só dara false se a quantidade de caracteres for menor que a validação.
 
-console.log(dia.test('10'));
+/*console.log(dia.test('10'));
 console.log(dia.test('2010'));
 console.log(dia.test('ano'));
+*/
+let tresLetras = /\w\w\w/
+console.log(tresLetras.test('njh') && 'njh'.length == 3)
+console.log(tresLetras.test('ii') && 'ii'.length == 3)
