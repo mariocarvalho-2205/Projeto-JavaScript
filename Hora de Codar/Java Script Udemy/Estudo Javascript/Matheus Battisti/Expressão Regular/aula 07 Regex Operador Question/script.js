@@ -10,13 +10,19 @@
 \S - Caractere quem não seja um espaço em branco
 . - Qualquer caractere, menos nova linha
 
-// Operador Plus +
-* Espera uma repetição indefinida
+// Operador Question ? +
+* Faz com que o digito anterior seja opcional
 
 
 */
-let umOuMaisNumeros = /\d+/;
+let opcional = /Prova\s?\d?/;
 
-console.log(umOuMaisNumeros.test("1"));
-console.log(umOuMaisNumeros.test("12345"));
-console.log(umOuMaisNumeros.test("çlk"));
+console.log(opcional.test("Prova"));
+console.log(opcional.test("Prova 1"));
+console.log(opcional.test("Prova Ç"));
+
+let padrao = /Abacax?i/;
+
+console.log(padrao.test("Abacai"));
+console.log(padrao.test("Abacaxi"));
+console.log(padrao.test("Abacasi"));
