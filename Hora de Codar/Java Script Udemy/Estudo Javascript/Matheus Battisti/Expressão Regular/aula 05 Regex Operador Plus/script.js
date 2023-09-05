@@ -2,7 +2,7 @@
 // Utilizando de varias formas
 * Caracteres Especias
 
-\d - Qualquer tipo de caractere
+\d - Qualquer tipo de caractere não aceita letras e nem vazio, só aceita digitos
 \w - Um caractere alfanumerico
 \s - Qualquer caractere de espaço em branco
 \D - Caracteres que não são digitos
@@ -11,6 +11,12 @@
 . - Qualquer caractere, menos nova linha
 
 // Operador Plus +
-* Podemos escrever um set que aceite tudo, menos alguns caracteres com o operador NOT ^
-* As combinações serão aceitas, somente será negado se a combinação for combinado com o set
+* Espera uma repetição indefinida
+
+
 */
+let umOuMaisNumeros = /\d+/;
+
+console.log(umOuMaisNumeros.test("1"));
+console.log(umOuMaisNumeros.test("12345"));
+console.log(umOuMaisNumeros.test("çlk"));
