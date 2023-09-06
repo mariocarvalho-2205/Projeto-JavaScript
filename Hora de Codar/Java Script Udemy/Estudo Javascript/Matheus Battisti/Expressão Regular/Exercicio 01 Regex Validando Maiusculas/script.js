@@ -12,3 +12,7 @@
 . - Qualquer caractere, menos nova linha
 
 */
+let maiusculas = /[A-Z]/
+
+console.log(maiusculas.test('mario'))
+console.log(maiusculas.test('MARIO'))
