@@ -15,13 +15,15 @@
 Sintaxe = /\tipo{intervalo ou quantidade}-separador\tipo{intervalo ou quantidade}/;
 */
 let telefone = /\d{4,5}-\d{4}/;
+let telefoneDDD = /\(\d{2}\) \d{4,5}-\d{4}/;
+let cep = /\d{5}-\d{3}/;
+
+
 
 console.log(telefone.test("98888-5555"));
-console.log(telefone.test("Prova 1"));
-console.log(telefone.test("Prova Ç"));
+console.log(telefone.test("9999-9999"));
+console.log(telefoneDDD.test("(71) 88888-9595"));
 
-let padrao = /Abacax?i/;
-
-console.log(padrao.test("Abacai"));
-console.log(padrao.test("Abacaxi"));
-console.log(padrao.test("Abacasi"));
+console.log(cep.test("98888-523"));
+console.log(cep.test("Prova 1"));
+console.log(cep.test("Prova Ç"));
