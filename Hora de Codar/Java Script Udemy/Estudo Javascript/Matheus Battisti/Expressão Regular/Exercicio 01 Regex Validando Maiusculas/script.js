@@ -16,3 +16,4 @@ let maiusculas = /[A-Z]/
 
 console.log(maiusculas.test('mario'))
 console.log(maiusculas.test('MARIO'))
+console.log(maiusculas.test('123'))
