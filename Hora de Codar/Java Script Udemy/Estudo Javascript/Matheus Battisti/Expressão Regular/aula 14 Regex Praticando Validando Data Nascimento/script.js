@@ -13,7 +13,7 @@
 */
 
 //let data = /^[0-9]{1,2}[/][0-9]{1,2}[/][0-9]{2,4}/;  // dessa forma ele reconhece datas inexistentes
-let data = /[0-31]{1,2}[/][0-12]{1,2}[/][1950-2050]{2,4}/;
+let data = /[0-31]{1,2}[/][0-12]{2}[/][1950-2050]{4}/;
 
 
 
@@ -22,6 +22,6 @@ let data = /[0-31]{1,2}[/][0-12]{1,2}[/][1950-2050]{2,4}/;
 // console.log(data.test('1/5/1234'))
 // console.log(data.test('100/50/1234'))
 console.log(data.test('20/05/2023'))
-console.log(data.test('14/05/12'))
-console.log(data.test('01/05/2023'))
-console.log(data.test('10/12/2023'))
+console.log(data.test('14/05/20'))
+console.log(data.test('01/02/2020'))
+console.log(data.test('12/12/2023'))
