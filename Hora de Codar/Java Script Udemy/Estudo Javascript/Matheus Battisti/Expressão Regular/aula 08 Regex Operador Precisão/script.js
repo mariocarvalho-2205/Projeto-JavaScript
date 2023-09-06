@@ -10,16 +10,15 @@
 \S - Caractere quem não seja um espaço em branco
 . - Qualquer caractere, menos nova linha
 
-// Operador Question ? +
-* Faz com que o digito anterior seja opcional
+// Operador de Precisão - Insere o numero de ocorrencias dentro de {} 
 
-
+Sintaxe = /\tipo{intervalo ou quantidade}-separador\tipo{intervalo ou quantidade}/;
 */
-let opcional = /Prova\s?\d?/;
+let telefone = /\d{4,5}-\d{4}/;
 
-console.log(opcional.test("Prova"));
-console.log(opcional.test("Prova 1"));
-console.log(opcional.test("Prova Ç"));
+console.log(telefone.test("98888-5555"));
+console.log(telefone.test("Prova 1"));
+console.log(telefone.test("Prova Ç"));
 
 let padrao = /Abacax?i/;
 
