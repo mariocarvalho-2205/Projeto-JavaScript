@@ -1,23 +1,25 @@
 /*
 
-// Async functions
+// Async Function - Await
 
-* Podemos criar funções assincronas utilizando a palavra reservada
-* async, retornando uma Promise
-
-* Se retornar algo, a promessa é resolvida, se der alguma exception a promessa é
-* rejeitada
-
+* Na async functions, podemos determinar uma instrução await
+* que irá esperar uma promise ser resolvida, para apresentar os resultados
 
 */
 // Ex:
 
-async function somar (a, b) {
-    return a + b
+function somaComDelay (a, b) {
+    return new Promise (resolve => {
+        setTimeout(function() {
+            resolve(a + b)
+        }, 2000)
+    })
 }
 
-somar(3, 3 ).then(function(value) {
-    console.log(value)
-})
+async function soma (a, b, c) {
+    let x = somaComDelay(a, b)
+    let y = somaComDelay(c, d)
+    return await x + await y
+}
 
-console.log(somar(4, 4))
+soma(2, 4, 6, 8).then((v) => console.log(v))
