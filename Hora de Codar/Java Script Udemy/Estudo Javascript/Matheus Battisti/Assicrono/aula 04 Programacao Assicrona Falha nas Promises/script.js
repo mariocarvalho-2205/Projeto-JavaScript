@@ -1,23 +1,19 @@
 /*
 
-// Promises
+// Falha nas Promises
 
-* As promises são ações assicronas que 
-* podem produzir um valor em algum momento do codigo
+* Uma promise pode falhar, podemos reter esse erro com um metodo chamado catch
 
-* É uma forma de dizer a linguagem que um valor pode 
-* estar presente em um futuro do codigo
+* Com ele podemos exibir o erro no console, por exemplo, e fazer o debug no codigo
 
-* O objeto das promises é Promise, resolve e o metodo que resolve uma Promise, 
-* O then é o que fal ela poder ser executada em um ponto futuro
 
 
 */
 
-let promessa = Promise.resolve(4 + 8)
+let promessaErrada = Promise.resolve(new Error('Algo deu errado'))
 
-console.log("algum codigo")
-console.log(promessa)
+console.log('lalala')
 
-promessa.then((value) => {return value + 5})
+promessaErrada
         .then((value) => console.log(value))
+        .catch(reason => console.log(`Error: ${reason}`))
