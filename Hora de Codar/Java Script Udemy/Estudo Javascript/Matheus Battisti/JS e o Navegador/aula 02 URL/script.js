@@ -1,23 +1,20 @@
 /*
 
-// Generators
+// Protocolos - URL
 
-* Generators funcionam semelhantes as Promises
-* Onde as ações podem ser pausadas e continuadas depois
-* Caracterizando pelo function* e yield
-* O yield pode salvar o estado da variavél
+* A cada arquivo que carrega no no navegador é nomeado por uma URL
+* A URL (Uniform Resource Locator) pode ser dividida em 3 partes
+* 1- Protocolo, Servidor e Arquivo
+
+* URL completa
+* http://www.horadecodar.com.br/index.html
+
+// Descrevendo por partes
+* http = Protocolo
+* www.horadecodar.com.br = Servidor ou (DNS para um IP)
+* index.html = arquivo
+
+
+
 
 */
-// Ex:
-function* genTest() {
-    let id = 0;
-    while(true) {
-        yield id++
-    }
-}
-
-let criarId = genTest()
-
-console.log(criarId.next().value)
-console.log(criarId.next().value)
-console.log(criarId.next().value)
