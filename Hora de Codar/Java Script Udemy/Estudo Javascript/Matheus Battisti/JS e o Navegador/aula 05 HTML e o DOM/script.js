@@ -41,7 +41,11 @@
 * É possivél alterar: elementos, atributos, CSS
 * Além de alterar podemos adicionar e tambem remover
 * Além de ser possivél criar eventos na página, como animações
-* 
+
+* O documento HTML seria a árvore completa
+* A raiz da árvore é o Document (só a uma raiz)
+* Cada elemento da árvore chamados de node (nó)
+* Conteudos como texto são chamados de leaf nodes (as folhas)
 */
 
 console.log(document)
