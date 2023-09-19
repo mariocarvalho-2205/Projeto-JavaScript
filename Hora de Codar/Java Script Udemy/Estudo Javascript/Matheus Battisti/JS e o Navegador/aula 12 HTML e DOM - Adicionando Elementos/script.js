@@ -7,29 +7,26 @@
 
 */
 // Inserindo Elementos Após o elemento Pai
+const newElementH2 = document.createElement('h2')
+const newElementH3 = document.createElement('h3')
+const newElementH5 = document.createElement('h5')
+const elementDaddy = document.querySelector('#container-principal')
+const elementChildH4 = document.querySelector('h4')
 
-// const elInserth2 = document.createElement("h2");  // Aqui eu crio o elemento
-// const elCreateH3 = document.createElement("h3");
-// const elElementH4 = document.getElementById('h4'); // Depois seleciono o elemento que terar a tag adicionada antes
-// const elPai = elElementH4.parentNode;  // Aqui eu atribuo a uma variavel o grau de parentesco do elemento onde tera a inserção 
+elementDaddy.insertBefore(newElementH2, elementChildH4)
+elementDaddy.insertBefore(newElementH3, elementChildH4)
+elementDaddy.insertBefore(newElementH5, elementChildH4)
 
+let text = document.createTextNode('Titulo H2')  // Aqui é adicionado o texto no elemento criado
+newElementH2.appendChild(text)
 
+let textH3 = document.createTextNode('Titulo H3')
+newElementH3.appendChild(textH3)
 
-// elPai.insertBefore(elCreateH3, elElementH4);
-// const elH3 = document.querySelector('h3')
-// const pai2 = elH3.parentNode;
-// const child1 = pai2.parentNode;
-
-// child1.insertBefore(elInserth2, pai2)
-
-const novoElemento = document.createElement('p')
-const elementoAlvo = document.querySelector('#titulo-principal')
-const elementoPai = document.querySelector('#container-principal')
-
-elementoPai.insertBefore(novoElemento, elementoAlvo)
+let textH5 = document.createTextNode('Titulo H5')
+newElementH5.appendChild(textH5)
 
 
-//elPai.parentNode.insertBefore(elInserth2, elInsertH3 )  // Seleciono o elemento e nomeio como parentNode e faço a inserção
 
 
 
