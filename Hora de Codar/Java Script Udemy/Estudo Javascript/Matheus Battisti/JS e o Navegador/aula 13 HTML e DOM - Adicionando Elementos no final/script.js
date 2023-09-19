@@ -9,8 +9,10 @@
 const newElement = document.createElement('h2')
 const elementH1 = document.querySelector('#titulo-principal')
 const elementDaddy = elementH1.parentNode;
+let text = document.createTextNode('titulo H2')
 
 elementDaddy.appendChild(newElement)
+newElement.appendChild(text)
 
 
 
