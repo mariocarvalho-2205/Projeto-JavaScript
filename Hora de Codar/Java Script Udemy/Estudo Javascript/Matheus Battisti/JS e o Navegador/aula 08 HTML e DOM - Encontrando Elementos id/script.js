@@ -1,6 +1,6 @@
 /*
 
-// DOM e JS - Encontrando Elementos
+// DOM e JS - Encontrando Elementos - id
 
 
 * Podemos encontrar elementos de uma forma mais facil do que se movendo pelo DOM
@@ -20,5 +20,9 @@
 
 
 */
-// Acessando pela tag
-console.log(document.getElementsByTagName('h2'))
+// Acessando pelo id
+console.log(document.getElementById('title'))
+
+console.log(document.getElementById("p1"));
+
+
