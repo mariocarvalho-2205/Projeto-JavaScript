@@ -1,7 +1,9 @@
 /*
 
-// DOM e JS - Criando Elementos - Modificando e Lendo Atributos 
-* Podemos criar um nó de elemento com o createElement, e depois inserir no HTML
+// DOM e JS - Modificando e Lendo Atributos 
+* Podemos resgatar o valor de um atributo ou trocar com o js
+* getAttribute - pega o valor 
+* setAttribute - atualiza o valor
 
 
 */
