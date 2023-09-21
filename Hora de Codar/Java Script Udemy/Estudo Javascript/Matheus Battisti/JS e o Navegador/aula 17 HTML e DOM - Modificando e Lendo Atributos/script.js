@@ -33,6 +33,12 @@ container.appendChild(lista)
 lista.getAttribute('class')  // Criando Atributo
 
 lista.setAttribute('class', 'list') // Adicionando valor ao atributo
+let a = document.createElement('a')
+let textA = document.createTextNode('link')
+container.appendChild(a)
+a.appendChild(textA)
+a.getAttribute('href')
+a.setAttribute('href', 'https://www.google.com.br')
 
 
 
