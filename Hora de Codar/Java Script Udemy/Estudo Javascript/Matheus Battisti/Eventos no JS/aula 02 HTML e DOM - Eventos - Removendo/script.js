@@ -21,17 +21,28 @@ ao evento.
 
 
 */
-// Adicionando Evento
 let btn = document.getElementById('btn')
+let btn2 = document.getElementById('btn2')
 
-
+// funçaõ para sinalizar o click
 function msg () {
     console.log('foi acionado')
 }
 
+// Adicionando Evento
 btn.addEventListener('click', msg)
 
-setTimeout(()=> {
+// aqui o evento e removido depois de um tempo
+// setTimeout(()=> {
+//     btn.removeEventListener('click', msg)
+// }, 3000)
+
+// removendo o evento atraves de outro elemento
+btn2.addEventListener('click', () => {
     btn.removeEventListener('click', msg)
-}, 3000)
+    console.log('removeu evento btn2')
+})
+
 // Acessando Elementos
+
+
