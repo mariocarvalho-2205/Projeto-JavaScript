@@ -1,0 +1,10 @@
+#titulo-principal2 {
+    border: 2px solid black;
+    width: 300px;
+}
+#btn-container {
+    width: 50px;
+    padding: 50px;
+    background: red;
+
+}
