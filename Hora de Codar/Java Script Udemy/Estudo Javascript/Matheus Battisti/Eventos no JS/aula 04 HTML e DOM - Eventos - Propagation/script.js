@@ -33,21 +33,19 @@ ao evento.
 // Vammos para o o exemplo
 */
 let container = document.getElementById('btn-container')
-let btn2 = document.getElementById('btn')
+let btn = document.getElementById('btn')
 
 // funçaõ para sinalizar o click
 function msg (e) {
     //console.log(e.target.id)
     //console.log(e)
     console.log('mensagem')
-    e.stopPropagation()
+    e.stopPropagation() // para a função quando clica no buttom sem deixar acionar
+    // a função do container
 }
 
 // Adicionando Evento
-btn2.addEventListener('click', () => {
-    console.log('msg buttom')
-    
-})
+btn.addEventListener('click', msg )  // chama a função quando clica no buttom
 container.addEventListener('click', () => console.log('mensagem container'))
 
 
