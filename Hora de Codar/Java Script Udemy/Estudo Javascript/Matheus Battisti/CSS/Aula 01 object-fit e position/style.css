@@ -1,0 +1,50 @@
+div {
+    width: 200px;
+    height: 300px;
+    border: 5px solid blue;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 10px 10px ;
+    /* Object-position: top left
+    para alterar o valor bottom 
+    ou rigth usamos valores negativos*/
+}
+
+#contain {
+    object-fit: contain;
+    /*
+    Ira dimensionar a imagem 
+    para caber dentro do 
+    container mantendo todas 
+    as proporções
+    */
+}
+
+#cover {
+    object-fit: cover; 
+    /* 
+    preenche todo o espaço com 
+    o tamanho com imagem, 
+    cortando parte dela caber 
+    no container
+    */
+}
+#none {
+    object-fit: none; 
+    /* 
+    preenche todo o espaço com 
+    o tamanho real da imagem 
+    mantendo suas proporções originais
+    */
+}
+#scale-down {
+    object-fit: scale-down; 
+    /* 
+    exibe a imagem com as proporções 
+    estabelecidas no container
+    */
+}
