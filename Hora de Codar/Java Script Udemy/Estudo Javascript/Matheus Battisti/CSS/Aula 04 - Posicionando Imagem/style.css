@@ -1,0 +1,126 @@
+
+/* backgroun-size */
+#percentual {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 10% 10%;    
+}
+#center {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+#right {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#left {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: left;
+
+}
+
+#bottom {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+#combinando {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: top right; /* left bottom utilizando ... depois da virgula vai para a proxima camada*/
+    /* Podemos associar o posicionamento com o percentual */ 
+}
+
+/* background-repeat*/
+
+#repeat {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 120%;
+    background-repeat: repeat;
+}
+
+#repeat-x {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 120px;
+    background-repeat: repeat-x;
+}
+#repeat-y {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 120px;
+    background-repeat: repeat-y;
+}
+
+#space {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 120px;
+    background-repeat: space;
+}
+
+#round {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 120px;
+    background-repeat: round;
+}
+
+#no-repeat {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 120px;
+    background-repeat: no-repeat;
+}
+
+#misto {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 120px;
+    background-repeat: repeat space;
+}
