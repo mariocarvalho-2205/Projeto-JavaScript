@@ -1,0 +1,111 @@
+
+/* backgroun-size */
+#auto {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: auto;    
+}
+#cover {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: cover;
+    
+}
+#contain {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: contain;
+}
+#valor {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 50%;
+}
+
+#valores {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 50% 30%;
+}
+
+#camadas {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 50% 30%, cover;
+}
+
+/* background-repeat*/
+
+#repeat {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 120%;
+    background-repeat: repeat;
+}
+
+#repeat-x {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 120px;
+    background-repeat: repeat-x;
+}
+#repeat-y {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 120px;
+    background-repeat: repeat-y;
+}
+
+#space {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 120px;
+    background-repeat: space;
+}
+
+#round {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 120px;
+    background-repeat: round;
+}
+
+#no-repeat {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 120px;
+    background-repeat: no-repeat;
+}
+
+#misto {
+    width: 300px;
+    height: 300px;
+    border: 5px solid blue;
+    background-image: url(https://img.freepik.com/fotos-premium/imagem-3d-de-uma-forma-de-ilha-tropical-flutuante_665280-6956.jpg?w=2000);
+    background-size: 120px;
+    background-repeat: repeat space;
+}
