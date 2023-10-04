@@ -1,0 +1,46 @@
+
+/* backgroun-attachement */
+
+body {
+    height: 200vh;
+    width: 500px;
+    
+}
+
+div {
+    
+    width: 300px;
+    height: 300px;
+    border: 15px dashed blue;
+    background-color: orange;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnDZ3tlXHTKqV_lc29Vp_s_Fj67horZjAoaQ&usqp=CAU);
+    background-blend-mode: darken;
+    
+    color: white;
+    padding: 30px;
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+
+    /*overflow: auto; Cria uma barra de rolagem dentro do elemento*/
+    
+
+}
+
+#border-box {
+    background-clip: border-box;
+}
+#padding-box {
+   
+    background-clip: padding-box;
+}
+#content-box {
+    background-clip: content-box;
+}
+
+#text {
+    -webkit-background-clip: text;
+    color: transparent;
+    background-clip: text;
+}
+
