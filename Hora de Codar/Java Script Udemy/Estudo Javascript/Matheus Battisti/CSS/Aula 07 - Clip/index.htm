@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilizando CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> Background Posicionando</h1>
+    
+    <h2>Background-Clip</h2>
+
+    <code>background-clip: padding-box;</code><br><br>
+    
+    <code>Nenhum fundo é desenhado abaixo da borda (o fundo se extende até a borda externa do preenchimento).</code><br>
+    <br>
+    <div id="padding-box">
+        <h3>Trilha de CSS</h3>
+    </div>
+    <br>
+    
+    
+    <code>background-clip: border-box;</code><br><br>
+    <code>O fundo se extende até fora da fronteira da borda (mas por baixo da borda na ordenação-z).</code><br>
+    
+    <br>
+    
+    <div id="border-box">   
+        <h3>Trilha de CSS</h3>
+    </div>
+
+    <br>
+
+
+    <br>
+    <code>background-clip: content-box;</code><br><br>
+
+    <code>O fundo é desenhado dentro (cortado) a caixa de conteúdo.</code><br>
+    <br>
+    <div id="content-box">
+        <h3>Trilha de CSS</h3>
+    </div>
+
+    <br>
+    <br>
+    <code>background-clip: text;</code><br><br>
+    
+    <code>O fundo é desenhado dentro (cortado) a caixa de conteúdo.</code><br>
+    <p>Podemos adicionar o background no texto da seguinte maneira
+        <br><code>
+            -webkit-background-clip: text;<br>
+            color: transparent;<br>
+            background-clip: text;
+        </code>
+    </p>
+    <br>
+    <div id="text">
+        <h3>Trilha de CSS</h3>
+    </div>
+    
+    <br>
+    
+    
+</body>
+</html>
