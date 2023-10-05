@@ -30,5 +30,27 @@ div {
 }
 
 #border-dotted {
-    border-style:dotted;
+    border-style: dotted;
+}
+
+#border-double {
+    border-style: double;
+}
+
+#border-groove {
+    border-style: groove;
+}
+
+#border-ridge {
+    border-style: ridge;
+}
+#border-inset {
+    border-style: inset;
+}
+
+#border-outset {
+    border-style: outset;
+}
+#border-misto {
+    border-style: outset dashed dotted double;
 }
