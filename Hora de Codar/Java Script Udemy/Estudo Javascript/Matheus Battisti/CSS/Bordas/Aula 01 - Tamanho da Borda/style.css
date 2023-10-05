@@ -1,0 +1,34 @@
+
+/* backgroun-attachement */
+
+body {
+    height: 200vh;
+    width: 500px;
+    
+}
+
+div {
+    
+    width: 30px;
+    height: 30px;
+    background-color: orange;
+    color: white;
+    /*overflow: auto; Cria uma barra de rolagem dentro do elemento*/
+}
+
+.border {
+    border-width: 5px;
+    border-color: blue;
+}
+
+#border-solid {
+    border-style: solid;
+}
+
+#border-dashed {
+    border-style: dashed;
+}
+
+#border-dotted {
+    border-style:dotted;
+}
