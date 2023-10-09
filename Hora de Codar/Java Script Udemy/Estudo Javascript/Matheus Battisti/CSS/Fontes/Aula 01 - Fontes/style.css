@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600&family=Roboto:wght@300&display=swap');
+@font-face {
+    font-family: Roboto;
+    src: local(), url(../fontes/Roboto-BoldItalic.ttf);
+}
+body {
+    height: 200vh;
+    width: 500px;
+    font-family: 'Pixelify Sans', cursive;
+
+}
+
+div {
+
+    margin: auto;
+    width: 250px;
+    height: 150px;
+    background-color: orange;
+    color: white;
+    /*overflow: auto; Cria uma barra de rolagem dentro do elemento*/
+}
+p {
+    font-size: 30px;
+}
+span {
+    font-variant: small-caps;
+}
+
+span .strech {
+    font-stretch: expanded;
+}
