@@ -1,0 +1,48 @@
+
+/* backgroun-attachement */
+
+body {
+    height: 200vh;
+    width: 500px;
+    
+}
+
+div {
+    margin: auto;
+    width: 250px;
+    height: 150px;
+    background-color: orange;
+    color: white;
+    /*overflow: auto; Cria uma barra de rolagem dentro do elemento*/
+}
+
+.border {
+    border: 30px solid
+}
+
+#source {
+    border-image-source: url("./border.png");
+    border-image-slice: 60;
+}
+
+#width {
+    border-image-source: linear-gradient(red, blue);
+    border-image-slice: 60;
+    border-image-width: 10px 20px 30px 40px;
+}
+
+#repeat {
+    border-image-source: url("./border.png");
+    border-image-repeat: space round;
+    border-image-slice: 40;
+}
+
+#outset {
+    border-image-source: url("./border.png");
+    border-image-outset: 50px 20px;
+}
+
+#slice {
+    border-image-source: linear-gradient(red, blue);
+    border-image-slice: 10;
+}
