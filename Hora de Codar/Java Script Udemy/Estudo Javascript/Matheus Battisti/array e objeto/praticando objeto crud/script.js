@@ -62,6 +62,7 @@ class RegistroPessoas {
 
     atualizarLista() {
         const listaPessoas = document.getElementById('listaPessoas')
+        listaPessoas.innerHTML = ''
 
         this.pessoas.forEach(pessoa => {
             const li = document.createElement('li');
