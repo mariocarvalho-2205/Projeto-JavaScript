@@ -2,17 +2,16 @@ const miniTwitter = {
     usuarios: 
         [
             {
-            userName: 'mario'
+            userName: ''
         }
-    ]
-    ,
+    ],
     posts:[
         {
             id: 1,
-            owner: 'mario',
-            content: 'primeiro post'
+            owner: '',
+            content: ''
         }
-    ]     
+    ],  
     
 
     
