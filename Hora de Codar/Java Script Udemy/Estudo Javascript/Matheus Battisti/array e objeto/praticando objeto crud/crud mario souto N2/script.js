@@ -27,14 +27,14 @@ const pessoa = {
         
     },
     
-    pegaPessoa(inputId) {
+    pegaPessoa(dados) {
         
-        pessoa.cadastro.forEach((id) => {
-            console.log(id)
-        })
-        // ulListaDeBusca.insertAdjacentHTML('beforeend', `
-        // <li><input type="checkbox" name="" id="">${dados.nome}</li>
-        // `)
+        ulListaDeBusca.insertAdjacentHTML('beforeend', `
+        <li><input type="checkbox" name="" id="">${dados.nome}</li>
+        `)
+        // pessoa.cadastro.forEach((id) => {
+        //     console.log(id)
+        // })
         // console.log(pessoa.cadastro[inputId].nome)
         
 
@@ -57,11 +57,17 @@ form.addEventListener('submit', (e) => {
                     nome: nome,
                 }
             )
-            input.value = ''
+            input.value = "";
             // console.log(pessoa.cadastro.id++, pessoa.cadastro.nome)
             // console.log(pessoa.cadastro)
         }
-    } else if (e.submitter === buttonPegar) {
-        pessoa.pegaPessoa(inputId)
+    } 
+    if (e.submitter === buttonPegar) {
+        
+            pessoa.pegaPessoa(pessoa.cadastro[inputId])
+
+        
+        
     }
+    input.value = "";
 })
