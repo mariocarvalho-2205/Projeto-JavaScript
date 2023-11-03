@@ -2,11 +2,13 @@
 const form = document.getElementById('form')
 const input = document.getElementById('input')
 const inputPegaPessoa = document.getElementById('inputPegaId')
+const inputApagaPessoa = document.getElementById("inputApagaId");
 const buttonCriar = document.getElementById('buttonCriar')
 const buttonPegar = document.getElementById('buttonPegar')
+const buttonApagar = document.getElementById("buttonApagar");
 const ulListaPost = document.querySelector('.listaDePost')
 const ulListaDeBusca = document.querySelector('.listaDeBusca')
-
+const ulListaDeNomes = document.querySelector("#listaDeNomes");
 const pessoa = {
     cadastro: [
         {
@@ -28,7 +30,7 @@ const pessoa = {
     },
     
     pegaPessoa(dados) {
-        
+        console.log(dados)
         ulListaDeBusca.insertAdjacentHTML('beforeend', `
         <li><input type="checkbox" name="" id="">${dados.nome}</li>
         `)
@@ -38,7 +40,9 @@ const pessoa = {
         // console.log(pessoa.cadastro[inputId].nome)
         
 
-    }
+    },
+
+    
 
 }
 /* 
@@ -70,4 +74,33 @@ form.addEventListener('submit', (e) => {
         
     }
     input.value = "";
+})
+
+buttonApagar.addEventListener('click', () => {
+    const indexApagaPessoaValue = inputApagaPessoa.value
+    const id = pessoa.cadastro[indexApagaPessoaValue];
+    const novaLista = pessoa.cadastro;
+    novaLista.splice(novaLista.indexOf(id), 1);
+    
+    const li = document.createElement("li");
+    novaLista.forEach(i => {
+        
+        ulListaDeNomes.insertAdjacentHTML(
+            "beforeend",
+            `
+            <li><input type="checkbox" name="" id="">${i.nome}</li>
+            `
+            );
+            
+            
+            
+            
+        })
+
+
+
+   
+
+
+
 })
