@@ -27,49 +27,52 @@ class Pessoa {
 
 // classe para registrar as pessoas
 class RegistroPessoas {
-    constructor(){
-        this.pessoas = [];
-        this.proximoId = 1;
+  constructor() {
+    this.pessoas = [];
+    this.proximoId = 1;
+  }
+
+  // metodo para adicionar pessoa ao array de objeto
+  adicionarPessoas(nome, idade, sexo) {
+    const pessoa = new Pessoa(this.proximoId, nome, idade, sexo);
+
+    // incrementa o id
+    this.proximoId++;
+    this.pessoas.push(pessoa);
+    // this.atualizarLista();
+    this.exibirListaAtualizada();
+  }
+
+  // metodo para editar pessoa
+  editarPessoa(id, novoNome, novaIdade) {
+    const pessoaIndex = this.pessoas.findIndex((p) => p.id === id);
+
+    if (pessoaIndex !== -1) {
+      this.pessoas[pessoaIndex].setNome(novoNome);
+      this.pessoas[pessoaIndex].setIdade(novaIdade);
+      // this.atualizarLista();
+      this.exibirListaAtualizada();
+    } else {
+      console.log("pessoa não encontrada");
     }
+  }
 
-    // metodo para adicionar pessoa ao array de objeto
-    adicionarPessoas(nome, idade, sexo) {
-        const pessoa = new Pessoa(this.proximoId, nome, idade, sexo)
+  // metodo para apagar pessoa
+  apagarPessoa(id) {
+    this.pessoas = this.pessoas.filter((p) => p.id !== id);
+    this.exibirListaAtualizada();
+  }
 
-        // incrementa o id
-        this.proximoId++
-        this.pessoas.push(pessoa)
-        this.atualizarLista();
-    }
+  exibirListaAtualizada() {
+    const listaPessoas = document.getElementById("listaPessoas");
+    listaPessoas.innerHTML = "";
 
-    // metodo para editar pessoa
-    editarPessoa(id, novoNome, novaIdade) {
-        const pessoaIndex = this.pessoas.findIndex(p => p.id === id)
-
-        if (pessoaIndex !== -1) {
-            this.pessoas[pessoaIndex].setNome(novoNome)
-            this.pessoas[pessoaIndex].setIdade(novaIdade)
-            this.atualizarLista();
-        } else {
-            console.log('pessoa não encontrada')
-        }
-    }
-
-    // metodo para apagar pessoa
-    apagarPessoa(id) {
-        this.pessoas = this.pessoas.filter(p => p.id !== id)
-    }
-
-    atualizarLista() {
-        const listaPessoas = document.getElementById('listaPessoas')
-        listaPessoas.innerHTML = ''
-
-        this.pessoas.forEach(pessoa => {
-            const li = document.createElement('li');
-            li.textContent = `ID: ${pessoa.id}, Nome: ${pessoa.nome}, Idade: ${pessoa.idade}, Sexo: ${pessoa.sexo}`
-            listaPessoas.appendChild(li)
-        })
-    }
+    this.pessoas.forEach((pessoa) => {
+      const li = document.createElement("li");
+      li.textContent = `ID: ${pessoa.id}, Nome: ${pessoa.nome}, Idade: ${pessoa.idade}, Sexo: ${pessoa.sexo}`;
+      listaPessoas.appendChild(li);
+    });
+  }
 }
 
 let registro = new RegistroPessoas()
@@ -95,12 +98,17 @@ function editarPessoa( ) {
     const novoSexo = prompt('Novo Sexo:')
 
     registro.editarPessoa(parseInt(idInput), nomeInput, novaIdade, novoSexo)
+    this.exibirListaAtualizada();
 }
 
 function apagarPessoa () {
     const idInput = prompt('Digite o ID da pessoa que deseja apagar:')
 
     registro.apagarPessoa(parseInt(idInput))
+}
+
+function exibirLista() {
+  registro.exibirListaAtualizada();
 }
 // registro.adicionarPessoas('adilma', 49, 'feminino')
 
