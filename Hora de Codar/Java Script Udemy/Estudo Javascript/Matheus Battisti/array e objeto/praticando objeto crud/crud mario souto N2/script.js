@@ -16,6 +16,8 @@ const pessoa = {
             nome: '',
         },
     ],
+
+
     criaPessoa(dados) {
         const li = document.createElement('li')
         pessoa.cadastro.push({
@@ -34,10 +36,6 @@ const pessoa = {
         ulListaDeBusca.insertAdjacentHTML('beforeend', `
         <li><input type="checkbox" name="" id="">${dados.nome}</li>
         `)
-        // pessoa.cadastro.forEach((id) => {
-        //     console.log(id)
-        // })
-        // console.log(pessoa.cadastro[inputId].nome)
         
 
     },
@@ -83,6 +81,7 @@ buttonApagar.addEventListener('click', () => {
     novaLista.splice(novaLista.indexOf(id), 1);
     
     const li = document.createElement("li");
+    
     novaLista.forEach(i => {
         
         ulListaDeNomes.insertAdjacentHTML(
