@@ -15,7 +15,7 @@ const pessoa = {
         },
     ],
     criaPessoa(dados) {
-        // const li = document.createElement('li')
+        const li = document.createElement('li')
         pessoa.cadastro.push({
             id: pessoa.cadastro.length,
             nome: dados.nome
