@@ -1,8 +1,13 @@
 const Sequelize = require('sequelize')  
-const sequelize = new Sequelize('test', 'root', '', {
+
+// sintaxe - new Sequelize('nome do banco', 'username do banco', 'senha', {
+//    host: "localhost",
+//    dialect: "tipo de banco usado"
+// })
+const sequelize = new Sequelize('sys', 'root', '', {
     // 
-    host: "localhost",  // url locak
-    dialect: "mysql"
+    host: "localhost",  // host e o endereço onde esta o banco de dados 
+    dialect: "mysql"  //  aqui define qual o tipo de banco estaremos usando
 })
 
 // ciclo de teste de conexão
