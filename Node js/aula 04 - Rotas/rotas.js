@@ -7,7 +7,10 @@ const porta = 3000  // endereço da porta
 // get - recebe 2 parametros para instanciar a rota, 
 // o primeiro e o endereço da rota e o segundo uma callback que ira conter 2 parametros(request e response) que ira exibir na tela o html
 app.get('/', (req, res) => {
-    res.end('mensagem vinda do servidor e da rota get /')
+    
+    res.send(`<h1>Hello World com Rotas</h1>`)  // envia uma msg e reconhece html
+    // res.end('teste');  // envia uma msg em forma de tela preta, nao reconhece html
+    
 })
 
 
