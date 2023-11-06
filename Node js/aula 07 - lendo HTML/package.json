@@ -1,12 +1,11 @@
 {
   "name": "aula-07---lendo-html",
   "version": "1.0.0",
-  "description": "",
   "main": "lendoHTML.js",
   "scripts": {
+    "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -14,5 +13,7 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }
