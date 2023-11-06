@@ -2,7 +2,7 @@ let http = require('http')  // modulo tradicional de http no node para criar ser
 
 
 
-// e necessario abrir um servidor httl criando e lendo uma porta
+// e necessario abrir um servidor html criando e lendo uma porta
 http.createServer(function (req, res) {
     res.end('server rodando')
 }).listen(8081)
