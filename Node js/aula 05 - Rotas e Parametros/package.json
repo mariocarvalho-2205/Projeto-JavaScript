@@ -1,0 +1,14 @@
+{
+  "name": "aula-05---rotas-e-parametros",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rotas_parametros.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
