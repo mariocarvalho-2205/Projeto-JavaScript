@@ -10,11 +10,16 @@ const sequelize = new Sequelize("sistemadecadastro", "root", "", {
     host: "localhost"
 })
 // template engine
+
+// Adicionar o .engine depos do handlebars
+// NOVA SINTAXE = app.engine('handlebars', handlebars.engine({defaultLayout: "main"}))
 app.engine('handlebars', handlebars.engine({defaultLayout: "main"}))
 app.set('view engine', 'handlebars')
 
+
+// Rotas
 app.get("/cad", (req, res) => {
-    res.send("Rota de Cadastro")
+    res.render('formulario')
 })
 
 // testando conexao mysql
