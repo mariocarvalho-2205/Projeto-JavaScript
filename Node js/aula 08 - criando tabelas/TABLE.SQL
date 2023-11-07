@@ -47,6 +47,9 @@ UPDATE usuarios SET idade = 48 WHERE nome = "Mario";
 DELETE FROM nome tabela // apaga toda a tabela
 DELETE FROM nome tabela WHERE condicional EX: nome ="nome da pessoa";
 
+* Para adicionar uma coluna na tabela, usamos, ALTER TABLE nome_da_tabela ADD nome_da_coluna TIPO.
+
+ALTER TABLE usuario ADD email VARCHAR(50) NOT NULL
 */
 CREATE TABLE usuarios(
     nome VARCHAR(50),

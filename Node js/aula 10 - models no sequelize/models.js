@@ -17,8 +17,20 @@ const Cargos = sequelize.define('cargo', {
     }
 })
 
+const Usuarios = sequelize.define('usuario', {
+    nome: {
+        type: Sequelize.STRING
+    },
+    email: {
+        type: Sequelize.STRING
+    },
+    idade: {
+        type: Sequelize.INTEGER
+    }
+})
 // SINCRONIZANDO A TABELA AO MYSQL
-//Cargos.sync({force: true})
+// Cargos.sync({force: true})
+// Usuarios.sync({force: true})
 
 // preenchendo os campos
 // Cargos.create({
@@ -26,6 +38,13 @@ const Cargos = sequelize.define('cargo', {
 //     tempo: "3 anos",
 //     descricao: "A profissão que irá crescer muito!"
 // })
+
+Usuarios.create({
+     nome: "Adilma",
+     email: "adienfa@hotmail.com",
+     idade: 49
+})
+
 
 sequelize.authenticate()
 .then(() => {
