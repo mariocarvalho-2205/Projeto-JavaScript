@@ -14,7 +14,7 @@ const sequelize = new Sequelize('sistemadecadastro', 'root', '', {
 
 // configurando o handlebars
     // template engine
-    app.engine('handlebars', handlebars({defaultLayout: "main"}))
+    app.engine('handlebars', handlebars.engine({defaultLayout: "main"}))
     app.set('view engine', 'handlebars')
 
 
