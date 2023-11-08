@@ -1,0 +1,29 @@
+1 iniciar o npm
+2 instalar os pacotes necessarios {express, express-handlebars, sequelize, mysql2, body-parser}
+3 instalar o nodemon como dependencia de desenvolvedor
+4 criar o gitignore
+5 criar arquivo principal index.js
+6 importar os pacotes express, express-handlebars, body-parser no index 
+7 criar o app com o express e criar a porta do servidor
+8 criar o servidor app.listen(porta, () => {console.log('teste porta)})
+9 criar pastas models e views
+10 na pasta views criar a pasta layouts e criar o arquivo main.handlebars
+11 na pasta models criar o arquivo db.js
+12 configurar o handlebars e o body-parser
+13 config handlebars
+    app.engine('handlebars', handlebars.engine({default: "main"}))
+    app.set('view engine', 'handlebars')
+14 config body-parser
+    app.use(bodyParser.urlencoded({extended: false}))
+    app.use(bodyParser.json())
+15 no arquivo db, importar e configurar o sequelize, 
+16 testar conexao com banco de dados no arquivo db e exportar o modulo
+17 importar o modulo db no arquivo models
+18 criar arquivo models com o modelo feito no sequelize
+19 criar a tabela e depois comentar o comando para nao zerar a tabela
+19 exportar o modelo criado 
+20 importar o bd no arquivo principal
+21 criar as rotas get para pegat os dados 
+22 post para enviar os dados
+23 importar o modelo no arquivo principal
+
