@@ -6,6 +6,13 @@ const port = 3300
 const handlebars = require('express-handlebars')
 const bodyParser = require('body-parser')
 
+// config handlebars
+app.engine('handlebars', handlebars.engine({defaultLayout: 'main'}))
+app.set('view engine', 'handlebars')
+
+// config body-parser
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
 
 
 
