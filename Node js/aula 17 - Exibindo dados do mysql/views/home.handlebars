@@ -2,11 +2,25 @@
 
 
 
-{{nome}}
-{{!-- 
-    Nome: {{clientes}} <br>
-    CPF: {{cpf}} <br>
-    Email: {{email}} <br>
-    Idade: {{idade}} <br>
-<br> --}}
-{{!-- {{/each}} --}}
+<ul>
+{{#each clientes}}
+    <li>
+    {{dataValues.nome}} <br>
+
+    </li>
+    <li>
+    {{dataValues.cpf}} <br>
+
+    </li>
+    <li>
+    {{dataValues.email}} <br>
+
+    </li>
+    <li>
+    {{dataValues.idade}} <br>
+        
+    </li>
+<br>
+{{/each}}
+
+</ul>

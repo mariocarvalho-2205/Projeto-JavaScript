@@ -8,7 +8,7 @@ const Cliente = db.sequelize.define('clientes', {
         type: db.Sequelize.INTEGER
     },
     email: {
-        type: db.Sequelize.INTEGER
+        type: db.Sequelize.STRING
     },
     idade: {
         type: db.Sequelize.INTEGER
@@ -16,6 +16,6 @@ const Cliente = db.sequelize.define('clientes', {
 })
 
 
-// Cliente.sync({force: true})
+//Cliente.sync({force: true})
 
 module.exports = Cliente

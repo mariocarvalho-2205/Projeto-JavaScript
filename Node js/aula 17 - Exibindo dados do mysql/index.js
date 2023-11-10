@@ -19,8 +19,12 @@ app.use(bodyParser.json())
 app.get('/', (req, res)  => {
   // verificar porque so esta aparecendo desse jeito
   // [object SequelizeInstance:clientes],[object SequelizeInstance:clientes]
-  Cliente.findAll().then(function (clientes) {
-    res.render("home", { nome: clientes });
+  Cliente.findAll({order: [
+    ['createdAt', 'DESC']
+
+  ]})
+  .then((clientes) => {
+    res.render("home", {clientes});
   });
 })
 
