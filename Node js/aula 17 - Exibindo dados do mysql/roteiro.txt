@@ -114,5 +114,16 @@
     ! E O METHOD PRECISA SER POST!!!
     * O FORMULARIO É CRIADO DENTRO DA PASTA views
     // <form action="/cadastrado" method="post">
+25 Rotas para listagem
+    // dentro do colchete vai a coluna que queremos pesquisar
+    // Cliente.findAll({order: [
+    //    ['createdAt', 'DESC']
+    //
+    // ]})
+    //    .then((clientes) => {
+    //    res.render("home", {clientes});
+    //  });
+26 no arquivo handlebars utilizamos o dataValues.campo do valor
+dentro de {{dataValues.campo}}
 
 
