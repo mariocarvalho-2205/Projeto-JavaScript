@@ -54,7 +54,7 @@
 17 importar o modulo db no arquivo com o modelo na pasta (models)
     // const db = require('./db') 
     ! O endereço do arquivo tem que direcionar para a pasta com o nome do arquivo
-18 criar o modelo feito no sequelize
+18 criar o modelo da tabela feita no sequelize
     // const Cliente = db.sequelize.define("clientes", {
     // nome: {
     //     type: db.Sequelize.STRING
@@ -70,7 +70,7 @@
     // }
     // 
     // })
-19 criar a tabela e depois comentar o comando para nao zerar a tabela
+19 Sincronizar a tabela e depois comentar o comando para nao zerar a tabela
     // Cliente.sync({force: true})
     ! NÃO ESQUECER DE COMENTAR O COMANDO DEPOIS QUE SINCRONIZAR AO BANCO DE DADOS
 20 Exportar o modelo do sequelize no arquivo do modelo 
