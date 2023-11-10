@@ -17,8 +17,6 @@ app.use(bodyParser.json())
 
 // Rotas
 app.get('/', (req, res)  => {
-  // verificar porque so esta aparecendo desse jeito
-  // [object SequelizeInstance:clientes],[object SequelizeInstance:clientes]
   Cliente.findAll({order: [
     ['createdAt', 'DESC']
 
