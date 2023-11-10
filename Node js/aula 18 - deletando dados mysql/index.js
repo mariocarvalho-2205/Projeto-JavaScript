@@ -2,6 +2,10 @@ const express = require('express')
 const app = express()
 const port = 3300
 
+// importação Sequelize
+const db = require('./models/db')
+
+
 // importação handlebars, body-parser
 const handlebars = require('express-handlebars')
 const bodyParser = require('body-parser')
