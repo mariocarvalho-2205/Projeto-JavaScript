@@ -54,7 +54,16 @@ app.get('/visual', (req, res) => {
     })
 })
 
-
+// Rota para deletar
+app.get('/deletar/:id', (req, res) => {
+    Cliente.destroy({
+        where: {'id': req.params.id}
+    }).then(() => {
+        res.send('Deletado com Sucesso')
+    }).catch((err) => {
+        res.send(`Não foi possivel deletar. Erro -> ${err}`)
+    })
+})
 
 
 

@@ -125,5 +125,17 @@
     //  });
 26 no arquivo handlebars utilizamos o dataValues.campo do valor
 dentro de {{dataValues.campo}}
+27 Deletar o item do banco adiciona rota e o button no item exibido
+    app.get('/deletar/:id', (req, res) => {
+        Cliente.destroy({
+            where: {'id': req.params.id}
+        }).then(() => {
+            res.send('Deletado com Sucesso')
+        }).catch((err) => {
+            res.send(`Não foi possivel deletar. Erro -> ${err}`)
+        })
+    })
+// no button adicionar a rota no link
+// <a href="/deletar/{{dataValues.id}}"><button>Excluir</button></a>
 
 
