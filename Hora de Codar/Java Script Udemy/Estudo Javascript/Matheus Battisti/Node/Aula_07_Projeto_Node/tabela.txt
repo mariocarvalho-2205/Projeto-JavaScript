@@ -1,0 +1,38 @@
+Criar tabela no mysql
+
+nome tabela jobs
+
+id: integer pk ai
+title: TEXT
+salary: INTEGER
+company: TEXT
+email: TEXT
+new: INTEGER
+createdAt: TEXT
+updatedAt: TEXT
+
+criando tabela
+CREATE TABLE funcionarios (
+    id int unsigned not null auto_increment,
+    nome varchar(45) not null,
+    salario double not null default '0',
+    departamento varchar(45) not null,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE veiculos (
+    id int unsigned not null auto_increment,
+    funcionario_id int unsigned default null,
+    veiculo varchar(45) not nul default '',
+    placa varchar(10) not null default '',
+    primary key (id)
+    CONSTRAINT fk_veiculos_funcionarios foreign key(funcionario_id) REFERENCE funcionarios (id)
+
+
+)
+
+para criação de tabela precisa de:
+tipo: int text str
+unsigned - recebe somente numeros inteiro - nao recebe negativos
+not null - nao recebe valor nulo
+auto_increment - incrementa automaticamente
