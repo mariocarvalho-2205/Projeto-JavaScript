@@ -4,7 +4,8 @@ const port = 3300
 
 // importação Sequelize
 const db = require('./models/db')
-
+// importação do modelo
+const Cliente = require('./models/Cliente')
 
 // importação handlebars, body-parser
 const handlebars = require('express-handlebars')
@@ -22,9 +23,36 @@ app.use(bodyParser.json())
 
 // Rota principal
 app.get('/', (req, res) => {
-    res.send(`Aula 18 - Deletando dados MySQL`)
+    res.render("home")
+})
+// Rota de cadastro
+app.get('/cadastro', (req, res) => {
+    res.render('cadastro')
 })
 
+// Rota post
+app.post('/cadastrado', (req, res) => {
+    Cliente.create({
+        nome: req.body.nome,
+        cpf: req.body.cpf,
+        email: req.body.email,
+        idade: req.body.idade,
+    }).then(() => {
+        res.redirect('/')
+    }).catch((err) => {
+        res.send(`Aula 18 deu o erro ${err}`)
+    })
+})
+
+// Rota para Visualizar
+app.get('/visual', (req, res) => {
+    Cliente.findAll({order: [
+        ['id', 'DESC']
+    ]})
+    .then((clientes) => {
+        res.render('visual', {clientes})
+    })
+})
 
 
 
