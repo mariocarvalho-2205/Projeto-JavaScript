@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 const db = require('../db/db')
 
-const Job = db.define("jobs", {
+const Job = db.sequelize.define("jobs", {
     // terminar de criar o modelo
     title: {
         type: Sequelize.STRING
