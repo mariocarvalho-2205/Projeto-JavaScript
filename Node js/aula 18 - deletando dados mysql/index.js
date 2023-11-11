@@ -57,6 +57,7 @@ app.get('/visual', (req, res) => {
 
 
 
+
 // Server
 app.listen(port, () => {
     console.log(`Aula 18 rodando na porta ${port}`)
