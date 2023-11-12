@@ -5,6 +5,11 @@ const path       = require('path')
 const port       = 3300
 const db         = require('./db/db')
 const bodyParser = require('body-parser')
+const Job        = require('./models/Job')
+
+// importar o sequelize e o modulo op para buscas mais detalhadas
+const Sequelize  = require('sequelize')
+const Op         = Sequelize.Op
 
 
 
@@ -24,12 +29,35 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 // routes
 app.get('/', (req, res) => {
-    res.render('index')
+// requisição quando vem da rota get, ela vem pelo query
+    let search = req.query.job
+    let query = "%"+search+"%"
+
+    if (!search) {
+        
+        Job.findAll({
+            order: [
+            ['createdAt', 'DESC']
+        ]})
+        .then(jobs => {
+            res.render('index', {jobs})
+        }) 
+        .catch((err) => console.log(err))
+    } else {
+        Job.findAll({
+            where: {title: {[Op.like]: query}},
+            order: [
+            ['createdAt', 'DESC']
+        ]})
+        .then(jobs => {
+            res.render('index', {jobs, search})
+        })
+        .catch((err) => console.log(err))
+    }
 })
 
 // Jobs routes
 app.use('/jobs', require('./routers/jobs'))
-
 
 
 // servidor 
