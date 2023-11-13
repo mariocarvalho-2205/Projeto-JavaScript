@@ -56,7 +56,7 @@ app.get('/', (req, res) => {
     }
 })
 
-// Jobs routes
+// Jobs routes config
 app.use('/jobs', require('./routers/jobs'))
 
 

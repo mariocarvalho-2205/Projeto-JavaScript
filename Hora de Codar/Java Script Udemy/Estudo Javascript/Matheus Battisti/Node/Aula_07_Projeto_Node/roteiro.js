@@ -1,3 +1,4 @@
+/*
 1 iniciar o npm
     // npm init
 2 instalar os pacotes necessarios {express, express-handlebars, sequelize, mysql2, body-parser}
@@ -74,14 +75,33 @@
     // }
     // 
     // })
-19 Sincronizar a tabela e depois comentar o comando para nao zerar a tabela
+
+    19 Sincronizar a tabela e depois comentar o comando para nao zerar a tabela
     // Cliente.sync({force: true})
     ! NÃO ESQUECER DE COMENTAR O COMANDO DEPOIS QUE SINCRONIZAR AO BANCO DE DADOS
-20 Exportar o modelo do sequelize no arquivo do modelo 
+
+    20 Exportar o modelo do sequelize no arquivo do modelo 
     // module.exports = Cliente
+
 21 importar o bd no arquivo principal
     // const db = require('./models/db')
+
 22 criar as rotas get para pegat os dados 
+    * Criar uam pasta routers para as rotas ficarem organizadas
+    instalar o pacote do express Router() para auxiliar com as rotas 
+    e determinando  uma rota padrão, nomear o arquivo de acordo com o tipo de rota
+    // padrao para Router - const router = express.Router()
+    ! podemos deixar uma rota inicial no arquivo principal do projeto
+    no arquivo das rotas precisamos importar o express, e o modelo 
+    const express = require('express)
+    const Job = require('endereço do arquivo modelo)
+
+    *   configuração das rotas no arquivo principal
+    // Jobs routes config
+    //  app.use('/jobs', require('./routers/jobs'))
+
+    ! não esquecer de exportar as rotas
+
     * ROTA PRINCIPAL SEM RENDERIZAR HTML
     // app.get('/', (req, res) => {
     //     res.render('home')  // DIRECIONA PARA A PAGINA PRINCIPAL
@@ -91,11 +111,17 @@
     // app.get("/cadastro", (req, res) => {
     //     res.render('formulario')
     // })
+
 23 importar o modelo no arquivo principal
     // const Cliente = require('./models/Cliente')
-24 criar rota post para enviar os dados
+24 criar rota post para enviar(adicionar) os dados no mysql
+
+
+
     // app.post('/cadastrado', (req,res) => {
     //     Cliente.create({
+    *       criando uma variavel para cada item 
+    //      let {title, salary, company, description, email, new_job} = req.body;
     //         nome: req.body.nome, 
     //         cpf: req.body.cpf, 
     //         email: req.body.email, 
@@ -147,3 +173,6 @@ dentro de {{dataValues.campo}}
 // dessa forma no handlebars, não precisa mais passar a pasta public
 app.use(express.static(path.join(__dirname, 'public')))
 
+28 
+
+*/
