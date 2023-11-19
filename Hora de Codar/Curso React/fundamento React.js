@@ -1,4 +1,6 @@
 /*
+! IMPORTANTE 1 - as classes de css, no React utilizamos className=""
+! IMPORTANTE 2 - o HTML será sempre enviado no return
 
 // Criando componentes
 ● Na maioria dos projetos os componentes ficam em uma pasta chamada
@@ -26,5 +28,43 @@ colocá-lo em forma de tag: <FirstComponent />
 ● Isso se dá pelas instruções semelhantes de JS e HTML, pois o JSX é
 JavaScript, então algumas terão nomes diferentes;
 ● O JSX pode ter apenas um elemento pai;
+! O retorno dos elementos precisam estar envoltos em uma 
+! div para que não tenha erro no React
 
+// passo a passo
+1- Criar pasta components
+2- Criar arquivo com nome em CamelCase com extenssão js
+3- Sintaxe
+    * EX: 
+        const FirstComponent = () => {
+            return (
+                <div>
+                    <h2>Meu Primeiro Componente</h2>
+                </div>
+            )
+        }
+4- importar o componente no arquivo principal
+    * EX:
+        import FirstComponent from './components/FisrtComponents';
+5- utilizar o componente na aplicação
+    * EX:
+        function App() {
+            return (
+                <div className="App">
+                <h1>Fundamentos React - Componentes</h1>
+                <FirstComponent/> --> Componente utilizado
+                </div>
+            );
+        }
+
+export default FirstComponent;
+
+// Comentários no componente
+● Podemos inserir comentários de duas maneiras no componente;
+● Na parte da função, onde é executada a lógica, a sintaxe é: // Algum
+comentário;
+● E também no JSX: { /* Algum comentário */ /*}
+● As chaves nos permitem executar sentenças em JavaScript, veremos
+isso mais adiante;
+● Vamos testar os comentários!
 */
