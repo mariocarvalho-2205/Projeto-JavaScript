@@ -1,4 +1,25 @@
 
+Criar projeto React:
+npx create-react-app <nome do projeto>
+
+Rodar o arquivo via react
+npm start 
+
+criar projeto com vite
+npm create vite@latest
+1 - coloca o nome do projeto
+2 - escolhe o framework
+3 - escolher a linguagem
+
+Rodar com o react vite
+npm run dev
+
+OBS: A pasta do projeto precosa estar aberta no terminal
+
+
+
+
+
 Aviso importante sobre componentes do React JS
 Fala galera!
 
