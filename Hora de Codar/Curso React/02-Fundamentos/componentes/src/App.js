@@ -4,7 +4,7 @@ import FirstComponent from './components/FisrtComponents';
 /* styles */
 import './App.css';
 
-function App() {
+function App() { 
   return (
     <div className="App">
       <h1>Fundamentos React - Componentes</h1>
