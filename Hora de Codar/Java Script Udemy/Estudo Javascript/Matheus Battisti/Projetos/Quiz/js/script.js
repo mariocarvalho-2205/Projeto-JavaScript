@@ -3,8 +3,8 @@ const answerBox = document.querySelector('#answers-box');
 const quizzContainer = document.querySelector('#quizz-container');
 const scoreContainer = document.querySelector('#score-container');
 const letters = ['a', 'b', 'c', 'd'];
-const points = 0;
-const actualQuestion = 0;
+let points = 0;
+let actualQuestion = 0;
 
 // Perguntas
 const questions = [
@@ -133,6 +133,8 @@ function createQuestion (i) {
     actualQuestion++;
 }
 
+// verificando resposta do usuario
+
 function checkAnswer(btn) {
     
 
@@ -141,13 +143,87 @@ function checkAnswer(btn) {
     buttons.forEach(function (button) {
 
         if (button.getAttribute('correct-answer') === 'true') {
-            console.log(button)
+            
+          button.classList.add('correct-answer')
 
+          // checa se o usuario acertou a pergunta
+          if(btn === button) {
+            points++;
+
+          }
+
+        } else {
+
+          button.classList.add('wrong-answer')
         }
 
     })
 
+    console.log(points)
+    // exibir proxima pergunta
+    nextQuestions()
 }
+
+// exibe a proxima pergunta do quizz
+
+function nextQuestions() {
+
+  // timer para o usuario ver as respostas
+  setTimeout(function() {
+
+    // verifica se ainda ha perguntas
+    if (actualQuestion >= questions.length) {
+      // apresenta a msg sucesso
+      showSuccessMessage()
+      return
+
+    }
+
+    createQuestion(actualQuestion)
+
+  }, 500)
+
+}
+
+function showSuccessMessage() {
+  
+  // Adiciona e remove o hide
+  hideOrShowQuizz()
+  
+  // trocar dados da tela de sucesso
+  
+  
+  // calcular o score
+  const score = ((points / questions.length) * 100).toFixed(2)
+  
+  const displayScore = document.querySelector('#display-score span')
+  displayScore.textContent = score
+  
+  // altera o numero de perguntas corretas
+  const correctAnswer = document.querySelector('#correct-answers')
+  const questionsQty = document.querySelector('#questions-qty')
+  correctAnswer.textContent = points
+  questionsQty.textContent = questions.length
+  
+  
+}
+
+// mostra ou esconde o score
+function hideOrShowQuizz() {
+  quizzContainer.classList.toggle('hide')
+  scoreContainer.classList.toggle('hide')
+}
+
+
+// reinicia o quizz
+const restart = document.querySelector('#restart')
+
+restart.addEventListener('click', (e) => {
+  actualQuestion = 0
+  points = 0
+  hideOrShowQuizz()
+  
+})
 
 // inicialização do quizz
 init()
