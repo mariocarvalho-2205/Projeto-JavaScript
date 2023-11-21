@@ -159,7 +159,7 @@ function checkAnswer(btn) {
 
     })
 
-    console.log(points)
+    
     // exibir proxima pergunta
     nextQuestions()
 }
@@ -222,6 +222,7 @@ restart.addEventListener('click', (e) => {
   actualQuestion = 0
   points = 0
   hideOrShowQuizz()
+  init()
   
 })
 
