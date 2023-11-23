@@ -17,9 +17,6 @@ npm run dev
 OBS: A pasta do projeto precosa estar aberta no terminal
 
 
-
-
-
 Aviso importante sobre componentes do React JS
 Fala galera!
 
@@ -37,28 +34,14 @@ Indicações de Livros
 Fala galera, beleza?
 
 
-
 Muita gente pede indicações de livros para complementar os estudos, então fiz uma curadoria para este curso e vou indicar alguns
-
-
-
 Primeiramente um livro que tem muita relação com este curso, meu mais recente ebook de React:
-
-
-
 Fundamentos do React JS: Aprenda a bilioteca mais famosa de front-end através de exercícios e projetos - https://amzn.to/3SsOS0E
-
-
 Este livro de minha autoria, é repeleto de exercícios e projetos, para você dominar os fundamentos de JavaScript em mais de 100 páginas e com precinho camarada ou 0800 pelo Kindle Unlimited:
-
-
 
 JavaScript para Iniciantes - Aprenda a Programar JS de Forma Simples - https://amzn.to/3Q1kU2h
 
-
 Outro livro de minha autoria é o:
-
-
 
 200 Exercícios de JavaScript: Fortaleça suas habilidades com desafios - https://amzn.to/3Zs49QR
 
