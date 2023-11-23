@@ -1,0 +1,43 @@
+* {
+  font-family: sans-serif;
+}
+
+.App {
+  height: 100vh; 
+  background-color: aqua;
+  
+}
+
+.grid {
+  margin: 0;
+  display: grid;
+
+  
+  grid-template-columns: 20vw 80vw;
+  grid-template-rows: 5vh 85vh 10vh;
+  grid-template-areas: "header header" "aside section " "footer footer" ;
+
+}
+
+.header {
+  grid-area: header;
+  background-color: blue;
+}
+
+.aside {
+  grid-area: aside;
+  background-color: blueviolet;
+  box-shadow: 1px 1px  10px black;
+  z-index: 1;
+}
+
+.section {
+  grid-area: section;
+  background-color: brown;
+}
+
+.footer {
+  grid-area: footer;
+  
+  background-color: red;
+}
