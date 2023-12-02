@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 // routes
 app.get('/', (req, res) => {
 // requisição quando vem da rota get, ela vem pelo query
-    let search = req.query.job
+    let search = req.query.job  // recebe os dados da busca
     let query = "%"+search+"%"
 
     if (!search) {
